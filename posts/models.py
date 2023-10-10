@@ -10,7 +10,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
-    description = models.TextField(max_length=300)
+    description = models.TextField(max_length=255)
     content = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_image', blank=True
