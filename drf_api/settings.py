@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django_filters',
     'profiles',
     'posts',
+    'comments',
 ]
 
 MIDDLEWARE = [
