@@ -2,6 +2,7 @@ asgiref==3.7.2
 black==23.9.1
 click==8.1.7
 cloudinary==1.36.0
+dj-rest-auth==2.1.9
 Django==3.2.22
 django-cloudinary-storage==0.3.0
 django-filter==23.3
