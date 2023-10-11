@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
@@ -7,6 +8,14 @@ import btnStyles from "../../styles/Button.module.css";
 import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
 
 const SignUpForm = () => {
+  const [signUpData, setSignUpData] = useState({
+    username: "",
+    password1: "",
+    password2: "",
+  });
+
+  const { username, password1, password2 } = signUpData;
+
   return (
     <Row className={styles.Row}>
       <Col
@@ -31,6 +40,7 @@ const SignUpForm = () => {
                 type="text"
                 placeholder="Enter Username"
                 name="username"
+                value={username}
               />
             </Form.Group>
 
@@ -41,6 +51,7 @@ const SignUpForm = () => {
                 type="password"
                 placeholder="Password"
                 name="password1"
+                value={password1}
               />
             </Form.Group>
             <Form.Group controlId="Password2">
@@ -50,6 +61,7 @@ const SignUpForm = () => {
                 type="password"
                 placeholder="Confirm Password"
                 name="password2"
+                value={password2}
               />
             </Form.Group>
             <Button
