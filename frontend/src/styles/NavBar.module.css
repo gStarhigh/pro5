@@ -9,3 +9,8 @@
 .NavLink i {
     padding: 5px;
 }
+
+.img {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
