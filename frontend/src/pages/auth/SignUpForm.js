@@ -1,12 +1,22 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
 
+/* Styles */
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { Form, Button, Image, Col, Row, Container } from "react-bootstrap";
-
+/* Sets username and passwords to an empty string */
 const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
     username: "",
@@ -14,13 +24,31 @@ const SignUpForm = () => {
     password2: "",
   });
 
+  /* Stores the Errors */
+  const [errors, setErrors] = useState({});
+  /* Checks the users history */
+  const history = useHistory();
+
+  /* Stores the username and passwords */
   const { username, password1, password2 } = signUpData;
 
+  /* Handle changes to the inputs */
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
       [event.target.name]: event.target.value,
     });
+  };
+
+  /* Handles the submit action */
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth-registration/", signUpData);
+      history.push("/signin");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
   };
 
   return (
@@ -39,7 +67,7 @@ const SignUpForm = () => {
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${styles.Content} p-4 `}>
           <h1 className={styles.Header}>Sign up</h1>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
               <Form.Label>Username</Form.Label>
               <Form.Control
@@ -51,6 +79,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
             <Form.Group controlId="Password1">
               <Form.Label>Password</Form.Label>
@@ -63,6 +96,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password1?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <Form.Group controlId="Password2">
               <Form.Label>Confirm Password</Form.Label>
               <Form.Control
@@ -74,6 +112,11 @@ const SignUpForm = () => {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.password2?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <Button
               className={`${btnStyles.Button} ${btnStyles.Wide} ${btnStyles.Bright}`}
               type="submit"
