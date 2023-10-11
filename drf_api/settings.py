@@ -67,7 +67,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-gstarhigh-pro5-q3ji6zohki8.ws-eu105.gitpod.io',
+ALLOWED_HOSTS = ['localhost',
                  os.environ.get('ALLOWED_HOST')]
 
 
@@ -81,7 +81,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudinary_storage',
-    'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
     'django_filters',
