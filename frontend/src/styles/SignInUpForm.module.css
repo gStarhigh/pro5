@@ -1,0 +1,65 @@
+.image {
+    max-height: 50vh;
+    border-radius: 50%;
+    margin-top: 30px;
+    object-fit: contain;
+}
+
+.Row {
+    height: calc(100vh - 81px);
+}
+
+.Input {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #7177a1;
+    text-align: center;
+    padding: 10px;
+}
+
+.Header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.Link {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.Link span {
+    color: #F1E0C5;
+}
+
+.Container {
+    padding: 30px 10px;
+}
+
+.SignInCol {
+    height: 320px;
+}
+
+.SignUpCol {
+    height: 375px;
+}
+
+.SignInImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+}
+
+.Content {
+    background-color: #71816D;
+    border-radius: 20px;
+}
