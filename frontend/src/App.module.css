@@ -2,8 +2,26 @@
     font-family: "Roboto", sans-serif;
     min-height: 100vh;
     background-color: #ECF0F1;
+    color: #2B2118;
 }
 
 .main {
     padding-top: 75px;
+}
+
+a {
+    color: #2B2118;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+i {
+    text-decoration: none;
+    color: #2B2118;
+}
+
+i:hover {
+    cursor: pointer;
 }
