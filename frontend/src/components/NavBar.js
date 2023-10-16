@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../assets/favicon-horse.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
@@ -23,6 +23,7 @@ const NavBar = () => {
     }
   };
 
+  /* If a user is logged in */
   const loggedInIcons = (
     <>
       <NavLink
@@ -40,9 +41,10 @@ const NavBar = () => {
       </NavLink>
     </>
   );
+
+  /* If a user is logged out */
   const loggedOutIcons = (
     <>
-      {" "}
       <NavLink
         to="/signin"
         className={styles.NavLink}
