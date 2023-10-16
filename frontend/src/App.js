@@ -13,7 +13,7 @@ export const SetCurrentUserContext = createContext();
 
 function App() {
   /* Get the current user */
-  const [currentUser, setCurrentUser] = useState;
+  const [currentUser, setCurrentUser] = useState(null);
   const handleMount = async () => {
     try {
       const { data } = await axios.get("dj-rest-auth/user");
