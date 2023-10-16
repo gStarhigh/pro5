@@ -4,10 +4,27 @@ import logo from "../assets/favicon-horse.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
-  const loggedInIcons = <>{currentUser?.username}</>;
+  const loggedInIcons = (
+    <>
+      <NavLink
+        to={`/profiles/${currentUser?.profile_id}`}
+        className={styles.NavLink}
+      >
+        <Avatar
+          src={currentUser?.profile_image}
+          text={currentUser?.username}
+          height={30}
+        />
+      </NavLink>
+      <NavLink to="/" className={styles.NavLink}>
+        <i className="fas fa-sign-out-alt"></i>Sign Out
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       {" "}
