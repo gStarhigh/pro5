@@ -15,6 +15,20 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 function SignInForm() {
+  const { username, password } = signInData;
+
+  const [signInData, setSignInData] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleChange = (event) => {
+    setSignInData({
+      ...signInData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
   return (
     <Row className={styles.Row}>
       <Col
@@ -40,6 +54,7 @@ function SignInForm() {
                 placeholder="Enter Username"
                 className={styles.Input}
                 value={username}
+                onChange={handleChange}
               />
             </Form.Group>
 
@@ -51,6 +66,7 @@ function SignInForm() {
                 name="password"
                 className={styles.Input}
                 value={password}
+                onChange={handleChange}
               />
             </Form.Group>
             <Button
