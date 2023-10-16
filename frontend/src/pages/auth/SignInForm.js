@@ -22,6 +22,8 @@ function SignInForm() {
 
   const { username, password } = signInData;
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
@@ -57,6 +59,11 @@ function SignInForm() {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors.username?.map((message, idx) => (
+              <Alert key={idx} variant="warning">
+                {message}
+              </Alert>
+            ))}
 
             <Form.Group controlId="password">
               <Form.Label>Password</Form.Label>
@@ -75,6 +82,11 @@ function SignInForm() {
             >
               Log in
             </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
           </Form>
           <div className={`mt-3 ${styles.Content}`}>
             <Link className={styles.Link} to="/signup">
