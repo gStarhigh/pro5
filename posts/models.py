@@ -11,9 +11,9 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     description = models.TextField(max_length=255)
-    content = models.TextField(blank=True)
+    content = models.TextField(max_length=255)
     image = models.ImageField(
-        upload_to='images/', default='../default_image', blank=True
+        upload_to='images/', default='../default_image'
     )
 
     class Meta:
