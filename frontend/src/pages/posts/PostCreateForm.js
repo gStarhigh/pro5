@@ -10,6 +10,7 @@ import Upload from "../../assets/upload.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import Loader from "../../components/Spinner";
 
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
@@ -42,7 +43,10 @@ function PostCreateForm() {
                 className="d-flex justify-content-center"
                 htmlFor="image-upload"
               >
-                <img src={Upload}></img>
+                <Loader
+                  src={Upload}
+                  message="Click or tap to upload an image"
+                />
               </Form.Label>
             </Form.Group>
             <div>{textFields}</div>
