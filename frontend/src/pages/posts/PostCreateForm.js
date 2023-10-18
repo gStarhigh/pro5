@@ -15,9 +15,36 @@ import Loader from "../../components/Spinner";
 function PostCreateForm() {
   const [errors, setErrors] = useState({});
 
+  const [postData, setPostData] = useState({
+    title: "",
+    content: "",
+    description: "",
+    image: "",
+  });
+  const { title, content, description, image } = postData;
+
   const textFields = (
     <div className="text-center">
-      {/* Add your form fields here */}
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control type="text" name="title" value={title} />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Description</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={2}
+          name="description"
+          value={description}
+        />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Content</Form.Label>
+        <Form.Control as="textarea" rows={6} name="content" value={content} />
+      </Form.Group>
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => {}}
