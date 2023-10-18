@@ -1,0 +1,10 @@
+.Container {
+    min-height: 343px;
+}
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+}
