@@ -19,6 +19,7 @@ const Post = (props) => {
     content,
     image,
     updated_at,
+    postPage,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -32,7 +33,19 @@ const Post = (props) => {
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
+          <div className="d-flex align-items-center">
+            <span>{updated_at}</span>
+            {is_owner && postPage && "..."}
+          </div>
         </Media>
+      </Card.Body>
+      <Link to={`/post/${id}`}>
+        <Card.Img src={image} alt={title}></Card.Img>
+      </Link>
+      <Card.Body>
+        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {description && <Card.Text>{description}</Card.Text>}
+        {content && <Card.Text>{content}</Card.Text>}
       </Card.Body>
     </Card>
   );
