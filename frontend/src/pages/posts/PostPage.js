@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import Post from "./Post";
 
 function PostPage() {
   const { id } = useParams();
@@ -29,7 +30,7 @@ function PostPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p className="text-center">Popular profiles</p>
-        <p className="text-center">Post component</p>
+        <Post {...post.results[0]} setPosts={setPost} />
         <Container className={styles.Content}>Comments</Container>
       </Col>
     </Row>
