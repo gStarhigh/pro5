@@ -35,11 +35,8 @@ function PostsPage({ message, filter = "" }) {
   }, [filter, pathname]);
 
   return (
-    <Row className="h-100">
-      <Col
-        className="py-2 p-0 p-lg-2 text-center justify-content-center"
-        lg={12}
-      >
+    <Row className={styles.Container}>
+      <Col className=" text-center justify-content-center">
         <p>Information from users will go here in a list</p>
         <p>Navigation buttons here</p>
         <p>Popular profiles</p>

@@ -23,3 +23,8 @@
     border-radius: 2px;
     border: 1px solid #dadadf;
 }
+
+.Container {
+    width: 80%;
+    margin: auto;
+}
