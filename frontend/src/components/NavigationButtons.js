@@ -8,16 +8,24 @@ const NavigationButtons = () => {
   return (
     <Container className={styles.Row}>
       <Link to="/">
-        <button className={btnStyles.Round}>Add Usage</button>
+        <button alt="To add usage" className={btnStyles.Round}>
+          Add Usage
+        </button>
       </Link>
       <Link to="/posts/create">
-        <button className={btnStyles.Round}>Create Post</button>
+        <button alt="To create post" className={btnStyles.Round}>
+          Create Post
+        </button>
       </Link>
       <Link to="/liked">
-        <button className={btnStyles.Round}>Liked Posts</button>
+        <button alt="To liked posts" className={btnStyles.Round}>
+          Liked Posts
+        </button>
       </Link>
       <Link to="/feed">
-        <button className={btnStyles.Round}>Posts Feed</button>
+        <button alt="To posts feed" className={btnStyles.Round}>
+          Posts Feed
+        </button>
       </Link>
     </Container>
   );
