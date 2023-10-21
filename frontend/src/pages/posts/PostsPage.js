@@ -13,6 +13,7 @@ import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import NavigationButtons from "../../components/NavigationButtons";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -38,10 +39,13 @@ function PostsPage({ message, filter = "" }) {
     <Row className={styles.Container}>
       <Col className=" text-center justify-content-center">
         <p>Information from users will go here in a list</p>
-        <p>Navigation buttons here</p>
+        <hr />
+        <NavigationButtons />
+        <hr />
         <p>Popular profiles</p>
+        <hr />
         <p>Search bar here</p>
-        <p>List of posts here</p>
+        <hr />
         {hasLoaded ? (
           <>
             {posts.results.length ? (
