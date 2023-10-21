@@ -16,3 +16,10 @@
     cursor: default;
     color: #cfced3;
 }
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+}

@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 import Post from "./Post";
 import Loader from "../../components/Spinner";
 
-import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";
 import { useLocation } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -53,13 +52,13 @@ function PostsPage({ message, filter = "" }) {
                 <Post key={post.id} {...post} setPosts={setPosts} />
               ))
             ) : (
-              <Container className={appStyles.Content}>
+              <Container className={styles.Content}>
                 <Loader src={NoResults} message={message} />
               </Container>
             )}
           </>
         ) : (
-          <Container className={appStyles.Content}>
+          <Container className={styles.Content}>
             <Loader spinner />
           </Container>
         )}

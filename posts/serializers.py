@@ -20,7 +20,7 @@ class PostSerializer(serializers.ModelSerializer):
             liked = Like.objects.filter(
                 owner=user, post=obj
             ).first()
-            return like.id if liked else None
+            return liked.id if liked else None
         return None
 
     def validate_image(self, value):
