@@ -8,6 +8,7 @@ import SignInForm from "./pages/auth/SignInForm";
 import { createContext } from "react";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import PostsPage from "./pages/posts/PostsPage";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -18,7 +19,7 @@ function App() {
       <NavBar />
       <Container className={styles.main}>
         <Switch>
-          <Route exact path="/" render={() => <h1>Home Page</h1>}></Route>
+          <Route exact path="/" render={() => <PostsPage />}></Route>
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/contact" render={() => <h1>Contact Page</h1>} />
