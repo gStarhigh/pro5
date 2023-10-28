@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import logo from "../assets/favicon-horse.png";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
