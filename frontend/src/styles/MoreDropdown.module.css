@@ -1,0 +1,21 @@
+.DropdownItem {
+    display: inline-block;
+    max-width: 50%;
+    padding: 0px;
+}
+
+.Edit:hover {
+    background-color: rgb(117, 212, 168);
+    border-radius: 4px;
+}
+
+.Delete:hover {
+    background-color: rgb(212, 117, 117);
+    border-radius: 4px;
+}
+
+.Absolute {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+}
