@@ -134,7 +134,6 @@ const Post = (props) => {
           {comments_count}
         </div>
       </Card.Body>
-      // Modal for delete confirmation
       <Modal show={showConfirmation} onHide={() => setShowConfirmation(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Confirm Deletion</Modal.Title>
