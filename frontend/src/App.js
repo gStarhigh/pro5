@@ -35,11 +35,7 @@ function App() {
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/contact" render={() => <h1>Contact Page</h1>} />
-          <PrivateRoute
-            exact
-            path="/posts/create"
-            render={() => <PostCreateForm />}
-          />
+          <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
           <Route exact path="/posts/:id" component={PostPage} />
           <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
           <PrivateRoute
