@@ -34,7 +34,15 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
-      history.push("/");
+
+      // Check if there is a 'from' property in the location.state
+      if (history.location.state && history.location.state.from) {
+        // Redirect to the original page
+        history.replace(history.location.state.from);
+      } else {
+        // Redirect to the home page
+        history.replace("/");
+      }
     } catch (err) {
       setErrors(err.response?.data);
     }

@@ -10,9 +10,8 @@ import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import PostEditForm from "./pages/posts/PostEditForm";
-
+import PrivateRoute from "./pages/auth/PrivateRoute";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
-import { Redirect } from "react-router-dom/cjs/react-router-dom";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -36,43 +35,21 @@ function App() {
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/contact" render={() => <h1>Contact Page</h1>} />
-          {currentUser ? (
-            <>
-              <Route
-                exact
-                path="/posts/create"
-                render={() => <PostCreateForm />}
-              />
-              <Route exact path="/posts/:id" render={() => <PostPage />} />
-              <Route
-                exact
-                path="/posts/:id/edit"
-                render={() => <PostEditForm />}
-              />
-              <Route
-                exact
-                path="/feed"
-                render={() => (
-                  <PostsPage
-                    message="No results found. Adjust the search keyword or follow a user."
-                    filter={`owner__followed__owner__profile=${profile_id}&`}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/liked"
-                render={() => (
-                  <PostsPage
-                    message="No results found. Adjust the search keyword or like a post."
-                    filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
-                  />
-                )}
-              />
-            </>
-          ) : (
-            <Redirect to="/signin" />
-          )}
+          <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
+          <PrivateRoute exact path="/posts/:id" component={PostPage} />
+          <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
+          <PrivateRoute
+            exact
+            path="/feed"
+            component={PostsPage}
+            filter={`owner__followed__owner__profile=${profile_id}&`}
+          />
+          <PrivateRoute
+            exact
+            path="/liked"
+            component={PostsPage}
+            filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+          />
           <Route
             render={() => <h1 className="text-center">Page Not Found</h1>}
           />
