@@ -73,6 +73,8 @@ function PostPage() {
               <Comment
                 key={comment.id}
                 {...comment}
+                setPost={setPost}
+                setComments={setComments}
                 isOwner={currentUser?.profile_id === comment.profile_id}
                 isPostOwner={post.results[0]?.user === comment.profile_id}
               />
