@@ -88,6 +88,7 @@ function PostsPage({ message, filter = "" }) {
         ) : (
           <Container className={styles.Content}>
             <Loader spinner />
+            <p>Loading...</p>
           </Container>
         )}
       </Col>

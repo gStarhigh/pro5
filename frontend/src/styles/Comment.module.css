@@ -1,0 +1,26 @@
+.Owner {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.Date {
+    font-weight: lighter;
+    color: #c1c1c5;
+}
+
+.OwnerHighlight {
+    color: #056959;
+}
+
+.OtherUserHighlight {
+    color: #0000ff;
+}
+
+.Loader {
+    text-align: center;
+    margin-top: 20vh;
+    padding: 100px;
+    width: fit-content;
+    border: 1px solid #dadadf;
+    border-radius: 20%;
+}
