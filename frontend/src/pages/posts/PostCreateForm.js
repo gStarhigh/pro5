@@ -15,8 +15,10 @@ import btnStyles from "../../styles/Button.module.css";
 import Loader from "../../components/Spinner";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PostCreateForm() {
+  const currentUser = useCurrentUser();
   const [errors, setErrors] = useState({});
 
   const [postData, setPostData] = useState({
@@ -49,6 +51,10 @@ function PostCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!currentUser) {
+      history.push("/signin");
+      return;
+    }
     const formData = new FormData();
 
     formData.append("title", title);
