@@ -14,3 +14,8 @@
     max-width: 100%;
     object-fit: contain;
 }
+
+.PopProfiles {
+    text-align: center;
+    margin-top: 20px;
+}
