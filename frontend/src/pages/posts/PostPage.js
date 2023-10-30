@@ -8,6 +8,8 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import commentStyles from "../../styles/Comment.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 import Post from "./Post";
 import CommentCreateForm from "../comments/CommentCreateForm";
@@ -69,16 +71,22 @@ function PostPage() {
             "Comments"
           ) : null}
           {comments.results.length ? (
-            comments.results.map((comment) => (
-              <Comment
-                key={comment.id}
-                {...comment}
-                setPost={setPost}
-                setComments={setComments}
-                isOwner={currentUser?.profile_id === comment.profile_id}
-                isPostOwner={post.results[0]?.user === comment.profile_id}
-              />
-            ))
+            <InfiniteScroll
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                  isOwner={currentUser?.profile_id === comment.profile_id}
+                  isPostOwner={post.results[0]?.user === comment.profile_id}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Loader spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
           ) : currentUser ? (
             <span>No comments yet, be the first to comment!</span>
           ) : (
