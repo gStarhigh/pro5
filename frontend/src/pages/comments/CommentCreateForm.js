@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import btnStyles from "../../styles/Button.module.css";
+
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
@@ -59,11 +61,11 @@ function CommentCreateForm(props) {
         </InputGroup>
       </Form.Group>
       <button
-        className={`${styles.Button} btn d-block ml-auto`}
+        className={`${btnStyles.Button} ${btnStyles.Grey} btn d-block ml-auto`}
         disabled={!content.trim()}
         type="submit"
       >
-        post
+        Post
       </button>
     </Form>
   );

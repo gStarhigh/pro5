@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Media } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
+import { axiosRes } from "../../api/axiosDefaults";
+
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
 import { MoreDropdown } from "../../components/MoreDropdown";
-import { axiosRes } from "../../api/axiosDefaults";
-import { Modal, Button } from "react-bootstrap";
+import CommentEditForm from "./CommentEditForm";
 
 const Comment = (props) => {
   const {
@@ -19,12 +21,9 @@ const Comment = (props) => {
     setComments,
     id,
   } = props;
-  const [showConfirmation, setShowConfirmation] = useState(false);
-  const history = useHistory();
 
-  const handleEdit = () => {
-    history.push(`/comments/${id}/edit`);
-  };
+  const [showEditForm, setShowEditForm] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleDelete = async () => {
     setShowConfirmation(true);
@@ -67,10 +66,24 @@ const Comment = (props) => {
           </span>
 
           <span className={styles.Date}>{updated_at}</span>
-          <p>{content}</p>
+          {showEditForm ? (
+            <CommentEditForm
+              id={id}
+              profile_id={profile_id}
+              content={content}
+              profileImage={profile_image}
+              setComments={setComments}
+              setShowEditForm={setShowEditForm}
+            />
+          ) : (
+            <p>{content}</p>
+          )}
         </Media.Body>
         {isOwner && (
-          <MoreDropdown handleEdit={handleEdit} handleDelete={handleDelete} />
+          <MoreDropdown
+            handleEdit={() => setShowEditForm(true)}
+            handleDelete={handleDelete}
+          />
         )}
       </Media>
       <Modal show={showConfirmation} onHide={() => setShowConfirmation(false)}>
