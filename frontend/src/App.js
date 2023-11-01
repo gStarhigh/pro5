@@ -12,6 +12,7 @@ import PostsPage from "./pages/posts/PostsPage";
 import PostEditForm from "./pages/posts/PostEditForm";
 import PrivateRoute from "./pages/auth/PrivateRoute";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
+import ProfilePage from "./pages/profiles/ProfilePage";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -35,8 +36,8 @@ function App() {
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/contact" render={() => <h1>Contact Page</h1>} />
-          <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
           <Route exact path="/posts/:id" component={PostPage} />
+          <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
           <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
           <PrivateRoute
             exact
@@ -50,6 +51,7 @@ function App() {
             component={PostsPage}
             filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
           />
+          <PrivateRoute exact path="/profiles/:id" component={ProfilePage} />
           <Route
             render={() => <h1 className="text-center">Page Not Found</h1>}
           />

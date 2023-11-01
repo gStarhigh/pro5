@@ -1,0 +1,26 @@
+.ProfileImage {
+    object-fit: cover;
+    height: 120px;
+    width: 120px;
+    margin: 4px;
+}
+
+@media screen and (max-width: 991px) {
+    .ProfileImage {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+.Container {
+    width: 80%;
+    margin: auto;
+}
+
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+}
