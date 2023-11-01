@@ -16,6 +16,7 @@ import NoResults from "../../assets/no-results.png";
 import NavigationButtons from "../../components/NavigationButtons";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -52,7 +53,7 @@ function PostsPage({ message, filter = "" }) {
         <hr />
         <NavigationButtons />
         <hr />
-        <p>Popular profiles</p>
+        <PopularProfiles />
         <hr />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
