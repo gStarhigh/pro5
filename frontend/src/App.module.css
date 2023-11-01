@@ -25,3 +25,10 @@ i {
 i:hover {
     cursor: pointer;
 }
+
+.Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #dadadf;
+}
