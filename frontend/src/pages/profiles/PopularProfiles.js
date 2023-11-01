@@ -15,7 +15,7 @@ const PopularProfiles = () => {
     <Container className={rowStyles.Row}>
       {popularProfiles.results.length ? (
         <>
-          <p>Most followed profiles</p>
+          <h4 className="text-center">Most followed profiles</h4>
           <div className="d-flex flex-wrap justify-content-around">
             {popularProfiles.results.slice(0, 6).map((profile) => (
               <Profile key={profile.id} profile={profile} />
