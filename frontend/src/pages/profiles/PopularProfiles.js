@@ -4,6 +4,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Loader from "../../components/Spinner";
 import styles from "../../styles/PostsPage.module.css";
+import rowStyles from "../../styles/NavigationButtons.module.css";
+import Profile from "./Profile";
 
 const PopularProfiles = () => {
   const [profileData, setProfileData] = useState({
@@ -30,13 +32,16 @@ const PopularProfiles = () => {
   }, [currentUser]);
 
   return (
-    <Container>
-      <p>Most followed profiles</p>
+    <Container className={rowStyles.Row}>
       {popularProfiles.results.length ? (
         <>
-          {popularProfiles.results.map((profile) => (
-            <p key={profile.id}>{profile.owner}</p>
-          ))}
+          <p>Most followed profiles</p>
+          <div className="d-flex flex-wrap justify-content-around">
+            {" "}
+            {popularProfiles.results.slice(0, 6).map((profile) => (
+              <Profile key={profile.id} profile={profile} />
+            ))}
+          </div>
         </>
       ) : (
         <Container className={styles.Content}>
