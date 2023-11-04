@@ -16,6 +16,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
+import ContactForm from "./pages/contact/ContactForm";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -58,7 +59,7 @@ function App() {
           />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/contact" render={() => <h1>Contact Page</h1>} />
+          <Route exact path="/contact" render={() => <ContactForm />} />
           <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
           <Route exact path="/posts/:id" component={PostPage} />
           <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
