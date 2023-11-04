@@ -22,7 +22,7 @@ function ContactForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="name">
+      <Form.Group>
         <Form.Label htmlFor="name">Name</Form.Label>
         <Form.Control
           type="text"
@@ -34,7 +34,7 @@ function ContactForm() {
           maxLength={100}
         />
       </Form.Group>
-      <Form.Group controlId="email">
+      <Form.Group>
         <Form.Label htmlFor="name">Email address</Form.Label>
         <Form.Control
           type="email"
@@ -46,7 +46,7 @@ function ContactForm() {
           maxLength={100}
         />
       </Form.Group>
-      <Form.Group controlId="subject">
+      <Form.Group>
         <Form.Label htmlFor="name">Subject</Form.Label>
         <Form.Control
           type="text"
@@ -59,7 +59,7 @@ function ContactForm() {
         />
       </Form.Group>
 
-      <Form.Group controlId="message">
+      <Form.Group>
         <Form.Label htmlFor="message">Message</Form.Label>
         <Form.Control
           as="textarea"
