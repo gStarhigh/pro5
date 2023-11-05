@@ -18,11 +18,13 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import InformationList from "../../components/Information";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const currentUser = useCurrentUser();
 
   const [query, setQuery] = useState("");
 
@@ -50,11 +52,17 @@ function PostsPage({ message, filter = "" }) {
   return (
     <Row className={styles.Container}>
       <Col className=" text-center justify-content-center">
-        <p>Information from users will go here in a list</p>
-        <InformationList />
-        <hr />
-        <NavigationButtons />
-        <hr />
+        {currentUser ? (
+          <>
+            <h3>Information</h3>
+            <InformationList />
+            <hr />
+            <NavigationButtons />
+            <hr />
+          </>
+        ) : (
+          <h4>Here can be some other info for not logged in users...?</h4>
+        )}
         <PopularProfiles />
         <hr />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
