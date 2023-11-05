@@ -8,8 +8,13 @@ function InformationList() {
     axiosReq.get("/information/").then((response) => {
       if (Array.isArray(response.data.results)) {
         const now = new Date();
+        const today = new Date(
+          now.getFullYear(),
+          now.getMonth(),
+          now.getDate()
+        );
         const filteredInformation = response.data.results.filter(
-          (info) => new Date(info.end_date) >= now
+          (info) => new Date(info.end_date) >= today
         );
         setInformation(filteredInformation);
         console.log("Filtered information:", filteredInformation);
