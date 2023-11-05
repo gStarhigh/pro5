@@ -17,6 +17,7 @@ import NavigationButtons from "../../components/NavigationButtons";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import InformationList from "../../components/Information";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -50,6 +51,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className={styles.Container}>
       <Col className=" text-center justify-content-center">
         <p>Information from users will go here in a list</p>
+
         <hr />
         <NavigationButtons />
         <hr />

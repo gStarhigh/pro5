@@ -16,6 +16,11 @@ const NavigationButtons = () => {
               Add Usage
             </button>
           </Link>
+          <Link to="/createinformation">
+            <button alt="Create information" className={btnStyles.Round}>
+              Create info
+            </button>
+          </Link>
           <Link to="/posts/create">
             <button alt="To create post" className={btnStyles.Round}>
               Create Post
