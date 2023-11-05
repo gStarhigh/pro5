@@ -11,7 +11,7 @@ class Information(models.Model):
     text = models.TextField()
 
     class Meta:
-        ordering = ['-end_date']
+        ordering = ['end_date']
 
     def __str__(self):
         return f'{self.id} {self.title}'
