@@ -6,19 +6,28 @@ function InformationList() {
 
   useEffect(() => {
     axiosReq.get("/information/").then((response) => {
-      const now = new Date();
-      const filteredInformation = response.data.filter(
-        (info) =>
-          new Date(info.start_date) <= now && new Date(info.end_date) >= now
-      );
-      setInformation(filteredInformation);
+      if (Array.isArray(response.data.results)) {
+        const now = new Date();
+        const filteredInformation = response.data.results.filter(
+          (info) => new Date(info.end_date) >= now
+        );
+        setInformation(filteredInformation);
+        console.log("Filtered information:", filteredInformation);
+      } else {
+        setInformation([]);
+        console.log("Didn't find anything");
+      }
     });
   }, []);
 
   return (
     <ul>
       {information.map((info) => (
-        <li key={info.id}>{info.text}</li>
+        <li key={info.id}>
+          {info.start_date}
+          {info.text}
+          {info.end_date}
+        </li>
       ))}
     </ul>
   );

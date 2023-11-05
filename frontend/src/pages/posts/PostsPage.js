@@ -51,7 +51,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className={styles.Container}>
       <Col className=" text-center justify-content-center">
         <p>Information from users will go here in a list</p>
-
+        <InformationList />
         <hr />
         <NavigationButtons />
         <hr />
