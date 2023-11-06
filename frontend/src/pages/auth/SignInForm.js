@@ -1,6 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
+// React imports
+import React, { useState, useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
 
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
@@ -9,12 +11,14 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
-import { Link, useHistory } from "react-router-dom";
-
 /* Styles */
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
+// My own imports
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import { AlertContext } from "../../contexts/AlertContext";
+import axios from "axios";
 
 function SignInForm() {
   const [signInData, setSignInData] = useState({
@@ -26,6 +30,7 @@ function SignInForm() {
   const { username, password } = signInData;
   const history = useHistory();
   const [errors, setErrors] = useState({});
+  const { setAlert } = useContext(AlertContext);
 
   /* Handles form submission */
   const handleSubmit = async (event) => {
@@ -34,6 +39,7 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
+      setAlert("You signed in successfully!");
 
       // Check if there is a 'from' property in the location.state
       if (history.location.state && history.location.state.from) {
