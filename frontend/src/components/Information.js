@@ -44,6 +44,7 @@ function InformationList() {
   const confirmDelete = async () => {
     try {
       await axiosRes.delete(`/information/${deleteId}/`);
+      setInformation(information.filter((info) => info.id !== deleteId));
       history.push("/");
     } catch (err) {
       console.log(err);
@@ -60,6 +61,9 @@ function InformationList() {
           <th>Message</th>
           <th>Start</th>
           <th>End</th>
+          <th>
+            <i class="fa-regular fa-pen-to-square"></i>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -69,14 +73,15 @@ function InformationList() {
             <td>{info.text}</td>
             <td>{info.start_date}</td>
             <td>{info.end_date}</td>
-            <td>{info.id}</td>
-            {info.is_owner && (
-              <MoreDropdown
-                id={info.id}
-                handleEdit={() => handleEdit(info.id)}
-                handleDelete={() => handleDelete(info.id)}
-              />
-            )}
+            <td>
+              {info.is_owner && (
+                <MoreDropdown
+                  id={info.id}
+                  handleEdit={() => handleEdit(info.id)}
+                  handleDelete={() => handleDelete(info.id)}
+                />
+              )}
+            </td>
           </tr>
         ))}
       </tbody>
