@@ -68,7 +68,7 @@ function App() {
           <PrivateRoute exact path="/profiles/:id" component={ProfilePage} />
           <PrivateRoute
             exact
-            path="/information/:id"
+            path="/information/:id/edit"
             component={EditInformation}
           />
           <Route
