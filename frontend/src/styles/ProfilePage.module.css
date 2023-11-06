@@ -5,18 +5,19 @@
     margin: 4px;
 }
 
-@media screen and (max-width: 991px) {
+@media only screen and (min-width:420px) and (max-width: 991px) {
     .ProfileImage {
         height: 250px;
         width: 250px;
     }
 }
 
-.Container {
-    width: 80%;
-    margin: auto;
+@media only screen and (min-width: 768px) {
+    .Container {
+        width: 80%;
+        margin: auto;
+    }
 }
-
 
 .Content {
     background-color: #ffffff;

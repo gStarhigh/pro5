@@ -138,7 +138,6 @@ function ProfilePage() {
   return (
     <Row className={styles.Container}>
       <Col className="py-2 p-0 p-lg-2">
-        <PopularProfiles limit={3} />
         <Container className={styles.Content}>
           {hasLoaded ? (
             <>
