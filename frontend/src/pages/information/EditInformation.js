@@ -55,7 +55,6 @@ function EditInformation() {
       setAlert("Information updated successfully!");
       history.push("/");
     } catch (err) {
-      setAlert("Oops, something went wrong!");
       console.log(err);
       console.log(err.response?.data);
     }
