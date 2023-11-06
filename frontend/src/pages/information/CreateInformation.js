@@ -53,6 +53,7 @@ function CreateInformation() {
       console.log("Sucessfully submitted");
     } catch (err) {
       if (err.response?.status !== 401) {
+        setAlert("Oops, something went wrong!");
         console.log(err);
         console.log(err.response?.data);
       }
