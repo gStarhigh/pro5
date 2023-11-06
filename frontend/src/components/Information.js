@@ -1,15 +1,26 @@
-import { Table } from "react-bootstrap";
-import { axiosReq, axiosRes } from "../api/axiosDefaults";
-import React, { useEffect, useState } from "react";
-import { MoreDropdown } from "./MoreDropdown";
+// React imports
+import React, { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { Modal, Button } from "react-bootstrap";
+
+// React Bootstrap imports
+import { Modal, Button, Table } from "react-bootstrap";
+
+// Styles
+
+// My own imports
+import { axiosReq, axiosRes } from "../api/axiosDefaults";
+import { MoreDropdown } from "./MoreDropdown";
+import { AlertContext } from "../contexts/AlertContext";
+
+// Toastify notificatons
 
 function InformationList() {
   const [information, setInformation] = useState([]);
   const history = useHistory();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
+
+  const { setAlert } = useContext(AlertContext);
 
   useEffect(() => {
     axiosReq.get("/information/").then((response) => {
@@ -45,6 +56,7 @@ function InformationList() {
     try {
       await axiosRes.delete(`/information/${deleteId}/`);
       setInformation(information.filter((info) => info.id !== deleteId));
+      setAlert("Information deleted successfully!");
       history.push("/");
     } catch (err) {
       console.log(err);
