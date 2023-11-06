@@ -45,8 +45,8 @@ function CreateInformation() {
     }
 
     try {
-      const { data } = await axiosReq.post("/information/", infoData);
-      history.push(`/information/${data.id}`);
+      await axiosReq.post("/information/", infoData);
+      history.push("/");
       console.log("Sucessfully submitted");
     } catch (err) {
       if (err.response?.status !== 401) {
