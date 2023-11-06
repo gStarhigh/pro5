@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { axiosReq } from "../../api/axiosDefaults";
+// React imports
+import React, { useState, useEffect, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
+
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+
+// Styles
 import btnStyles from "../../styles/Button.module.css";
+
+// My own imports
+import { axiosReq } from "../../api/axiosDefaults";
+import { AlertContext } from "../../contexts/AlertContext";
 
 function EditInformation() {
   const history = useHistory();
@@ -14,6 +22,8 @@ function EditInformation() {
     text: "",
   });
   const { start_date, end_date, text } = infoData;
+
+  const { setAlert } = useContext(AlertContext);
 
   useEffect(() => {
     const handleMount = async () => {
@@ -42,6 +52,7 @@ function EditInformation() {
 
     try {
       await axiosReq.put(`/information/${id}/`, infoData);
+      setAlert("Information updated successfully!");
       history.push("/");
     } catch (err) {
       console.log(err);
