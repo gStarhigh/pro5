@@ -16,13 +16,19 @@ function EditInformation() {
   const { start_date, end_date, text } = infoData;
 
   useEffect(() => {
-    const fetchInformation = async () => {
-      const response = await axiosReq.get(`/information/${id}/`);
-      setInfoData(response.data);
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/information/${id}/`);
+        const { start_date, end_date, text, is_owner } = data;
+
+        is_owner
+          ? setInfoData({ start_date, end_date, text })
+          : history.push("/");
+      } catch (err) {}
     };
 
-    fetchInformation();
-  }, [id]);
+    handleMount();
+  }, [history, id]);
 
   const handleChange = (event) => {
     setInfoData({
