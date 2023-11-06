@@ -1,9 +1,12 @@
 import { Table } from "react-bootstrap";
 import { axiosReq } from "../api/axiosDefaults";
 import React, { useEffect, useState } from "react";
+import { MoreDropdown } from "./MoreDropdown";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 function InformationList() {
   const [information, setInformation] = useState([]);
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
     axiosReq.get("/information/").then((response) => {
@@ -26,6 +29,10 @@ function InformationList() {
     });
   }, []);
 
+  const handleEdit = () => {};
+
+  const handleDelete = () => {};
+
   return (
     <Table striped bordered hover>
       <thead>
@@ -43,6 +50,14 @@ function InformationList() {
             <td>{info.text}</td>
             <td>{info.start_date}</td>
             <td>{info.end_date}</td>
+            <div className="d-flex align-items-center">
+              {info.is_owner && (
+                <MoreDropdown>
+                  handleEdit={handleEdit}
+                  handleDelete={handleDelete}
+                </MoreDropdown>
+              )}
+            </div>
           </tr>
         ))}
       </tbody>
