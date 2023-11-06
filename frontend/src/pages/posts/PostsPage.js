@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -20,11 +20,18 @@ import PopularProfiles from "../profiles/PopularProfiles";
 import InformationList from "../../components/Information";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import { AlertContext } from "../../contexts/AlertContext";
+
+import "react-toastify/dist/ReactToastify.css";
+
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const currentUser = useCurrentUser();
+  const { alert } = useContext(AlertContext);
 
   const [query, setQuery] = useState("");
 
@@ -49,11 +56,18 @@ function PostsPage({ message, filter = "" }) {
     };
   }, [filter, query, pathname]);
 
+  useEffect(() => {
+    if (alert && typeof alert === "string" && alert !== "null") {
+      toast(alert);
+    }
+  }, [alert]);
+
   return (
     <Row className={styles.Container}>
       <Col className=" text-center justify-content-center">
         {currentUser ? (
           <>
+            <ToastContainer position="top-center" />
             <h3>Information</h3>
             <InformationList />
             <hr />

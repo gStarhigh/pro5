@@ -20,6 +20,8 @@ import ContactForm from "./pages/contact/ContactForm";
 import CreateInformation from "./pages/information/CreateInformation";
 import EditInformation from "./pages/information/EditInformation";
 
+import { AlertProvider } from "./contexts/AlertContext";
+
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
@@ -28,75 +30,85 @@ function App() {
   const profile_id = currentUser?.profile_id || "";
 
   return (
-    <div className={styles.App}>
-      <NavBar />
-      <Container className={styles.main}>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <PostsPage message="No results found. Adjust the search keyword." />
-            )}
-          />
-          <Route
-            exact
-            path="/feed"
-            render={() => (
-              <PostsPage
-                message="No results found. Adjust the search keyword or follow a user."
-                filter={`owner__followed__owner__profile=${profile_id}&`}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/liked"
-            render={() => (
-              <PostsPage
-                message="No results found. Adjust the search keyword or like a post."
-                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
-              />
-            )}
-          />
-          <Route exact path="/signin" render={() => <SignInForm />} />
-          <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/contact" render={() => <ContactForm />} />
-          <PrivateRoute exact path="/posts/create" component={PostCreateForm} />
-          <Route exact path="/posts/:id" component={PostPage} />
-          <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
-          <PrivateRoute exact path="/profiles/:id" component={ProfilePage} />
-          <PrivateRoute
-            exact
-            path="/information/:id/edit"
-            component={EditInformation}
-          />
-          <Route
-            exact
-            path="/createinformation"
-            render={() => <CreateInformation />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit/username"
-            render={() => <UsernameForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit/password"
-            render={() => <UserPasswordForm />}
-          />
-          <Route
-            exact
-            path="/profiles/:id/edit"
-            render={() => <ProfileEditForm />}
-          />
-          <Route
-            render={() => <h1 className="text-center">Page Not Found</h1>}
-          />
-        </Switch>
-      </Container>
-    </div>
+    <AlertProvider>
+      <div className={styles.App}>
+        <NavBar />
+        <Container className={styles.main}>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <PostsPage message="No results found. Adjust the search keyword." />
+              )}
+            />
+            <Route
+              exact
+              path="/feed"
+              render={() => (
+                <PostsPage
+                  message="No results found. Adjust the search keyword or follow a user."
+                  filter={`owner__followed__owner__profile=${profile_id}&`}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/liked"
+              render={() => (
+                <PostsPage
+                  message="No results found. Adjust the search keyword or like a post."
+                  filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                />
+              )}
+            />
+            <Route exact path="/signin" render={() => <SignInForm />} />
+            <Route exact path="/signup" render={() => <SignUpForm />} />
+            <Route exact path="/contact" render={() => <ContactForm />} />
+            <PrivateRoute
+              exact
+              path="/posts/create"
+              component={PostCreateForm}
+            />
+            <Route exact path="/posts/:id" component={PostPage} />
+            <PrivateRoute
+              exact
+              path="/posts/:id/edit"
+              component={PostEditForm}
+            />
+            <PrivateRoute exact path="/profiles/:id" component={ProfilePage} />
+            <PrivateRoute
+              exact
+              path="/information/:id/edit"
+              component={EditInformation}
+            />
+            <Route
+              exact
+              path="/createinformation"
+              render={() => <CreateInformation />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit/username"
+              render={() => <UsernameForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit/password"
+              render={() => <UserPasswordForm />}
+            />
+            <Route
+              exact
+              path="/profiles/:id/edit"
+              render={() => <ProfileEditForm />}
+            />
+            <Route
+              render={() => <h1 className="text-center">Page Not Found</h1>}
+            />
+          </Switch>
+        </Container>
+      </div>
+    </AlertProvider>
   );
 }
 

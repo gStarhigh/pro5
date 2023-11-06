@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect } from "react";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { AlertContext } from "../../contexts/AlertContext";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -13,6 +14,7 @@ import btnStyles from "../../styles/Button.module.css";
 function CreateInformation() {
   const currentUser = useCurrentUser();
   const history = useHistory();
+  const { setAlert } = useContext(AlertContext); // Use the useContext hook to access the setAlert function
 
   const [infoData, setInfoData] = useState({
     start_date: "",
@@ -46,6 +48,7 @@ function CreateInformation() {
 
     try {
       await axiosReq.post("/information/", infoData);
+      setAlert("Information submitted successfully!"); // Set the alert message
       history.push("/");
       console.log("Sucessfully submitted");
     } catch (err) {
