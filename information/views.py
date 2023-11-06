@@ -10,7 +10,7 @@ class InformationViewSet(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get_queryset(self):
-        return self.request.user.information_set.all()
+        return Information.objects.all()
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
