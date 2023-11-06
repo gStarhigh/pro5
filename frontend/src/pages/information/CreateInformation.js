@@ -31,7 +31,7 @@ function CreateInformation() {
   useEffect(() => {
     setInfoData((prevState) => ({
       ...prevState,
-      user: currentUser?.id,
+      owner: currentUser?.id,
     }));
   }, [currentUser]);
 
