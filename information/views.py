@@ -14,3 +14,14 @@ class InformationViewSet(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+
+class InformationDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Edit or delete an information object if you own it.
+    """
+    serializer_class = InformationSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+
+    def get_queryset(self):
+        return Information.objects.all()
