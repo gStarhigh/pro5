@@ -3,14 +3,14 @@ from .models import Information
 
 
 class InformationSerializer(serializers.ModelSerializer):
-    user = serializers.ReadOnlyField(source='user.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
-        return request.user == obj.user
+        return request.user == obj.owner
 
     class Meta:
         model = Information
-        fields = ['user', 'start_date', 'end_date',
-                  'created_on', 'updated_on', 'text', 'is_owner',]
+        fields = ['owner', 'start_date', 'end_date',
+                  'created_on', 'updated_on', 'text', 'is_owner', 'id',]

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Information(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
     updated_on = models.DateField(auto_now=True)

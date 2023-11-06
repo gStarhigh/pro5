@@ -1,12 +1,15 @@
 import { Table } from "react-bootstrap";
-import { axiosReq } from "../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import React, { useEffect, useState } from "react";
 import { MoreDropdown } from "./MoreDropdown";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useHistory } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
 
 function InformationList() {
   const [information, setInformation] = useState([]);
-  const currentUser = useCurrentUser();
+  const history = useHistory();
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
 
   useEffect(() => {
     axiosReq.get("/information/").then((response) => {
@@ -29,9 +32,25 @@ function InformationList() {
     });
   }, []);
 
-  const handleEdit = () => {};
+  const handleEdit = (id) => {
+    history.push(`/information/${id}/edit`);
+  };
 
-  const handleDelete = () => {};
+  const handleDelete = async (id) => {
+    setShowConfirmation(true);
+    setDeleteId(id);
+  };
+
+  const confirmDelete = async () => {
+    try {
+      await axiosRes.delete(`/information/${deleteId}/`);
+      history.push("/");
+    } catch (err) {
+      console.log(err);
+      console.log(deleteId);
+    }
+    setShowConfirmation(false);
+  };
 
   return (
     <Table striped bordered hover>
@@ -46,21 +65,38 @@ function InformationList() {
       <tbody>
         {information.map((info) => (
           <tr key={info.id}>
-            <td>{info.user ? info.user : "Unknown User"}</td>
+            <td>{info.owner ? info.owner : "Unknown User"}</td>
             <td>{info.text}</td>
             <td>{info.start_date}</td>
             <td>{info.end_date}</td>
-            <div className="d-flex align-items-center">
-              {info.is_owner && (
-                <MoreDropdown>
-                  handleEdit={handleEdit}
-                  handleDelete={handleDelete}
-                </MoreDropdown>
-              )}
-            </div>
+            <td>{info.id}</td>
+            {info.is_owner && (
+              <MoreDropdown
+                id={info.id}
+                handleEdit={() => handleEdit(info.id)}
+                handleDelete={() => handleDelete(info.id)}
+              />
+            )}
           </tr>
         ))}
       </tbody>
+      <Modal show={showConfirmation} onHide={() => setShowConfirmation(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Deletion</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Are you sure you want to delete this post?</Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="secondary"
+            onClick={() => setShowConfirmation(false)}
+          >
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={confirmDelete}>
+            Delete
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Table>
   );
 }

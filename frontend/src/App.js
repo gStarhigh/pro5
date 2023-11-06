@@ -18,6 +18,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ContactForm from "./pages/contact/ContactForm";
 import CreateInformation from "./pages/information/CreateInformation";
+import EditInformation from "./pages/information/EditInformation";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -65,6 +66,11 @@ function App() {
           <Route exact path="/posts/:id" component={PostPage} />
           <PrivateRoute exact path="/posts/:id/edit" component={PostEditForm} />
           <PrivateRoute exact path="/profiles/:id" component={ProfilePage} />
+          <PrivateRoute
+            exact
+            path="/information/:id"
+            component={EditInformation}
+          />
           <Route
             exact
             path="/createinformation"
