@@ -1,29 +1,34 @@
+// React imports
 import React, { useEffect, useState, useContext } from "react";
+import { useLocation } from "react-router-dom";
 
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import InfiniteScroll from "react-infinite-scroll-component";
 
+// Styles
+import styles from "../../styles/PostsPage.module.css";
+
+// My own imports
+import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import Loader from "../../components/Spinner";
-
-import styles from "../../styles/PostsPage.module.css";
-import { useLocation } from "react-router-dom";
-import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/no-results.png";
 import NavigationButtons from "../../components/NavigationButtons";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import InformationList from "../../components/Information";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+// Toastify notificatons
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import { AlertContext } from "../../contexts/AlertContext";
 
+// Toastify style
 import "react-toastify/dist/ReactToastify.css";
 
 function PostsPage({ message, filter = "" }) {
