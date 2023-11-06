@@ -1,7 +1,9 @@
+// React imports
 import React from "react";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import axios from "axios";
+
+// React Bootstrap imports
 import {
   Form,
   Button,
@@ -12,9 +14,12 @@ import {
   Alert,
 } from "react-bootstrap";
 
-/* Styles */
+// Styles
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
+// My own imports
+import axios from "axios";
 
 /* Sets username and passwords to an empty string */
 const SignUpForm = () => {
