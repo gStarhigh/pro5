@@ -1,5 +1,8 @@
+// React imports
 import React, { useRef, useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -8,12 +11,13 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
-import Upload from "../../assets/upload.png";
-
+// Styles
 import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
+
+// My own imports
+import Upload from "../../assets/upload.png";
 import Loader from "../../components/Spinner";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
