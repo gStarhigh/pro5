@@ -1,4 +1,7 @@
+// React import
 import React from "react";
+
+// Styles
 import styles from "../styles/Avatar.module.css";
 
 const Avatar = ({ src, height = 45, text }) => {
