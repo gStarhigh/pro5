@@ -33,6 +33,10 @@ function CreateInformation() {
     });
   };
 
+  const handleCancel = () => {
+    history.goBack();
+  };
+
   useEffect(() => {
     setInfoData((prevState) => ({
       ...prevState,
@@ -96,9 +100,7 @@ function CreateInformation() {
       </Form.Group>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => {
-          history.goBack();
-        }}
+        onClick={handleCancel}
       >
         Cancel
       </Button>
