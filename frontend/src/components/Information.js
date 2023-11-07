@@ -3,9 +3,10 @@ import React, { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 // React Bootstrap imports
-import { Modal, Button, Table } from "react-bootstrap";
+import { Modal, Button, Table, Container } from "react-bootstrap";
 
 // Styles
+import styles from "../styles/Information.module.css";
 
 // My own imports
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
@@ -64,57 +65,71 @@ function InformationList() {
     }
     setShowConfirmation(false);
   };
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    return `${day}/${month}`;
+  }
 
   return (
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Creator</th>
-          <th>Message</th>
-          <th>Start</th>
-          <th>End</th>
-          <th>
-            <i class="fa-regular fa-pen-to-square"></i>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {information.map((info) => (
-          <tr key={info.id}>
-            <td>{info.owner ? info.owner : "Unknown User"}</td>
-            <td>{info.text}</td>
-            <td>{info.start_date}</td>
-            <td>{info.end_date}</td>
-            <td>
-              {info.is_owner && (
-                <MoreDropdown
-                  id={info.id}
-                  handleEdit={() => handleEdit(info.id)}
-                  handleDelete={() => handleDelete(info.id)}
-                />
-              )}
-            </td>
+    <Container className={styles.Information}>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>Creator</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </th>
           </tr>
-        ))}
-      </tbody>
-      <Modal show={showConfirmation} onHide={() => setShowConfirmation(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirm Deletion</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Are you sure you want to delete this post?</Modal.Body>
-        <Modal.Footer>
-          <Button
-            variant="secondary"
-            onClick={() => setShowConfirmation(false)}
-          >
-            Cancel
-          </Button>
-          <Button variant="danger" onClick={confirmDelete}>
-            Delete
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Table>
+        </thead>
+        <tbody>
+          {information.map((info) => (
+            <tr key={info.id}>
+              <td>
+                <span>{info.owner ? info.owner : "Unknown User"}</span>
+              </td>
+
+              <td>{info.text}</td>
+              <td>
+                {formatDate(info.start_date)} - {formatDate(info.end_date)}
+              </td>
+              <td>
+                {info.is_owner && (
+                  <MoreDropdown
+                    id={info.id}
+                    handleEdit={() => handleEdit(info.id)}
+                    handleDelete={() => handleDelete(info.id)}
+                  />
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        <Modal
+          show={showConfirmation}
+          onHide={() => setShowConfirmation(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Confirm Deletion</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Are you sure you want to delete this post?</Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={() => setShowConfirmation(false)}
+            >
+              Cancel
+            </Button>
+            <Button variant="danger" onClick={confirmDelete}>
+              Delete
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </Table>
+    </Container>
   );
 }
 
