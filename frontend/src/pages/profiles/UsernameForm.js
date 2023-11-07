@@ -1,5 +1,8 @@
+// React imports
 import React, { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 
+// React Bootstrap imports
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -7,15 +10,16 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-import { useHistory, useParams } from "react-router-dom";
+// Styles
+import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
+
+// My own imports
 import { axiosRes } from "../../api/axiosDefaults";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
-
-import btnStyles from "../../styles/Button.module.css";
-import appStyles from "../../App.module.css";
 
 const UsernameForm = () => {
   const [username, setUsername] = useState("");
