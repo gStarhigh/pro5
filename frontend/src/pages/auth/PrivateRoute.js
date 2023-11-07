@@ -1,5 +1,8 @@
+// React imports
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
+
+// My own imports
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PrivateRoute({ component: Component, ...rest }) {
