@@ -1,13 +1,18 @@
+// React imports
 import React from "react";
+
+// React Bootstrap imports
 import { Container } from "react-bootstrap";
 
+// Styles
+import styles from "../../styles/PostsPage.module.css";
+import rowStyles from "../../styles/NavigationButtons.module.css";
+
+// My own imports
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Loader from "../../components/Spinner";
 import Profile from "./Profile";
 import { useProfileData } from "../../contexts/ProfileDataContext";
-
-import styles from "../../styles/PostsPage.module.css";
-import rowStyles from "../../styles/NavigationButtons.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 const PopularProfiles = () => {
   const { popularProfiles } = useProfileData();
