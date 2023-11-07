@@ -1,5 +1,8 @@
+// React imports
 import React, { useEffect, useRef, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
 
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -8,10 +11,11 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
+// Styles
 import styles from "../../styles/PostCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory, useParams } from "react-router-dom";
+// My own imports
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostEditForm() {
