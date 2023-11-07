@@ -1,12 +1,19 @@
+// React imports
 import React, { useState } from "react";
-import styles from "../../styles/Post.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
+
+// React Bootstrap imports
+import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
+
+// Styles
+import styles from "../../styles/Post.module.css";
+
+// My own imports
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
-import { Modal, Button } from "react-bootstrap";
 
 const Post = (props) => {
   const {
