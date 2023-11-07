@@ -1,8 +1,15 @@
+// React imports
 import React from "react";
 import { Link } from "react-router-dom";
+
+// React Boostrap import
+import { Container } from "react-bootstrap";
+
+// Styles
 import btnStyles from "../styles/Button.module.css";
 import styles from "../styles/NavigationButtons.module.css";
-import { Container } from "react-bootstrap";
+
+// My own import
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const NavigationButtons = () => {
