@@ -1,14 +1,23 @@
+// React import
 import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import logo from "../assets/favicon-horse.png";
-import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
+
+// React Bootstrap imports
+import { Container, Navbar, Nav } from "react-bootstrap";
+
+// Axios import
+import axios from "axios";
+
+// Styles
+import styles from "../styles/NavBar.module.css";
+
+// My own imports
+import logo from "../assets/favicon-horse.png";
 import {
   useCurrentUser,
   useSetCurrentUser,
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
-import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 
 const NavBar = () => {
