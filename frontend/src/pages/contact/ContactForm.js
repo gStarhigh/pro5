@@ -1,6 +1,11 @@
+// React imports
 import React, { useState } from "react";
+
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
+
+// Axios import
 import axios from "axios";
 
 function ContactForm() {
