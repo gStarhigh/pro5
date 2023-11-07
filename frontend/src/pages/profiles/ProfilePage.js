@@ -1,13 +1,20 @@
+// React imports
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import InfiniteScroll from "react-infinite-scroll-component";
+
+// React Bootstrap imports
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { Button, Image } from "react-bootstrap";
 
-import { axiosReq } from "../../api/axiosDefaults";
+// Styles
+import styles from "../../styles/ProfilePage.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
+// My own imports
+import { axiosReq } from "../../api/axiosDefaults";
 import Loader from "../../components/Spinner";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
@@ -18,9 +25,6 @@ import {
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-
-import styles from "../../styles/ProfilePage.module.css";
-import btnStyles from "../../styles/Button.module.css";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
