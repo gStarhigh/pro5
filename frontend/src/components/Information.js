@@ -12,12 +12,14 @@ import styles from "../styles/Information.module.css";
 import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { MoreDropdown } from "./MoreDropdown";
 import { AlertContext } from "../contexts/AlertContext";
+import Loader from "../components/Spinner";
 
 function InformationList() {
   const [information, setInformation] = useState([]);
   const history = useHistory();
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const { setAlert } = useContext(AlertContext);
 
@@ -30,6 +32,7 @@ function InformationList() {
           now.getMonth(),
           now.getDate()
         );
+        setHasLoaded(true);
         const filteredInformation = response.data.results.filter(
           (info) => new Date(info.end_date) >= today
         );
@@ -37,6 +40,7 @@ function InformationList() {
         console.log("Filtered information:", filteredInformation);
       } else {
         setInformation([]);
+        setHasLoaded(false);
         console.log("Didn't find anything");
       }
     });
@@ -72,61 +76,69 @@ function InformationList() {
 
   return (
     <Container className={styles.Information}>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Creator</th>
-            <th>Message</th>
-            <th>Date</th>
-            <th>
-              <i class="fa-regular fa-pen-to-square"></i>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {information.map((info) => (
-            <tr key={info.id}>
-              <td>
-                <span>{info.owner ? info.owner : "Unknown User"}</span>
-              </td>
-
-              <td>{info.text}</td>
-              <td>
-                {formatDate(info.start_date)} - {formatDate(info.end_date)}
-              </td>
-              <td>
-                {info.is_owner && (
-                  <MoreDropdown
-                    id={info.id}
-                    handleEdit={() => handleEdit(info.id)}
-                    handleDelete={() => handleDelete(info.id)}
-                  />
-                )}
-              </td>
+      {hasLoaded ? (
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Creator</th>
+              <th>Message</th>
+              <th>Date</th>
+              <th>
+                <i class="fa-regular fa-pen-to-square"></i>
+              </th>
             </tr>
-          ))}
-        </tbody>
-        <Modal
-          show={showConfirmation}
-          onHide={() => setShowConfirmation(false)}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>Confirm Deletion</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Are you sure you want to delete this post?</Modal.Body>
-          <Modal.Footer>
-            <Button
-              variant="secondary"
-              onClick={() => setShowConfirmation(false)}
-            >
-              Cancel
-            </Button>
-            <Button variant="danger" onClick={confirmDelete}>
-              Delete
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </Table>
+          </thead>
+          <tbody>
+            {information.map((info) => (
+              <tr key={info.id}>
+                <td>
+                  <span>{info.owner ? info.owner : "Unknown User"}</span>
+                </td>
+
+                <td>{info.text}</td>
+                <td>
+                  {formatDate(info.start_date)} - {formatDate(info.end_date)}
+                </td>
+                <td>
+                  {info.is_owner && (
+                    <MoreDropdown
+                      id={info.id}
+                      handleEdit={() => handleEdit(info.id)}
+                      handleDelete={() => handleDelete(info.id)}
+                    />
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+
+          <Modal
+            show={showConfirmation}
+            onHide={() => setShowConfirmation(false)}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>Confirm Deletion</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Are you sure you want to delete this post?</Modal.Body>
+            <Modal.Footer>
+              <Button
+                variant="secondary"
+                onClick={() => setShowConfirmation(false)}
+              >
+                Cancel
+              </Button>
+              <Button variant="danger" onClick={confirmDelete}>
+                Delete
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </Table>
+      ) : (
+        <Container className={styles.Content}>
+          <Loader spinner />
+          <p>Loading...</p>
+        </Container>
+      )}
     </Container>
   );
 }
