@@ -1,12 +1,16 @@
+// React imports
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+// Styles
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
+// My own imports
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
