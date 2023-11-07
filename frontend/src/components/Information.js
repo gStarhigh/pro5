@@ -13,8 +13,6 @@ import { axiosReq, axiosRes } from "../api/axiosDefaults";
 import { MoreDropdown } from "./MoreDropdown";
 import { AlertContext } from "../contexts/AlertContext";
 
-// Toastify notificatons
-
 function InformationList() {
   const [information, setInformation] = useState([]);
   const history = useHistory();

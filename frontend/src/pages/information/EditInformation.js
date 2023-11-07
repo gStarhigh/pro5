@@ -47,6 +47,10 @@ function EditInformation() {
     });
   };
 
+  const handleCancel = () => {
+    history.goBack();
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -95,7 +99,7 @@ function EditInformation() {
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => history.goBack()}
+        onClick={handleCancel}
       >
         Cancel
       </Button>
