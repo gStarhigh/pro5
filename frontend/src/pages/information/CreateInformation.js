@@ -1,15 +1,18 @@
-import React, { useState, useContext } from "react";
-import { axiosReq } from "../../api/axiosDefaults";
+// React imports
+import React, { useState, useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useEffect } from "react";
 
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { AlertContext } from "../../contexts/AlertContext";
-
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
+// Styles
 import btnStyles from "../../styles/Button.module.css";
+
+// My own imports
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { AlertContext } from "../../contexts/AlertContext";
+import { axiosReq } from "../../api/axiosDefaults";
 
 function CreateInformation() {
   const currentUser = useCurrentUser();
