@@ -55,7 +55,7 @@ const NavBar = () => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i class="fa-regular fa-envelope"></i>Contact Us
+        <i class="fa-regular fa-envelope"></i>Contact
       </NavLink>
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
