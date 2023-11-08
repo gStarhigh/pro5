@@ -1,5 +1,5 @@
 // React imports
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 // React Bootstrap imports
@@ -14,6 +14,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import { AlertContext } from "../../contexts/AlertContext";
 
 const Post = (props) => {
   const {
@@ -37,6 +38,7 @@ const Post = (props) => {
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const { setAlert } = useContext(AlertContext);
 
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -49,6 +51,7 @@ const Post = (props) => {
   const confirmDelete = async () => {
     try {
       await axiosRes.delete(`/posts/${id}/`);
+      setAlert("Your post was deleted!");
       history.goBack();
     } catch (err) {
       console.log(err);

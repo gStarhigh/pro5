@@ -1,5 +1,5 @@
 // React imports
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 // React Bootstrap imports
@@ -17,10 +17,11 @@ import btnStyles from "../../styles/Button.module.css";
 
 // My own imports
 import { axiosReq } from "../../api/axiosDefaults";
+import { AlertContext } from "../../contexts/AlertContext";
 
 function PostEditForm() {
   const [errors, setErrors] = useState({});
-
+  const { setAlert } = useContext(AlertContext);
   const [postData, setPostData] = useState({
     title: "",
     description: "",
@@ -79,6 +80,7 @@ function PostEditForm() {
 
     try {
       await axiosReq.put(`/posts/${id}/`, formData);
+      setAlert("Your post was updated!");
       history.push(`/posts/${id}`);
     } catch (err) {
       if (err.response?.status !== 401) {
