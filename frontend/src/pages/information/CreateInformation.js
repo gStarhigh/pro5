@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
@@ -17,8 +18,8 @@ import { axiosReq } from "../../api/axiosDefaults";
 function CreateInformation() {
   const currentUser = useCurrentUser();
   const history = useHistory();
-  const { setAlert } = useContext(AlertContext); // Use the useContext hook to access the setAlert function
-
+  const { setAlert } = useContext(AlertContext);
+  const [errors, setErrors] = useState({});
   const [infoData, setInfoData] = useState({
     start_date: "",
     end_date: "",
@@ -62,6 +63,7 @@ function CreateInformation() {
       if (err.response?.status !== 401) {
         console.log(err);
         console.log(err.response?.data);
+        setErrors(err.response?.data);
       }
     }
   };
@@ -77,6 +79,11 @@ function CreateInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.start_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group controlId="end_date">
         <Form.Label>End Date</Form.Label>
@@ -87,6 +94,11 @@ function CreateInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.end_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group controlId="text">
         <Form.Label>Message</Form.Label>
@@ -98,6 +110,12 @@ function CreateInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.text?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={handleCancel}
