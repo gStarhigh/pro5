@@ -1,5 +1,5 @@
 // React imports
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // React Bootstrap imports
@@ -20,10 +20,12 @@ import Upload from "../../assets/upload.png";
 import Loader from "../../components/Spinner";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { AlertContext } from "../../contexts/AlertContext";
 
 function PostCreateForm() {
   const currentUser = useCurrentUser();
   const [errors, setErrors] = useState({});
+  const { setAlert } = useContext(AlertContext);
 
   const [postData, setPostData] = useState({
     title: "",
@@ -69,6 +71,7 @@ function PostCreateForm() {
     try {
       const { data } = await axiosReq.post("/posts/", formData);
       history.push(`/posts/${data.id}`);
+      setAlert("Your post was created!");
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
