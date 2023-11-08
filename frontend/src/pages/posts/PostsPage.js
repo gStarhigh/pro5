@@ -36,8 +36,7 @@ function PostsPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const currentUser = useCurrentUser();
-  const { alert } = useContext(AlertContext);
-
+  const { alert, setAlert } = useContext(AlertContext);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -64,8 +63,9 @@ function PostsPage({ message, filter = "" }) {
   useEffect(() => {
     if (alert && typeof alert === "string" && alert !== "null") {
       toast(alert);
+      setAlert(null);
     }
-  }, [alert]);
+  }, [alert, setAlert]);
 
   return (
     <Row className={styles.Container}>
