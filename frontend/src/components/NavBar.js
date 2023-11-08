@@ -37,6 +37,7 @@ const NavBar = () => {
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");
+      setAlert("You signed out successfully!");
       setCurrentUser(null);
     } catch (err) {
       console.log(err);
@@ -46,6 +47,16 @@ const NavBar = () => {
   /* If a user is logged in */
   const loggedInIcons = (
     <>
+      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+        <i className="fas fa-sign-out-alt"></i>Sign out
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i class="fa-regular fa-envelope"></i>Contact Us
+      </NavLink>
       <NavLink
         to={`/profiles/${currentUser?.profile_id}`}
         className={styles.NavLink}
@@ -55,9 +66,6 @@ const NavBar = () => {
           text={currentUser?.username}
           height={40}
         />
-      </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
-        <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
     </>
   );
@@ -119,13 +127,6 @@ const NavBar = () => {
               <i className="fas fa-home"></i>Home
             </NavLink>
             {currentUser ? loggedInIcons : loggedOutIcons}
-            <NavLink
-              to="/contact"
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-            >
-              <i class="fa-regular fa-envelope"></i>Contact Us
-            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
