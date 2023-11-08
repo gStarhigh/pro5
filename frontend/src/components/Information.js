@@ -83,11 +83,14 @@ function InformationList() {
               <th>Creator</th>
               <th>Message</th>
               <th>Date</th>
-              <th>
-                <i class="fa-regular fa-pen-to-square"></i>
-              </th>
+              {information.some((info) => info.is_owner) && (
+                <th>
+                  <i className="fa-regular fa-pen-to-square"></i>
+                </th>
+              )}
             </tr>
           </thead>
+
           <tbody>
             {information.map((info) => (
               <tr key={info.id}>
@@ -99,15 +102,15 @@ function InformationList() {
                 <td>
                   {formatDate(info.start_date)} - {formatDate(info.end_date)}
                 </td>
-                <td>
-                  {info.is_owner && (
+                {info.is_owner && (
+                  <td>
                     <MoreDropdown
                       id={info.id}
                       handleEdit={() => handleEdit(info.id)}
                       handleDelete={() => handleDelete(info.id)}
                     />
-                  )}
-                </td>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
