@@ -8,15 +8,16 @@ import { Button } from "react-bootstrap";
 // Axios import
 import axios from "axios";
 
+// Styles
+import btnStyles from "../../styles/Button.module.css";
+
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = { name, email, subject, message };
+    const data = { subject, message };
     try {
       await axios.post("/contact/", data);
       console.log("Form data successfully sent", data);
@@ -27,30 +28,6 @@ function ContactForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group>
-        <Form.Label htmlFor="name">Name</Form.Label>
-        <Form.Control
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Your name"
-          maxLength={100}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label htmlFor="name">Email address</Form.Label>
-        <Form.Control
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your email"
-          maxLength={100}
-        />
-      </Form.Group>
       <Form.Group>
         <Form.Label htmlFor="name">Subject</Form.Label>
         <Form.Control
@@ -77,7 +54,9 @@ function ContactForm() {
           placeholder="Write your message here"
         />
       </Form.Group>
-      <Button type="submit">Send email</Button>
+      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+        Submit
+      </Button>
     </Form>
   );
 }
