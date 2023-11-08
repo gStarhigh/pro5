@@ -1,5 +1,5 @@
 // React imports
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 // React Bootstrap imports
@@ -22,13 +22,16 @@ import {
   useSetCurrentUser,
 } from "../../contexts/CurrentUserContext";
 
+// Toastify notificatons
+import { AlertContext } from "../../contexts/AlertContext";
+
 const ProfileEditForm = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { id } = useParams();
   const history = useHistory();
   const imageFile = useRef();
-
+  const { setAlert } = useContext(AlertContext);
   const [profileData, setProfileData] = useState({
     name: "",
     content: "",
@@ -80,6 +83,7 @@ const ProfileEditForm = () => {
         ...currentUser,
         profile_image: data.image,
       }));
+      setAlert("Profile updated successfully!");
       history.goBack();
     } catch (err) {
       console.log(err);

@@ -1,5 +1,5 @@
 // React import
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 // React Bootstrap imports
@@ -19,11 +19,20 @@ import {
 } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
+import { AlertContext } from "../contexts/AlertContext";
+
+// Toastify Imports
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+
+// Toastify style
+import "react-toastify/dist/ReactToastify.css";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
+  const { alert, setAlert } = useContext(AlertContext);
 
   const handleSignOut = async () => {
     try {
@@ -73,6 +82,13 @@ const NavBar = () => {
     </>
   );
 
+  useEffect(() => {
+    if (alert && typeof alert === "string" && alert !== "null") {
+      toast(alert);
+      setAlert(null);
+    }
+  }, [alert, setAlert]);
+
   return (
     <Navbar
       expanded={expanded}
@@ -81,6 +97,7 @@ const NavBar = () => {
       className={styles.NavBar}
     >
       <Container>
+        <ToastContainer position="top-center" />
         <NavLink to="/">
           <Navbar.Brand>
             <img className={styles.img} src={logo} alt="logo" height="45" />
