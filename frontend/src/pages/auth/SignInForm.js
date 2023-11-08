@@ -39,7 +39,9 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
-      setAlert("You signed in successfully!");
+      setTimeout(() => {
+        setAlert("You signed in successfully!");
+      }, 1000);
 
       // Check if there is a 'from' property in the location.state
       if (history.location.state && history.location.state.from) {
