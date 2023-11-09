@@ -38,6 +38,7 @@ function ContactList() {
             <tr>
               <th>Subject</th>
               <th>Message</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +46,7 @@ function ContactList() {
               <tr key={contact.id}>
                 <td>{contact.subject}</td>
                 <td>{contact.message}</td>
+                <td>{contact.ticket_status}</td>
               </tr>
             ))}
           </tbody>

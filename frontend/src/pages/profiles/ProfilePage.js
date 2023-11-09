@@ -40,6 +40,11 @@ function ProfilePage() {
   const [profile] = pageProfile.results;
   const is_owner = currentUser?.username === profile?.owner;
 
+  const [showContactList, setShowContactList] = useState(false);
+  const toggleContactList = () => {
+    setShowContactList(!showContactList);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -113,7 +118,10 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
-      <ContactList />
+      <div className="text-center">
+        <Button onClick={toggleContactList}>Tickets</Button>
+        {showContactList && <ContactList />}
+      </div>
       <hr />
       <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
