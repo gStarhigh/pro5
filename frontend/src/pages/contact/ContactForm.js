@@ -1,29 +1,73 @@
 // React imports
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import { Button } from "react-bootstrap";
-
-// Axios import
-import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
 import styles from "../../styles/ContactForm.module.css";
 
+// My own imports
+import { axiosReq } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { AlertContext } from "../../contexts/AlertContext";
+
 function ContactForm() {
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const currentUser = useCurrentUser();
+  const history = useHistory();
+  const { setAlert } = useContext(AlertContext);
+  const [errors, setErrors] = useState({});
+
+  const [contactData, setContactData] = useState({
+    subject: "",
+    message: "",
+  });
+  const { subject, message } = contactData;
+
+  // Handles changes to the form
+  const handleChange = (event) => {
+    setContactData({
+      ...contactData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  // Handles cancel from the user
+  const handleCancel = () => {
+    history.goBack();
+  };
+
+  useEffect(() => {
+    setContactData((prevState) => ({
+      ...prevState,
+      owner: currentUser?.id,
+    }));
+  }, [currentUser]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const data = { subject, message };
+    console.log(contactData);
+
+    if (!currentUser) {
+      history.push("/signin");
+      return;
+    }
+
     try {
-      await axios.post("/contact/", data);
-      console.log("Form data successfully sent", data);
-    } catch (error) {
-      console.error("Error sending form data", error);
+      await axiosReq.post("/contact/", contactData);
+      setAlert("Message sent successfully!");
+      history.push("/");
+      console.log("Form data successfully sent", contactData);
+    } catch (err) {
+      if (err.response?.status !== 401) {
+        console.log(err);
+        console.log(err.response?.data);
+        setErrors(err.response?.data);
+      }
     }
   };
 
@@ -36,11 +80,16 @@ function ContactForm() {
           name="subject"
           id="subject"
           value={subject}
-          onChange={(e) => setSubject(e.target.value)}
+          onChange={handleChange}
           placeholder="Subject"
           maxLength={150}
         />
       </Form.Group>
+      {errors?.subject?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group>
         <Form.Label htmlFor="message">Message</Form.Label>
@@ -50,11 +99,22 @@ function ContactForm() {
           name="message"
           id="message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={handleChange}
           rows={5}
           placeholder="Write your message here"
         />
       </Form.Group>
+      {errors?.message?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Button
+        className={`${btnStyles.Button} ${btnStyles.Grey} ${btnStyles.Wide}`}
+        onClick={handleCancel}
+      >
+        Cancel
+      </Button>
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Wide}`}
         type="submit"
