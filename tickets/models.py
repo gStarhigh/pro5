@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 TICKET_STATUS = ((0, "Awaiting review"), (1, "Reviewed"), (2, "Closed"))
 
 
-class Contact(models.Model):
+class Tickets(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     updated_on = models.DateField(auto_now=True)
     created_on = models.DateField(auto_now_add=True)
