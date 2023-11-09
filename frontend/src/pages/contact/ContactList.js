@@ -3,11 +3,10 @@ import React, { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 // React Bootstrap imports
-import { Modal, Button, Table, Container } from "react-bootstrap";
+import { Table, Container } from "react-bootstrap";
 
 // My own imports
-import { axiosReq, axiosRes } from "../../api/axiosDefaults";
-import { MoreDropdown } from "../../components/MoreDropdown";
+import { axiosReq } from "../../api/axiosDefaults";
 import { AlertContext } from "../../contexts/AlertContext";
 import Loader from "../../components/Spinner";
 
