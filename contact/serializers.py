@@ -11,6 +11,6 @@ class ContactSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
-        model = Information
+        model = Contact
         fields = ['owner', 'created_on', 'updated_on', 'subject',
                   'message', 'ticket_status', 'is_owner', 'id',]
