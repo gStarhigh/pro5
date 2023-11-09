@@ -1,0 +1,24 @@
+.Width {
+    width: 30vw;
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .Width {
+        width: 50vw;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .Width {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .Width {
+        width: 80vw;
+    }
+}

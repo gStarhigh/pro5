@@ -10,6 +10,7 @@ import axios from "axios";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ContactForm.module.css";
 
 function ContactForm() {
   const [subject, setSubject] = useState("");
@@ -27,7 +28,7 @@ function ContactForm() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={styles.Width}>
       <Form.Group>
         <Form.Label htmlFor="name">Subject</Form.Label>
         <Form.Control
@@ -54,7 +55,10 @@ function ContactForm() {
           placeholder="Write your message here"
         />
       </Form.Group>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      <Button
+        className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Wide}`}
+        type="submit"
+      >
         Submit
       </Button>
     </Form>
