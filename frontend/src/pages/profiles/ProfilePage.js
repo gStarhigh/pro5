@@ -25,6 +25,7 @@ import {
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import ContactList from "../contact/ContactList";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -112,6 +113,7 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
+      <ContactList />
       <hr />
       <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
