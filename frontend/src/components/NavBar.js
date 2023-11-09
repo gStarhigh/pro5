@@ -1,9 +1,9 @@
 // React import
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // React Bootstrap imports
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav, Modal, Button } from "react-bootstrap";
 
 // Axios import
 import axios from "axios";
@@ -33,6 +33,11 @@ const NavBar = () => {
   const setCurrentUser = useSetCurrentUser();
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
   const { alert, setAlert } = useContext(AlertContext);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const confirmSignOut = async () => {
+    setShowConfirmation(true);
+  };
 
   const handleSignOut = async () => {
     try {
@@ -42,12 +47,13 @@ const NavBar = () => {
     } catch (err) {
       console.log(err);
     }
+    setShowConfirmation(false);
   };
 
   /* If a user is logged in */
   const loggedInIcons = (
     <>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+      <NavLink className={styles.NavLink} to="/" onClick={confirmSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
       <NavLink
@@ -129,6 +135,26 @@ const NavBar = () => {
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
+        <Modal
+          show={showConfirmation}
+          onHide={() => setShowConfirmation(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Sign out</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Are you sure you want to sign out?</Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={() => setShowConfirmation(false)}
+            >
+              Cancel
+            </Button>
+            <Button variant="danger" onClick={handleSignOut}>
+              Sign out
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </Navbar>
   );
