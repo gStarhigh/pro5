@@ -35,10 +35,12 @@ const NavBar = () => {
   const { alert, setAlert } = useContext(AlertContext);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
+  // Shows the confirmation modal
   const confirmSignOut = async () => {
     setShowConfirmation(true);
   };
 
+  // Handles the signout
   const handleSignOut = async () => {
     try {
       await axios.post("dj-rest-auth/logout/");

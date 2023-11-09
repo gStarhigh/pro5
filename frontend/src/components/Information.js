@@ -50,11 +50,13 @@ function InformationList() {
     history.push(`/information/${id}/edit`);
   };
 
+  // Shows the confirmation modal
   const handleDelete = async (id) => {
     setShowConfirmation(true);
     setDeleteId(id);
   };
 
+  // Handles the delete
   const confirmDelete = async () => {
     try {
       await axiosRes.delete(`/information/${deleteId}/`);
