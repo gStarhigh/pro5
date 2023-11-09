@@ -58,7 +58,7 @@ function ContactForm() {
     }
 
     try {
-      await axiosReq.post("/contact/", contactData);
+      await axiosReq.post("/tickets/", contactData);
       setAlert("Message sent successfully!");
       history.push("/");
       console.log("Form data successfully sent", contactData);
