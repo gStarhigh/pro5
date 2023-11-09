@@ -9,6 +9,7 @@ import Alert from "react-bootstrap/Alert";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ContactForm.module.css";
 
 // My own imports
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -69,7 +70,7 @@ function CreateInformation() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={styles.Width}>
       <Form.Group controlId="start_date">
         <Form.Label>Start date</Form.Label>
         <Form.Control
@@ -117,7 +118,7 @@ function CreateInformation() {
       ))}
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Grey}`}
         onClick={handleCancel}
       >
         Cancel
