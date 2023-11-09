@@ -2,21 +2,10 @@
   "short_name": "Equestrians Together",
   "name": "Project Portfolio 5 by Gustaf Starhög",
   "icons": [{
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "favicon-horse.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "favicon-horse.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
+    "src": "favicon-horse.png",
+    "sizes": "32x32 24x24 16x16",
+    "type": "image/x-icon"
+  }],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
