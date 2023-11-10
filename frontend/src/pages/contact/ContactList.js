@@ -54,7 +54,7 @@ function ContactList() {
             </tbody>
           </Table>
         ) : (
-          <p>You have no active tickets</p>
+          <p>You have no tickets</p>
         )
       ) : (
         <Container className="text-center justify-content-center">

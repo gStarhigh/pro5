@@ -57,7 +57,6 @@ function PostsPage({ message, filter = "" }) {
       <Col className=" text-center justify-content-center">
         {currentUser ? (
           <>
-            <h3>Information</h3>
             <InformationList />
             <hr />
             <NavigationButtons />

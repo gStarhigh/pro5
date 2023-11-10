@@ -76,8 +76,9 @@ function InformationList() {
     return `${day}/${month}`;
   }
 
-  return (
+  return information.length > 0 ? (
     <Container className={styles.Information}>
+      <h3>Information</h3>
       {hasLoaded ? (
         <Table striped bordered hover>
           <thead>
@@ -145,7 +146,7 @@ function InformationList() {
         </Container>
       )}
     </Container>
-  );
+  ) : null;
 }
 
 export default InformationList;
