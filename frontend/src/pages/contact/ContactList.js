@@ -20,36 +20,42 @@ function ContactList() {
   const { setAlert } = useContext(AlertContext);
 
   useEffect(() => {
+    setHasLoaded(false);
     axiosReq.get("/tickets/").then((response) => {
       if (Array.isArray(response.data.results)) {
         setContactData(response.data.results);
       } else {
         setContactData([]);
       }
+      setHasLoaded(true);
     });
   }, []);
 
   return (
     <Container>
-      {contactData.length ? (
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Subject</th>
-              <th>Message</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {contactData.map((contact) => (
-              <tr key={contact.id}>
-                <td>{contact.subject}</td>
-                <td>{contact.message}</td>
-                <td>{contact.ticket_status}</td>
+      {hasLoaded ? (
+        contactData.length ? (
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Status</th>
               </tr>
-            ))}
-          </tbody>
-        </Table>
+            </thead>
+            <tbody>
+              {contactData.map((contact) => (
+                <tr key={contact.id}>
+                  <td>{contact.subject}</td>
+                  <td>{contact.message}</td>
+                  <td>{contact.ticket_status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        ) : (
+          <p>You have no active tickets</p>
+        )
       ) : (
         <Container className="text-center justify-content-center">
           <Loader spinner />
