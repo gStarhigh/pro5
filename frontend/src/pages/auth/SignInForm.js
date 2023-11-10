@@ -19,6 +19,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { AlertContext } from "../../contexts/AlertContext";
 import axios from "axios";
+import { setTokenTimestamp } from "../../utils/utils";
 
 function SignInForm() {
   const [signInData, setSignInData] = useState({
@@ -39,6 +40,7 @@ function SignInForm() {
     try {
       const { data } = await axios.post("/dj-rest-auth/login/", signInData);
       setCurrentUser(data.user);
+      setTokenTimestamp(data);
       setAlert("You signed in successfully!");
 
       // Check if there is a 'from' property in the location.state

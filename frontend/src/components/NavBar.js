@@ -27,6 +27,7 @@ import { ToastContainer } from "react-toastify";
 
 // Toastify style
 import "react-toastify/dist/ReactToastify.css";
+import { removeTokenTimestamp } from "../utils/utils";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -46,6 +47,7 @@ const NavBar = () => {
       await axios.post("dj-rest-auth/logout/");
       setAlert("You signed out successfully!");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
