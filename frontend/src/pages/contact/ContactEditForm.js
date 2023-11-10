@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ContactForm.module.css";
 
 // My own imports
 import { axiosReq } from "../../api/axiosDefaults";
@@ -63,7 +64,7 @@ function EditTicket() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={styles.Width}>
       <Form.Group controlId="subject">
         <Form.Label>Subject</Form.Label>
         <Form.Control

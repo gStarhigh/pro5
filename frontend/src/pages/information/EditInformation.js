@@ -95,7 +95,7 @@ function EditInformation() {
       </Form.Group>
 
       <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        className={`${btnStyles.Button} ${btnStyles.Grey}`}
         onClick={handleCancel}
       >
         Cancel
