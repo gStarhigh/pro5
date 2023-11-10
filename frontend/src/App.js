@@ -19,6 +19,7 @@ import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import ContactForm from "./pages/contact/ContactForm";
 import CreateInformation from "./pages/information/CreateInformation";
 import EditInformation from "./pages/information/EditInformation";
+import ContactEditForm from "./pages/contact/ContactEditForm";
 
 import { AlertProvider } from "./contexts/AlertContext";
 
@@ -64,7 +65,13 @@ function App() {
             />
             <Route exact path="/signin" render={() => <SignInForm />} />
             <Route exact path="/signup" render={() => <SignUpForm />} />
-            <Route exact path="/contact" render={() => <ContactForm />} />
+
+            <PrivateRoute exact path="/tickets" component={ContactForm} />
+            <PrivateRoute
+              exact
+              path="/tickets/:id/edit"
+              component={ContactEditForm}
+            />
             <PrivateRoute
               exact
               path="/posts/create"
