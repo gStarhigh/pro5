@@ -80,10 +80,12 @@ function ContactList() {
                   <td>{tickets.message}</td>
                   <td>{tickets.ticket_status}</td>
                   {tickets.is_owner && (
-                    <MoreDropdown
-                      handleEdit={() => handleEdit(tickets.id)}
-                      handleDelete={() => handleDelete(tickets.id)}
-                    />
+                    <td>
+                      <MoreDropdown
+                        handleEdit={() => handleEdit(tickets.id)}
+                        handleDelete={() => handleDelete(tickets.id)}
+                      />
+                    </td>
                   )}
                 </tr>
               ))}
