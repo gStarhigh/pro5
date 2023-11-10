@@ -119,12 +119,16 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <div className="text-center">
-        <Button onClick={toggleContactList}>Tickets</Button>
+        <Button
+          onClick={toggleContactList}
+          className={`${btnStyles.Button} ${btnStyles.Blue}`}
+        >
+          My Tickets
+        </Button>
         {showContactList && <ContactList />}
       </div>
       <hr />
       <p className="text-center">{profile?.owner}'s posts</p>
-      <hr />
       <div className="justify-content-center">
         {profilePosts.results.length ? (
           <InfiniteScroll
