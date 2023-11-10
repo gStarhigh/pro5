@@ -18,11 +18,6 @@ const NavigationButtons = () => {
     <Container className={styles.Row}>
       {currentUser ? (
         <>
-          <Link to="/">
-            <button alt="To add usage" className={btnStyles.Round}>
-              Add Usage
-            </button>
-          </Link>
           <Link to="/createinformation">
             <button alt="Create information" className={btnStyles.Round}>
               Create info
