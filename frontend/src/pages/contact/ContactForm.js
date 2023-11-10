@@ -50,7 +50,6 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(contactData);
 
     if (!currentUser) {
       history.push("/signin");
@@ -61,11 +60,8 @@ function ContactForm() {
       await axiosReq.post("/tickets/", contactData);
       setAlert("Message sent successfully!");
       history.push("/");
-      console.log("Form data successfully sent", contactData);
     } catch (err) {
       if (err.response?.status !== 401) {
-        console.log(err);
-        console.log(err.response?.data);
         setErrors(err.response?.data);
       }
     }

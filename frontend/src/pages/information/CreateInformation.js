@@ -48,7 +48,6 @@ function CreateInformation() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(infoData);
 
     if (!currentUser) {
       history.push("/signin");
@@ -59,11 +58,8 @@ function CreateInformation() {
       await axiosReq.post("/information/", infoData);
       setAlert("Information submitted successfully!"); // Set the alert message
       history.push("/");
-      console.log("Sucessfully submitted");
     } catch (err) {
       if (err.response?.status !== 401) {
-        console.log(err);
-        console.log(err.response?.data);
         setErrors(err.response?.data);
       }
     }

@@ -58,10 +58,7 @@ function EditInformation() {
       await axiosReq.put(`/information/${id}/`, infoData);
       setAlert("Information updated successfully!");
       history.push("/");
-    } catch (err) {
-      console.log(err);
-      console.log(err.response?.data);
-    }
+    } catch (err) {}
   };
 
   return (

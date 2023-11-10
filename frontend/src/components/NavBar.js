@@ -52,9 +52,7 @@ const NavBar = () => {
       setAlert("You signed out successfully!");
       setCurrentUser(null);
       removeTokenTimestamp();
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
     setShowConfirmation(false);
   };
 

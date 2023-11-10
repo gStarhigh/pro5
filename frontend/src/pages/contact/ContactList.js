@@ -52,10 +52,7 @@ function ContactList() {
       await axiosRes.delete(`/tickets/${deleteId}/`);
       setContactData(contactData.filter((tickets) => tickets.id !== deleteId));
       setAlert("Ticket deleted successfully!");
-    } catch (err) {
-      console.log(err);
-      console.log(deleteId);
-    }
+    } catch (err) {}
     setShowConfirmation(false);
   };
 

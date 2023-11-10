@@ -40,11 +40,9 @@ function InformationList() {
           (info) => new Date(info.end_date) >= today
         );
         setInformation(filteredInformation);
-        console.log("Filtered information:", filteredInformation);
       } else {
         setInformation([]);
         setHasLoaded(false);
-        console.log("Didn't find anything");
       }
     });
   }, []);
@@ -66,10 +64,7 @@ function InformationList() {
       setInformation(information.filter((info) => info.id !== deleteId));
       setAlert("Information deleted successfully!");
       history.push("/");
-    } catch (err) {
-      console.log(err);
-      console.log(deleteId);
-    }
+    } catch (err) {}
     setShowConfirmation(false);
   };
   function formatDate(dateString) {

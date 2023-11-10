@@ -57,9 +57,7 @@ const Post = (props) => {
       await axiosRes.delete(`/posts/${id}/`);
       setAlert("Your post was deleted!");
       history.goBack();
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
     setShowConfirmation(false);
   };
 
