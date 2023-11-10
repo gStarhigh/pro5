@@ -3,8 +3,12 @@ import React, { useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 // React Bootstrap imports
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Modal, Button } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Media from "react-bootstrap/Media";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 // Styles
 import styles from "../../styles/Post.module.css";

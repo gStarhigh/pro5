@@ -3,7 +3,10 @@ import React, { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 // React Bootstrap imports
-import { Table, Container, Modal, Button } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
+import Container from "react-bootstrap/Container";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 // My own imports
 import { axiosReq, axiosRes } from "../../api/axiosDefaults";

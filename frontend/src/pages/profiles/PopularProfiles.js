@@ -2,7 +2,7 @@
 import React from "react";
 
 // React Bootstrap imports
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 // Styles
 import styles from "../../styles/PostsPage.module.css";

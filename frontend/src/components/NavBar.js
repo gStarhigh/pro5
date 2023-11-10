@@ -3,7 +3,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // React Bootstrap imports
-import { Container, Navbar, Nav, Modal, Button } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 // Axios import
 import axios from "axios";

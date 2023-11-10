@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 
 // Styles

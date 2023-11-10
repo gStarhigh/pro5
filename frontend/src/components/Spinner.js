@@ -2,7 +2,7 @@
 import React from "react";
 
 // React Bootstrap import
-import { Spinner } from "react-bootstrap";
+import Spinner from "react-bootstrap/Spinner";
 
 // Styles
 import styles from "../styles/Asset.module.css";

@@ -1,11 +1,16 @@
+// React imports
+import { createContext } from "react";
+import { Route, Switch } from "react-router-dom";
+
+// React Bootstrap imports
+import Container from "react-bootstrap/Container";
+
+// My own imports
 import styles from "./App.module.css";
 import NavBar from "./components/NavBar";
-import { Container } from "react-bootstrap";
-import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
-import { createContext } from "react";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
@@ -20,7 +25,6 @@ import ContactForm from "./pages/contact/ContactForm";
 import CreateInformation from "./pages/information/CreateInformation";
 import EditInformation from "./pages/information/EditInformation";
 import ContactEditForm from "./pages/contact/ContactEditForm";
-
 import { AlertProvider } from "./contexts/AlertContext";
 
 export const CurrentUserContext = createContext();

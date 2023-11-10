@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 // React Bootstrap imports
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 // Styles
 import styles from "../../styles/Profile.module.css";

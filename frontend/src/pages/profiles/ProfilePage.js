@@ -7,7 +7,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import { Button, Image } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 
 // Styles
 import styles from "../../styles/ProfilePage.module.css";

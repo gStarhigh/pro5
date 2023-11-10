@@ -1,13 +1,13 @@
 // React imports
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 // Styles
 import styles from "../../styles/PostsPage.module.css";

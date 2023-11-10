@@ -3,7 +3,10 @@ import React, { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 // React Bootstrap imports
-import { Modal, Button, Table, Container } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Table from "react-bootstrap/Table";
+import Container from "react-bootstrap/Container";
 
 // Styles
 import styles from "../styles/Information.module.css";

@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // React Bootstrap imports
-import { Media } from "react-bootstrap";
-import { Modal, Button } from "react-bootstrap";
+import Media from "react-bootstrap/Media";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 // Styles
 import styles from "../../styles/Comment.module.css";
