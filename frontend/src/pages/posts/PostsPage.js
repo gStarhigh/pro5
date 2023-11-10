@@ -22,6 +22,7 @@ import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import InformationList from "../../components/Information";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Carousel1 from "../../components/Carousel";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -52,6 +53,7 @@ function PostsPage({ message, filter = "" }) {
 
   return (
     <Row className={styles.Container}>
+      <Carousel1 />
       <Col className=" text-center justify-content-center">
         {currentUser ? (
           <>
@@ -60,9 +62,7 @@ function PostsPage({ message, filter = "" }) {
             <NavigationButtons />
             <hr />
           </>
-        ) : (
-          <h4>Here can be some other info for not logged in users...?</h4>
-        )}
+        ) : null}
         <PopularProfiles />
         <hr />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
