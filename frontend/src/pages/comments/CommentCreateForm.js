@@ -1,5 +1,5 @@
 // React imports
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // React Bootstrap imports
@@ -13,13 +13,19 @@ import btnStyles from "../../styles/Button.module.css";
 // My own imports
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
+import { AlertContext } from "../../contexts/AlertContext";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+  const { setAlert } = useContext(AlertContext);
 
   const handleChange = (event) => {
     setContent(event.target.value);
+  };
+
+  const handleCancel = () => {
+    setContent("");
   };
 
   const handleSubmit = async (event) => {
@@ -42,6 +48,7 @@ function CommentCreateForm(props) {
         ],
       }));
       setContent("");
+      setAlert("Your comment was created!");
     } catch (err) {}
   };
 
@@ -62,13 +69,21 @@ function CommentCreateForm(props) {
           />
         </InputGroup>
       </Form.Group>
-      <button
-        className={`${btnStyles.Button} ${btnStyles.Grey} btn d-block ml-auto`}
-        disabled={!content.trim()}
-        type="submit"
-      >
-        Post
-      </button>
+      <div>
+        <button
+          className={`${btnStyles.Button} ${btnStyles.Grey}`}
+          onClick={handleCancel}
+        >
+          Cancel
+        </button>
+        <button
+          className={`${btnStyles.Button} ${btnStyles.Blue} `}
+          disabled={!content.trim()}
+          type="submit"
+        >
+          Post
+        </button>
+      </div>
     </Form>
   );
 }
