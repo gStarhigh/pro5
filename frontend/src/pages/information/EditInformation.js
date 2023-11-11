@@ -5,9 +5,11 @@ import { useHistory, useParams } from "react-router-dom";
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Image from "react-bootstrap/Image";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
+import styles from "../../styles/ContactForm.module.css";
 
 // My own imports
 import { axiosReq } from "../../api/axiosDefaults";
@@ -62,7 +64,13 @@ function EditInformation() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={styles.Contact}>
+      <Image
+        className={styles.Image}
+        // Image credit : https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
+        src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
+        fluid
+      />
       <Form.Group controlId="start_date">
         <Form.Label>Start date</Form.Label>
         <Form.Control

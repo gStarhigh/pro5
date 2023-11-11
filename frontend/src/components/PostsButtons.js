@@ -10,13 +10,18 @@ import Container from "react-bootstrap/Container";
 const PostsButtons = () => {
   return (
     <Container className={styles.Container}>
+      <Link className={styles.Link} to="/">
+        <button className={styles.GrayButton} alt="To liked posts">
+          All
+        </button>
+      </Link>
       <Link className={styles.Link} to="/liked">
-        <button className={btnStyles.Gray} alt="To liked posts">
+        <button className={styles.GrayButton} alt="To liked posts">
           Liked
         </button>
       </Link>
       <Link className={styles.Link} to="/feed">
-        <button className={btnStyles.Gray} alt="To posts feed">
+        <button className={styles.GrayButton} alt="To posts feed">
           Feed
         </button>
       </Link>
