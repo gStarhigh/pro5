@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
@@ -67,7 +68,13 @@ function CreateInformation() {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className={styles.Width}>
+    <Form onSubmit={handleSubmit} className={styles.Contact}>
+      <Image
+        className={styles.Image}
+        // Image credit : https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
+        src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
+        fluid
+      />
       <Form.Group controlId="start_date">
         <Form.Label>Start date</Form.Label>
         <Form.Control
