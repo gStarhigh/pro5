@@ -34,6 +34,13 @@
 .Grey {
     background-color: grey;
     color: #ffffff;
+    border: solid 1px grey;
+}
+
+.Grey:hover {
+    color: grey;
+    background-color: #ffffff;
+    border: solid 1px grey;
 }
 
 .Blue,

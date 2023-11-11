@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 // Styles
-import btnStyles from "../styles/Button.module.css";
 import styles from "../styles/PostsButtons.module.css";
 import Container from "react-bootstrap/Container";
 
