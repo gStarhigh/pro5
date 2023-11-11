@@ -1,0 +1,16 @@
+.Container {
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.Link {
+    margin: 10px 10px 20px 10px;
+}
+
+@media only screen and (max-width: 490px) {
+    .Container {
+        display: grid;
+        margin: auto;
+        justify-content: center;
+    }
+}

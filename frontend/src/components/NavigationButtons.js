@@ -28,16 +28,6 @@ const NavigationButtons = () => {
               Create Post
             </button>
           </Link>
-          <Link to="/liked">
-            <button alt="To liked posts" className={btnStyles.Round}>
-              Liked Posts
-            </button>
-          </Link>
-          <Link to="/feed">
-            <button alt="To posts feed" className={btnStyles.Round}>
-              Posts Feed
-            </button>
-          </Link>
         </>
       ) : null}
     </Container>

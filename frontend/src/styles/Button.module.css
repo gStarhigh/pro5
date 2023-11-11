@@ -85,3 +85,13 @@
 .Round:hover {
     background-color: #0056b3;
 }
+
+
+.Gray {
+    background-color: #968E85;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    width: 150px;
+}

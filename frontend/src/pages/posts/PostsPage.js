@@ -23,6 +23,7 @@ import PopularProfiles from "../profiles/PopularProfiles";
 import InformationList from "../../components/Information";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Carousel1 from "../../components/Carousel";
+import PostsButtons from "../../components/PostsButtons";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -65,6 +66,7 @@ function PostsPage({ message, filter = "" }) {
         ) : null}
         <PopularProfiles />
         <hr />
+        <PostsButtons />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}
