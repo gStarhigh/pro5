@@ -121,6 +121,7 @@ const NavBar = () => {
         <NavLink to="/">
           <Navbar.Brand>
             <img className={styles.img} src={logo} alt="logo" height="45" />
+            <span className={styles.BrandText}>Equestrians Together</span>
           </Navbar.Brand>
         </NavLink>
         <Navbar.Toggle
