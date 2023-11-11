@@ -1,7 +1,7 @@
 // React imports
 import React, { useState, useContext } from "react";
 
-// React Boostrap imports
+// React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 
