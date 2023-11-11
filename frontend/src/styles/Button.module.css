@@ -48,6 +48,7 @@
 .Bright:hover {
     background-color: #2142b2;
     color: #ffffff;
+    border: 1px solid #2142b2;
 }
 
 .BlueOutline,
