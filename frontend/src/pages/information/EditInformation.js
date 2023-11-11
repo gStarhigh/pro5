@@ -6,6 +6,7 @@ import { useHistory, useParams } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
+import Alert from "react-bootstrap/Alert";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
@@ -16,6 +17,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { AlertContext } from "../../contexts/AlertContext";
 
 function EditInformation() {
+  const [errors, setErrors] = useState({});
   const history = useHistory();
   const { id } = useParams();
   const [infoData, setInfoData] = useState({
@@ -60,7 +62,11 @@ function EditInformation() {
       await axiosReq.put(`/information/${id}/`, infoData);
       setAlert("Information updated successfully!");
       history.push("/");
-    } catch (err) {}
+    } catch (err) {
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
   };
 
   return (
@@ -80,6 +86,11 @@ function EditInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.start_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group controlId="end_date">
         <Form.Label>End Date</Form.Label>
@@ -90,6 +101,11 @@ function EditInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.end_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group controlId="text">
         <Form.Label>Message</Form.Label>
@@ -101,6 +117,11 @@ function EditInformation() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.text?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Grey}`}
