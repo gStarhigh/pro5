@@ -1,5 +1,5 @@
 // React imports
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 // React Boostrap imports
 import Form from "react-bootstrap/Form";
@@ -11,11 +11,13 @@ import btnStyles from "../../styles/Button.module.css";
 
 // My own imports
 import { axiosRes } from "../../api/axiosDefaults";
+import { AlertContext } from "../../contexts/AlertContext";
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
   const [errors, setErrors] = useState({});
   const [formContent, setFormContent] = useState(content);
+  const { setAlert } = useContext(AlertContext);
 
   const handleChange = (event) => {
     setFormContent(event.target.value);
@@ -50,6 +52,7 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
+      setAlert("Your comment was updated!");
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
