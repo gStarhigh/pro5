@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 // React Boostrap imports
 import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 
 // Styles
 import styles from "../../styles/CommentCreateEditForm.module.css";
@@ -13,7 +14,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
-
+  const [errors, setErrors] = useState({});
   const [formContent, setFormContent] = useState(content);
 
   const handleChange = (event) => {
@@ -22,6 +23,16 @@ function CommentEditForm(props) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!formContent.trim()) {
+      setErrors({
+        formContent: [
+          "Comment cannot be empty. Choose delete if you want to erase this comment.",
+        ],
+      });
+      return;
+    }
+
     try {
       await axiosRes.put(`/comments/${id}/`, {
         content: formContent.trim(),
@@ -39,7 +50,11 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
-    } catch (err) {}
+    } catch (err) {
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
   };
 
   return (
@@ -53,6 +68,12 @@ function CommentEditForm(props) {
           rows={2}
         />
       </Form.Group>
+      {errors?.formContent?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
       <div className="text-right">
         <button
           className={`${btnStyles.Button} ${btnStyles.Grey}`}
