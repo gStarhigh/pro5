@@ -26,6 +26,7 @@ import CreateInformation from "./pages/information/CreateInformation";
 import EditInformation from "./pages/information/EditInformation";
 import ContactEditForm from "./pages/contact/ContactEditForm";
 import { AlertProvider } from "./contexts/AlertContext";
+import NotFound from "./components/NotFound";
 
 export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
@@ -93,10 +94,10 @@ function App() {
               path="/information/:id/edit"
               component={EditInformation}
             />
-            <Route
+            <PrivateRoute
               exact
               path="/createinformation"
-              render={() => <CreateInformation />}
+              component={CreateInformation}
             />
             <Route
               exact
@@ -113,9 +114,7 @@ function App() {
               path="/profiles/:id/edit"
               render={() => <ProfileEditForm />}
             />
-            <Route
-              render={() => <h1 className="text-center">Page Not Found</h1>}
-            />
+            <Route render={() => <NotFound />} />
           </Switch>
         </Container>
       </div>
