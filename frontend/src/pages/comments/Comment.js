@@ -1,5 +1,5 @@
 // React imports
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // React Bootstrap imports
@@ -15,6 +15,7 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 import CommentEditForm from "./CommentEditForm";
 import { axiosRes } from "../../api/axiosDefaults";
 import Avatar from "../../components/Avatar";
+import { AlertContext } from "../../contexts/AlertContext";
 
 const Comment = (props) => {
   const {
@@ -31,7 +32,7 @@ const Comment = (props) => {
 
   const [showEditForm, setShowEditForm] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
-
+  const { setAlert } = useContext(AlertContext);
   const handleDelete = async () => {
     setShowConfirmation(true);
   };
@@ -54,6 +55,7 @@ const Comment = (props) => {
       }));
     } catch (err) {}
     setShowConfirmation(false);
+    setAlert("Your comment was deleted!");
   };
 
   return (
