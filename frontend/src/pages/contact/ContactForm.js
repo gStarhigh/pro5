@@ -105,6 +105,7 @@ function ContactForm() {
           {message}
         </Alert>
       ))}
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Grey} ${btnStyles.Wide}`}
         onClick={handleCancel}

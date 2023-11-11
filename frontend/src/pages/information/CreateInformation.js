@@ -51,6 +51,7 @@ function CreateInformation() {
 
     if (!currentUser) {
       history.push("/signin");
+      setAlert("You must be signed in to create information");
       return;
     }
 

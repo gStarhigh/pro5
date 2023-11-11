@@ -5,6 +5,7 @@ import { useHistory, useParams } from "react-router-dom";
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 // Styles
 import btnStyles from "../../styles/Button.module.css";
@@ -22,7 +23,7 @@ function EditTicket() {
     message: "",
   });
   const { subject, message } = ticketData;
-
+  const [errors, setErrors] = useState({});
   const { setAlert } = useContext(AlertContext);
 
   useEffect(() => {
@@ -32,9 +33,7 @@ function EditTicket() {
         const { subject, message, is_owner } = data;
 
         is_owner ? setTicketData({ subject, message }) : history.push("/");
-      } catch (err) {
-        console.error(err);
-      }
+      } catch (err) {}
     };
 
     handleMount();
@@ -59,7 +58,9 @@ function EditTicket() {
       setAlert("Ticket updated successfully!");
       history.goBack();
     } catch (err) {
-      console.error(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   };
 
@@ -74,6 +75,11 @@ function EditTicket() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.subject?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Form.Group controlId="message">
         <Form.Label>Message</Form.Label>
@@ -85,6 +91,11 @@ function EditTicket() {
           onChange={handleChange}
         />
       </Form.Group>
+      {errors?.message?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Grey}`}
