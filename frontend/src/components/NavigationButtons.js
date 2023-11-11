@@ -3,10 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // React Boostrap import
-import { Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 
 // Styles
-import btnStyles from "../styles/Button.module.css";
 import styles from "../styles/NavigationButtons.module.css";
 
 // My own import
@@ -15,19 +17,35 @@ import { useCurrentUser } from "../contexts/CurrentUserContext";
 const NavigationButtons = () => {
   const currentUser = useCurrentUser();
   return (
-    <Container className={styles.Row}>
+    <Container className={styles.Container}>
       {currentUser ? (
         <>
-          <Link to="/createinformation">
-            <button alt="Create information" className={btnStyles.Round}>
-              Create info
-            </button>
-          </Link>
-          <Link to="/posts/create">
-            <button alt="To create post" className={btnStyles.Round}>
-              Create Post
-            </button>
-          </Link>
+          <Row className={styles.Row}>
+            <Col className={styles.Col}>
+              <Link to="/posts/create">
+                <div className={styles.Button}>
+                  <Image
+                    className={styles.Image}
+                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/gene-devine-ahxNfsInPVM-unsplash_fgcxqq.jpg"
+                    fluid
+                  />
+                  <p>Create Post</p>
+                </div>
+              </Link>
+            </Col>
+            <Col className={styles.Col}>
+              <Link to="/createinformation">
+                <div className={styles.Button}>
+                  <Image
+                    className={styles.Image}
+                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
+                    fluid
+                  />
+                  <p>Create info</p>
+                </div>
+              </Link>
+            </Col>
+          </Row>
         </>
       ) : null}
     </Container>

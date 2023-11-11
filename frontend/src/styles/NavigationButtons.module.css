@@ -1,3 +1,65 @@
 .Row {
+    margin-top: 20px;
     flex-direction: row;
+}
+
+.Col {
+    margin-bottom: 80px;
+}
+
+.Button {
+    position: relative;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Button p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.Image {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    margin: auto;
+    height: 270px;
+}
+
+@media only screen and (max-width: 991px) {
+    .Image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .Col {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 590px) {
+    .Row {
+        flex-direction: column;
+    }
+
+    .Image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .Col {
+        margin-bottom: 10px;
+    }
+
+    .Container {
+        display: grid;
+        margin: auto;
+        justify-content: center;
+    }
 }
