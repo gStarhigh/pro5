@@ -112,19 +112,20 @@ function ContactForm() {
           {message}
         </Alert>
       ))}
-
-      <Button
-        className={`${btnStyles.Button} ${btnStyles.Grey} ${btnStyles.Wide}`}
-        onClick={handleCancel}
-      >
-        Cancel
-      </Button>
-      <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue} ${btnStyles.Wide}`}
-        type="submit"
-      >
-        Submit
-      </Button>
+      <div className="text-center">
+        <Button
+          className={`${btnStyles.Button} ${btnStyles.Grey}`}
+          onClick={handleCancel}
+        >
+          Cancel
+        </Button>
+        <Button
+          className={`${btnStyles.Button} ${btnStyles.Blue}`}
+          type="submit"
+        >
+          Submit
+        </Button>
+      </div>
     </Form>
   );
 }
