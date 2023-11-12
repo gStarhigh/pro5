@@ -216,6 +216,25 @@ The Navbar is visible throughout the entire application, however what you see di
 <img src="documentation/images/navbar_auth_desktop.PNG">
 </details>
 
+#### Account Creation
+The Sign Up navigation button is only visible when you are signed out. This page lets you set up your own username and password to get the full functionality of the application.
+The main difference between mobile and desktop view is that the image is only visible on desktop view.
+<details>
+<summary>Register - Mobile</summary>
+<img src="documentation/images/register_mobile.png">
+</details>
+<details>
+<summary>Register - Desktop</summary>
+<img src="documentation/images/register_desktop.png">
+</details>
+
+### Sign in page
+
+
+
+
+
+
 --- 
 ## Testing
 
