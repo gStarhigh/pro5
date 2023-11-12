@@ -92,6 +92,21 @@ The project goal was to create a responsive website using the Django Framework A
 All acceptance criteria can be viewed in [GITHUB](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D) on each Issue.
 
 
+I used milestones for each part of the project to map out everything that needed to be done for each functionality to work. Everything was planned and setup using GitHub.
+
+- The two Milestones/tasks called "Hay usage" and "Invoices" were not implemented.
+<details>
+<summary>Image Milestones</summary>
+<img src="documentation/images/milestones.PNG">
+</details>
+
+The Kanban board was a great help in keeping track of what I had done and what needed to be done in this project. Some were added throughout the project to simplify the planning and adding additional features.
+<details>
+<summary>Image of the Kanban board</summary>
+<img src="documentation/images/kanban.PNG">
+</details>
+
+
 | **EPIC** | **ID #** | **User Story** | **Label** | **Github project** |
 |-------------|------------|---------------------|---------------------|---------------------|
 | **User Authorization** | 
@@ -136,12 +151,6 @@ The flowchart was made using [Lucidchart](https://lucid.co/).
 The Wireframes should not be considered finished result of the website, but as a tool I used to plan and visualize the project as I worked on it. 
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
-
-
-
-#### Database
-
-
 
 
 ---
