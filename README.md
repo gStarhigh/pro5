@@ -252,7 +252,7 @@ The Create post page lets you upload an image of your choice and choose a title,
 </details>
 
 ### Information Create page
-The Information create page lets you post any important information of your choice to other on the page that is authenticated. It could for example be that your horse should get new shoes tomorrow and need to be in the stable. Or that the horse should get extra food one day. 
+The Information create page lets you post any important information of your choice to other on the page that is authenticated. It could for example be that your horse should get new shoes tomorrow and need to be in the stable. Or that the horse should get extra food one day. If the end date has passed, the information is deleted from the database.
 <details>
 <summary>Create Information - Mobile</summary>
 <img src="documentation/images/information_create_mobile.png">
@@ -277,6 +277,40 @@ On the contact page you can send a message to any question that you might have.A
 
 
 ### Profile Page
+On your profile page you can see your tickets, edit your profile, change username and change password. If you are not the owner of the profile, an unsubscribe button is visible. 
+<details>
+<summary>Profile page - Mobile</summary>
+<img src="documentation/images/profile_page_mobile.png">
+</details>
+<details>
+<summary>Profile page - Desktop</summary>
+<img src="documentation/images/profile_page_desktop.png">
+</details>
+
+<details>
+<summary>Edit profile - Mobile</summary>
+<img src="documentation/images/edit_profile_mobile.png">
+</details>
+<details>
+<summary>Edit profile - Desktop</summary>
+<img src="documentation/images/edit_profile_desktop.png">
+</details>
+<details>
+<summary>Change username - Mobile</summary>
+<img src="documentation/images/change_username_mobile.png">
+</details>
+<details>
+<summary>Change username - Desktop</summary>
+<img src="documentation/images/change_username_desktop.png">
+</details>
+<details>
+<summary>Change password - Mobile</summary>
+<img src="documentation/images/change_password_mobile.png">
+</details>
+<details>
+<summary>Change password - Desktop</summary>
+<img src="documentation/images/change_password_desktop.png">
+</details>
 
 
 ### Post page
