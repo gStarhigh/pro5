@@ -143,11 +143,21 @@ The model user stories(or tasks), can be viewed in the Backend README.
 The structure of the website is divided between authenticated users and not authenticated.
 - The Register page gives the user the ability to create an account.
 - The Login page gives the user to login using an existing username and password.
-- The Home page is visible for all users, however some functionality is only available to authenticated users.
+- The Home page is visible for all users, however some functionality is only available to authenticated users:
 - Authenticated:
     - Important weekly information on the homepage is displayed, if any exist.
+    - Important weekly information posts disappears after end date has passed.
     - The subscribe/unsubscribe buttons on the popular profiles are visible.
-    - 
+    - Sign up in the navbar is hidden.
+    - Sign in in the navbar is hidden.
+    - Contact in the navbar is visible.
+    - Profile name and avatar in navbar is visible.
+    - Sign out in the navbar is visible.
+    - The Post navigation buttons (All, Liked, Feed) are visible. 
+    - Post navigation button All - Lets you view all posts.
+    - Post navigation button Liked - Lets you view all posts you have liked.
+    - Post navigation button All - Lets you view all posts from those whom you have subscribed to.
+    - You can like a post directly from the home page.
 
 - Not Authenticated:
     - Important weekly information is hidden.
@@ -158,7 +168,8 @@ The structure of the website is divided between authenticated users and not auth
     - Sign up in the navbar is visible.
     - Sign in in the navbar is visible.
     - A tooltip is displayed when trying to like a post saying that you need to login to like a post.
-    
+    - The Post navigation buttons (All, Liked, Feed) are hidden.
+
 
 #### Here is an image of the structure I used for this project.
 The flowchart was made using [Lucidchart](https://lucid.co/).
