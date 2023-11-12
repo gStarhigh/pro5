@@ -3,6 +3,8 @@
 ## General information
 Equestrians Together is an online page for equestrians. The original idea, and the idea behind the site, is that those who have their horse in our (IRL) stable, can share images and information with one another to ease their communication and easier share their experiences with one another.
 
+This website was created with a "mobile view first" idea, which means that I believe that the users of this site will to the most part use it through a mobile device.
+
 The website has full CRUD functionality, which means that users can:
 
 - Create a post, comment, information post, or contact form.
@@ -19,6 +21,16 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 Link to the Backend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Backend_README.md)
 
 
+<details>
+<summary>Image of the finished website - Mobile</summary>
+<img src="">
+</details>
+
+
+<details>
+<summary>Image of the finished website - Desktop</summary>
+<img src="">
+</details>
 
 ---
 ## Table of Contents
