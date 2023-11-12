@@ -66,7 +66,7 @@ function PostsPage({ message, filter = "" }) {
         ) : null}
         <PopularProfiles />
         <hr />
-        <PostsButtons />
+        {currentUser ? <PostsButtons /> : null}
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}
