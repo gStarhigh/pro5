@@ -89,7 +89,7 @@ The project goal was to create a responsive website using the Django Framework A
 
 ---
 # User Stories
-All acceptance criteria can be viewed in Github on each Issue.
+All acceptance criteria can be viewed in [GITHUB](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D) on each Issue.
 
 
 | **EPIC** | **ID #** | **User Story** | **Label** | **Github project** |
