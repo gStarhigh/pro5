@@ -140,7 +140,25 @@ The model user stories(or tasks), can be viewed in the Backend README.
 ## Flowchart
 
 ### Structure
+The structure of the website is divided between authenticated users and not authenticated.
+- The Register page gives the user the ability to create an account.
+- The Login page gives the user to login using an existing username and password.
+- The Home page is visible for all users, however some functionality is only available to authenticated users.
+- Authenticated:
+    - Important weekly information on the homepage is displayed, if any exist.
+    - The subscribe/unsubscribe buttons on the popular profiles are visible.
+    - 
 
+- Not Authenticated:
+    - Important weekly information is hidden.
+    - The subscribe/unsubscribe buttons are hidden.
+    - Contact page in the navbar is hidden.
+    - Profile name and avatar in the navbar is hidden.
+    - Sign out in the navbar is hidden.
+    - Sign up in the navbar is visible.
+    - Sign in in the navbar is visible.
+    - A tooltip is displayed when trying to like a post saying that you need to login to like a post.
+    
 
 #### Here is an image of the structure I used for this project.
 The flowchart was made using [Lucidchart](https://lucid.co/).
