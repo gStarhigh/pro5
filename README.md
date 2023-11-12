@@ -252,6 +252,15 @@ The Create post page lets you upload an image of your choice and choose a title,
 </details>
 
 ### Information Create page
+The Information create page lets you post any important information of your choice to other on the page that is authenticated. It could for example be that your horse should get new shoes tomorrow and need to be in the stable. Or that the horse should get extra food one day. 
+<details>
+<summary>Create Information - Mobile</summary>
+<img src="documentation/images/information_create_mobile.png">
+</details>
+<details>
+<summary>Create Information - Desktop</summary>
+<img src="documentation/images/information_create_desktop.png">
+</details>
 
 
 
