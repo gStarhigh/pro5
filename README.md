@@ -229,8 +229,16 @@ The main difference between mobile and desktop view is that the image is only vi
 </details>
 
 ### Sign in page
-
-
+The Sign In navigation button is only visible when you are signed out. This page lets you login to the site using you existing username and password.
+The main difference between mobile and desktop view is that the image is only visible on desktop view.
+<details>
+<summary>Sign in - Mobile</summary>
+<img src="documentation/images/signin_page_mobile.png">
+</details>
+<details>
+<summary>Sign in - Desktop</summary>
+<img src="documentation/images/signin_page_desktop.png">
+</details>
 
 
 
