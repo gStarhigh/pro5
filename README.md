@@ -1,9 +1,22 @@
 # React project (Project Portfolio 5, Advanced FrontEnd) for Code Institute.
 
 ## General information
+Equestrians Together is an online page for equestrians. The original idea, and the idea behind the site, is that those who have their horse in our (IRL) stable, can share images and information with one another to ease their communication and easier share their experiences with one another.
+
+The website has full CRUD functionality, which means that users can:
+
+- Create a post, comment, information post, or contact form.
+- View a post, comment, information post, or contact form.
+- Edit a post, comment, information post, or contact form.
+- Delete a post, comment, information post, or contact form.
+
+
+This project was created within a deadline and I have alot of ideas I want to implement going forward, but due to a short timetable some features had to be left out. You can read more about this [here](#Future-improvements-1).
 
 
 Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
+
+Link to the Backend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Backend_README.md)
 
 
 
