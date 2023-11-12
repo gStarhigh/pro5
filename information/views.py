@@ -3,6 +3,7 @@ from rest_framework import viewsets, generics, permissions
 from .models import Information
 from .serializers import InformationSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
+from datetime import date
 
 
 class InformationViewSet(generics.ListCreateAPIView):
@@ -10,6 +11,7 @@ class InformationViewSet(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get_queryset(self):
+        Information.objects.filter(end_date__lt=date.today()).delete()
         return Information.objects.all()
 
     def perform_create(self, serializer):
