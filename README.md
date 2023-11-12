@@ -20,6 +20,8 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 Link to the Backend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Backend_README.md)
 
+![Fullscreen image of the application:](/documentation/images/amiresponsive.PNG)
+
 
 <details>
 <summary>Image of the finished website - Mobile</summary>
@@ -76,8 +78,11 @@ The Font I chose is from GoogleFonts and are free to use. I chose the font calle
 Roboto is clean and easy to read. 
 
 #### Color
-
-
+The main colors for the site are:
+- Text color: #2B2118 or #fff.
+- Navbar background color: rgb(114, 210, 241).
+- Button colors: #968E85 or #2142b2.
+- Main Background color for the site: #ECF0F1.
 
 ## Project Goals
 
