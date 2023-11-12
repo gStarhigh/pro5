@@ -170,6 +170,14 @@ The structure of the website is divided between authenticated users and not auth
     - A tooltip is displayed when trying to like a post saying that you need to login to like a post.
     - The Post navigation buttons (All, Liked, Feed) are hidden.
 
+- Create a post is only available to authenticated users.
+- Edit or delete a post is only available to the creator of the post.
+- Create information is only available to authenticated users.
+- Edit or delete information is only available to the creator of the information.
+- Contact form is only available to authenticated users.
+- Edit or delete of the contact ticket, is only available to the creator of the ticket.
+- Comment on a post is only available to authenticated users.
+- Edit or delete of a comment on a post is only available to the creater of the comment.
 
 #### Here is an image of the structure I used for this project.
 The flowchart was made using [Lucidchart](https://lucid.co/).
