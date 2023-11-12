@@ -75,6 +75,7 @@ function ContactForm() {
         // Image credit : https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
         src="https://res.cloudinary.com/draygqe7t/image/upload/v1699702895/pawel-czerwinski--0xCCPIbl3M-unsplash_a3vso0.jpg"
         fluid
+        alt="a phone"
       />
       <Form.Group>
         <Form.Label htmlFor="name">Subject</Form.Label>

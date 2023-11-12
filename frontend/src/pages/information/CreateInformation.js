@@ -74,6 +74,7 @@ function CreateInformation() {
         // Image credit : https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
         src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
         fluid
+        alt="2 horses"
       />
       <Form.Group controlId="start_date">
         <Form.Label>Start date</Form.Label>
