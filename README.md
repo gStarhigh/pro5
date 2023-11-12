@@ -314,8 +314,31 @@ On your profile page you can see your tickets, edit your profile, change usernam
 
 
 ### Post page
-
-
+On a specific post, you can like and comment on the post. If you are the owner of the post, you cannot like your post, however you have the ability to edit or delete your post. If you are the creator of a comment, your name will be Green, if there is a comment from someone other than you, their color is Blue. This is implemented to easier find your own, or someone elses comments. You also have the ability to edit or delete your own comment.
+<details>
+<summary>Post owner - Mobile</summary>
+<img src="documentation/images/post_owner_mobile.png">
+</details>
+<details>
+<summary>Post owner - Desktop</summary>
+<img src="documentation/images/post_owner_desktop.png">
+</details>
+<details>
+<summary>Not post owner - Mobile</summary>
+<img src="documentation/images/post_not_owner_mobile.png">
+</details>
+<details>
+<summary>Not post owner - Desktop</summary>
+<img src="documentation/images/post_not_owner_desktop.png">
+</details>
+<details>
+<summary>Comments - Mobile</summary>
+<img src="documentation/images/comments_mobile.png">
+</details>
+<details>
+<summary>Comments - Desktop</summary>
+<img src="documentation/images/comments_desktop.PNG">
+</details>
 
 --- 
 ## Testing
