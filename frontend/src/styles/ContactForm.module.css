@@ -2,11 +2,13 @@
     width: 30vw;
     margin: auto;
     margin-top: 19px;
+    justify-content: center;
 }
 
 .Image {
     margin-bottom: 10px;
     border-radius: 20px;
+    width: 100%;
 }
 
 

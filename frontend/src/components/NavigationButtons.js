@@ -26,7 +26,7 @@ const NavigationButtons = () => {
                 <div className={styles.Button}>
                   <Image
                     className={styles.Image}
-                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/gene-devine-ahxNfsInPVM-unsplash_fgcxqq.jpg"
+                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699809639/pp5/gene-devine-ahxNfsInPVM-unsplash_ol4cq6.webp"
                     fluid
                     alt="running horses"
                   />
@@ -39,7 +39,7 @@ const NavigationButtons = () => {
                 <div className={styles.Button}>
                   <Image
                     className={styles.Image}
-                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
+                    src="https://res.cloudinary.com/draygqe7t/image/upload/v1699810073/pp5/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr_glznpe.webp"
                     fluid
                     alt="2 horses"
                   />

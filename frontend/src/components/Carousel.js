@@ -37,7 +37,7 @@ const Carousel1 = () => {
       <Carousel.Item>
         <img
           className={styles.Image}
-          src="https://res.cloudinary.com/draygqe7t/image/upload/c_scale,h_640,w_960/v1698496726/media/images/received_172611130713732_wnbm8r.jpg"
+          src="https://res.cloudinary.com/draygqe7t/image/upload/v1699809621/pp5/received_172611130713732_wnbm8r_ldqrt6.webp"
           alt="Rider and a horse"
         />
 
@@ -55,7 +55,7 @@ const Carousel1 = () => {
       <Carousel.Item>
         <img
           className={styles.Image}
-          src="https://res.cloudinary.com/draygqe7t/image/upload/v1691502351/123466975_184051633261540_2718395644933478477_n_erz6k8.jpg"
+          src="https://res.cloudinary.com/draygqe7t/image/upload/v1699809621/pp5/123466975_184051633261540_2718395644933478477_n_erz6k8_gmzr7e.webp"
           alt="A stable"
         />
 

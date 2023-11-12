@@ -73,7 +73,7 @@ function ContactForm() {
       <Image
         className={styles.Image}
         // Image credit : https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
-        src="https://res.cloudinary.com/draygqe7t/image/upload/v1699702895/pawel-czerwinski--0xCCPIbl3M-unsplash_a3vso0.jpg"
+        src="https://res.cloudinary.com/draygqe7t/image/upload/v1699809639/pp5/pawel-czerwinski--0xCCPIbl3M-unsplash_1_w847t8.webp"
         fluid
         alt="a phone"
       />
