@@ -263,9 +263,17 @@ The Information create page lets you post any important information of your choi
 </details>
 
 
-
-
 ### Contact page
+On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page.
+
+<details>
+<summary>Contact page - Mobile</summary>
+<img src="documentation/images/contact_page_mobile.png">
+</details>
+<details>
+<summary>Contact page - Desktop</summary>
+<img src="documentation/images/contact_page_desktop.png">
+</details>
 
 
 ### Profile Page
