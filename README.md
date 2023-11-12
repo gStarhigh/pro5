@@ -194,7 +194,27 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/).
 ## General features
 
 #### Header and Navigation
-
+The Navbar is visible throughout the entire application, however what you see differs depending if you are authenticated or not. The Home button, and the name and image of the application is the only ones that are the same regardless of your login status.
+<details>
+<summary>Navbar not expanded - Mobile</summary>
+<img src="documentation/images/mobile_not_auth.png">
+</details>
+<details>
+<summary>Navbar not authenticated - Mobile expanded</summary>
+<img src="documentation/images/navbar_expanded.PNG">
+</details>
+<details>
+<summary>Navbar not authenticated - Desktop</summary>
+<img src="documentation/images/navbar_not_desktop.PNG">
+</details>
+<details>
+<summary>Navbar authenticated - Mobile expanded</summary>
+<img src="documentation/images/navbar_auth_expanded.PNG">
+</details>
+<details>
+<summary>Navbar authenticated - Desktop</summary>
+<img src="documentation/images/navbar_auth_desktop.PNG">
+</details>
 
 --- 
 ## Testing
