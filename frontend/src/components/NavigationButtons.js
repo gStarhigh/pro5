@@ -28,6 +28,7 @@ const NavigationButtons = () => {
                     className={styles.Image}
                     src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/gene-devine-ahxNfsInPVM-unsplash_fgcxqq.jpg"
                     fluid
+                    alt="running horses"
                   />
                   <p>Create Post</p>
                 </div>
@@ -40,6 +41,7 @@ const NavigationButtons = () => {
                     className={styles.Image}
                     src="https://res.cloudinary.com/draygqe7t/image/upload/v1699698851/magdalena-smolnicka-xrxD8RaPIOg-unsplash_incngr.jpg"
                     fluid
+                    alt="2 horses"
                   />
                   <p>Create info</p>
                 </div>
