@@ -240,6 +240,29 @@ The main difference between mobile and desktop view is that the image is only vi
 <img src="documentation/images/signin_page_desktop.png">
 </details>
 
+### Create Post page
+The Create post page lets you upload an image of your choice and choose a title, description and content information. By filling out these 3 fields other users can easier search and find your post and might also find the content more informative.
+<details>
+<summary>Create Post - Mobile</summary>
+<img src="documentation/images/post_create_mobile.png">
+</details>
+<details>
+<summary>Create Post - Desktop</summary>
+<img src="documentation/images/post_create_desktop.png">
+</details>
+
+### Information Create page
+
+
+
+
+### Contact page
+
+
+### Profile Page
+
+
+### Post page
 
 
 
