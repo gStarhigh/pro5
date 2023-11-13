@@ -119,15 +119,17 @@ function ProfilePage() {
 
   const mainProfilePosts = (
     <>
-      <div className="text-center">
-        <Button
-          onClick={toggleContactList}
-          className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        >
-          My Tickets
-        </Button>
-        {showContactList && <ContactList />}
-      </div>
+      {is_owner && (
+        <div className="text-center">
+          <Button
+            onClick={toggleContactList}
+            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+          >
+            My Tickets
+          </Button>
+          {showContactList && <ContactList />}
+        </div>
+      )}
       <hr />
       <p className="text-center">{profile?.owner}'s posts</p>
       <div className="justify-content-center">
