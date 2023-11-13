@@ -26,7 +26,6 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
     
 - ## [Testing](#testing-1)
     - ## [Code Validation](#code-validation-1)
-    - ## [Testing User Stories](#testing-user-stories-1)
     - ## [Manual Testing](#manual-testing-1)
     - ## [Future improvements](#Future-improvements-1)
 - ## [Bugs](#Bugs-1)
@@ -41,18 +40,6 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 - ## [Credits](#credits-1)
 ---
-## UX
-
-
-### Colors and Fonts used:
-
-#### Font
-The Font I chose is from GoogleFonts and are free to use. I chose the font called "Roboto" with sans-serif as a fallback font. 
-Roboto is clean and easy to read. 
-
-#### Color
-
-
 
 ## Project Goals
 
@@ -66,65 +53,25 @@ Roboto is clean and easy to read.
 ---
 ## Flowchart
 
-### Structure
-
-
-#### Here is an image of the structure I used for this project.
-The flowchart was made using [Lucidchart](https://lucid.co/).
-![Image of the structure:]()
-
-
-#### Wireframes
-The Wireframes should not be considered finished result of the website, but as a tool I used to plan and visualize the project as I worked on it. 
-
-All wireframes were created using [Balsamiq](https://balsamiq.com/).
-
-
-
 #### Database
 
-
-
-
----
-## General features
-
-#### Header and Navigation
 
 
 --- 
 ## Testing
 
 
-#### Lighthouse result
-
-
 
 ---
 ### Code Validation
-
-#### HTML
-All HTML files has passed through validation and shows no errors:
-
-
-#### CSS
-
-
-
-#### JavaScript
-
-
 
 #### Python
 
 
 
+
+
 ---
-
-## Testing User Stories
-Testing of the User stories for the project.
-All User Stories can be found [Here]()
-
 
 
 ## Manual Testing
@@ -147,14 +94,6 @@ All User Stories can be found [Here]()
 
 
 ---
-## Languages, Libraries and Software
-### Main Languages/ Frameworks:
-- HTML5
-- CSS3
-- Python
-- Javascript
-- Django
-- React
 
 ### Modules/ Packages used:
 Most important packages:
@@ -186,36 +125,9 @@ Most important packages:
 ---
 ## Deployment
 
-### Creating the workspace
+The deployment guidelines can be found in the Deployment Readme.
 
 
-
-#### Creating the Heroku app
-
-
----
-## Github Pages
-- This project was developed using Gitpod which I used to commit and push to GitHub using the terminal in GitPod.(Note that this project was deployed to Heroku and that those steps also must be followed.)
-### Here are the steps to deploy a website to GitHub Pages from its GitHub repository:
-
-- Log in to GitHub and locate the GitHub Repository.
-- At the top of the Repository, locate the Settings button on the menu.
-- Under Source, click the dropdown called None and select Main Branch.
-- The page will refresh automatically and generate a link to your website.
-### Forking the GitHub Repository
-- By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
-
-- Log in to GitHub and locate the GitHub Repository.
-- At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-- You should now have a copy of the original repository in your GitHub account.
-### Making a Local Clone
-- Log in to GitHub and locate the GitHub Repository
-- Under the repository name, click "Clone or download".
-- To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-- Open Git Bash
-- Change the current working directory to the location where you want the cloned directory to be made.
-- Type git clone, and then paste the URL you copied in Step 3. $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-- Press Enter. Your local clone will be created.
 ---
 ## Credits
 
