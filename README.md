@@ -393,8 +393,12 @@ The lighthouse result is not as good as I would like. The problem is the images 
 ### Code Validation
 
 #### HTML
-All HTML files has passed through validation and shows no errors:
+Index.html has passed through validation and there is 3 errors due to that the linter does not recognize the %PUBLIC_URL% value. It does not affect the project/code. There are also 9 info messages, that does not affect the code.
 
+<details>
+<summary>HTML Result</summary>
+<img src="documentation/testing/validation/html/html.png">
+</details>
 
 #### CSS
 
