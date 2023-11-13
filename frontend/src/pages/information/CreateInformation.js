@@ -34,6 +34,21 @@ function CreateInformation() {
       ...infoData,
       [event.target.name]: event.target.value,
     });
+
+    // If the user changed the start_date or end_date inputs, perform the validation check again
+    if (
+      event.target.name === "start_date" ||
+      event.target.name === "end_date"
+    ) {
+      let newErrors = {};
+      if (isDateInPast(start_date)) {
+        newErrors.start_date = ["Start date cannot be in the past"];
+      }
+      if (isDateInPast(end_date)) {
+        newErrors.end_date = ["End date cannot be in the past"];
+      }
+      setErrors(newErrors);
+    }
   };
 
   const handleCancel = () => {
@@ -47,12 +62,35 @@ function CreateInformation() {
     }));
   }, [currentUser]);
 
+  const isDateInPast = (dateString) => {
+    const date = new Date(dateString);
+    const now = new Date();
+    now.setHours(0, 0, 0, 0); // Sets the time to 00:00:00 for today's date
+    return date < now;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!currentUser) {
       history.push("/signin");
       setAlert("You must be signed in to create information");
+      return;
+    }
+
+    // Store error messages
+    let newErrors = {};
+
+    // Check if start_date and end_date are in the past
+    if (isDateInPast(start_date)) {
+      newErrors.start_date = ["Start date cannot be in the past"];
+    }
+    if (isDateInPast(end_date)) {
+      newErrors.end_date = ["End date cannot be in the past"];
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
