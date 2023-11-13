@@ -737,6 +737,23 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | The 3 dots | The 3 dots are not visible. | The 3 dots are not visible. | :heavy_check_mark: |
 
 
+8. Contact page
+
+- As a Signed in user.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| No Subject | Submit the form without a Subject | Error message appears | :heavy_check_mark: |
+| No Message | Submit the form without a Message | Error message appears | :heavy_check_mark: |
+| Cancel | Click the Cancel button | I am redirected to my last visited page. | :heavy_check_mark: |
+| Submit | Click the Submit button | I am redirected to the home page. | :heavy_check_mark: |
+| Submit | Click the Submit button | An alert message is displayed. | :heavy_check_mark: |
+
+- As a Signed out user.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Contact page | Try to access the Contact page | Redirected to the sign in page. | :heavy_check_mark: |
 
 
 ---
