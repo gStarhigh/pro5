@@ -755,6 +755,48 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 |-------------|------------|---------------------|-------------------|
 | Contact page | Try to access the Contact page | Redirected to the sign in page. | :heavy_check_mark: |
 
+9. Contact tickets on profile page.
+
+- As a Profile page owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| My tickets button | The profile page owner. | The "My Tickets" button is visible. | :heavy_check_mark: |
+| No existing tickets | Click the "My Tickets" button | The text "You have no tickets" is displayed. | :heavy_check_mark: |
+| Existing tickets | Click the "My Tickets" button | All existing tickets are displayed. | :heavy_check_mark: |
+| The 3 dots | Click the 3 dots. | Edit and Delete icons are displayed. | :heavy_check_mark: |
+| Edit Icon | Click the Edit Icon | I am redirected to the edit page. | :heavy_check_mark: |
+| Edit page | Change the Subject and submit. | An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Change the Message and submit. | I am redirected back to the Profile page. | :heavy_check_mark: |
+| Edit page | Change the Message and submit. | An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Click the Cancel button | I am redirected back to the Profile Page. | :heavy_check_mark: |
+| Delete Icon | Click the Delete Icon | The delete modal is displayed. | :heavy_check_mark: |
+| Delete Modal | Click the Delete Button | The Ticket is deleted. | :heavy_check_mark: |
+| Delete Modal | Click the Delete Button | An alert message is displayed. | :heavy_check_mark: |
+| Delete Modal | Click the Cancel Button | The Modal closes. | :heavy_check_mark: |
+
+
+- As not a Profile page owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| My tickets button | Not the profile page owner. | The "My Tickets" button is not visible. | :heavy_check_mark: |
+
+
+10. Profile page.
+- As a Profile page owner.
+
+
+
+
+
+- As not a Profile page owner.
+
+
+
+
+
+
 
 ---
 ## Future improvements
