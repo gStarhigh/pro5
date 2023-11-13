@@ -17,4 +17,4 @@ class TicketsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tickets
         fields = ['owner', 'created_on', 'updated_on', 'subject',
-                  'message', 'ticket_status', 'is_owner', 'id',]
+                  'message', 'ticket_status', 'is_owner', 'id', ]
