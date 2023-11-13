@@ -401,7 +401,88 @@ Index.html has passed through validation and there is 3 errors due to that the l
 </details>
 
 #### CSS
+All CSS files has been validated and shows no errors.
 
+<details>
+<summary>App.module.css</summary>
+<img src="documentation/testing/validation/css/app.png">
+</details>
+<details>
+<summary>index.module.css</summary>
+<img src="documentation/testing/validation/css/avatar.png">
+</details>
+<details>
+<summary>Avatar.module.css</summary>
+<img src="documentation/testing/validation/css/avatar.png">
+</details>
+<details>
+<summary>Button.module.css</summary>
+<img src="documentation/testing/validation/css/button.png">
+</details>
+<details>
+<summary>Carousel.module.css</summary>
+<img src="documentation/testing/validation/css/carousel.png">
+</details>
+<details>
+<summary>Comment.module.css</summary>
+<img src="documentation/testing/validation/css/comment.png">
+</details>
+<details>
+<summary>CommentCreateEditForm.module.css</summary>
+<img src="documentation/testing/validation/css/commentcreate.png">
+</details>
+<details>
+<summary>ContactForm.module.css</summary>
+<img src="documentation/testing/validation/css/contactform.png">
+</details>
+<details>
+<summary>Information.module.css</summary>
+<img src="documentation/testing/validation/css/information.png">
+</details>
+<details>
+<summary>MoreDropDown.module.css</summary>
+<img src="documentation/testing/validation/css/moredropdown.png">
+</details>
+<details>
+<summary>NavBar.module.css</summary>
+<img src="documentation/testing/validation/css/navbar.png">
+</details>
+<details>
+<summary>NavigationButtons.module.css</summary>
+<img src="documentation/testing/validation/css/navigationbuttons.png">
+</details>
+<details>
+<summary>NotFound.module.css</summary>
+<img src="documentation/testing/validation/css/notfound.png">
+</details>
+<details>
+<summary>Post.module.css</summary>
+<img src="documentation/testing/validation/css/post.png">
+</details>
+<details>
+<summary>PostCreateEditForm.module.css</summary>
+<img src="documentation/testing/validation/css/postcreateedit.png">
+</details>
+<details>
+<summary>PostsButtons.module.css</summary>
+<img src="documentation/testing/validation/css/postsbuttons.png">
+</details>
+<details>
+<summary>PostsPage.module.css</summary>
+<img src="documentation/testing/validation/css/postspage.png">
+</details>
+<details>
+<summary>Profile.module.css</summary>
+<img src="documentation/testing/validation/css/profile.png">
+</details>
+<details>
+<summary>ProfilePage.module.css</summary>
+<img src="documentation/testing/validation/css/profilepage.png">
+</details>
+<details>
+<summary>SignInUpForm.module.css</summary>
+<img src="documentation/testing/validation/css/signinupform.png">
+</details>
 
 
 #### JavaScript
