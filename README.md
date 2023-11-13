@@ -556,8 +556,30 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 ## Manual Testing
 
+1. Home Page
 
+- As a Logged out user:
 
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Navbar buttons | The Home link in the navbar is visible. | The Home link in the navbar is visible. | :heavy_check_mark: |
+| Navbar buttons | The Sign in link in the navbar is visible. | The sign in link in the navbar is visible. | :heavy_check_mark: |
+| Navbar buttons | The Sign up link in the navbar is visible. | The sign up link in the navbar is visible. | :heavy_check_mark: |
+| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
+| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
+| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
+| Most popular profiles | Click a profile in "most followed profiles"  | I am redirected to the sign in page, after sign in, I am redirected to the profile I clicked. | :heavy_check_mark: |
+| Information component | The information component is not visible. | Information component is not visible. | :heavy_check_mark: |
+| Create information image | The create information image is not visible. | The create information image is not visible. | :heavy_check_mark: |
+| Create post image | The create post image is not visible. | The create post image is not visible. | :heavy_check_mark: |
+| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
+| Notification | Sign in | The Alert for a successful sign in is displayed. | :heavy_check_mark: |
+
+- As a Logged in user:
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| . | . | . | :heavy_check_mark: |
 
 
 ---
