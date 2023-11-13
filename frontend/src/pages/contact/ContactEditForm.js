@@ -65,7 +65,7 @@ function EditTicket() {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className={styles.Width}>
+    <Form onSubmit={handleSubmit} className={styles.Contact}>
       <Form.Group controlId="subject">
         <Form.Label>Subject</Form.Label>
         <Form.Control
