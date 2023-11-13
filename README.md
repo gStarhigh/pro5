@@ -221,7 +221,6 @@ All wireframes were created using [Balsamiq](https://balsamiq.com/).
 </details>
 
 
-
 ---
 ## General features
 
@@ -492,10 +491,6 @@ I Installed Eslint's extension on gitpod and that was explained to me that that 
 <summary>Eslint</summary>
 <img src="documentation/testing/validation/eslint/eslint.png">
 </details>
-
-
-#### Python
-
 
 
 ---
