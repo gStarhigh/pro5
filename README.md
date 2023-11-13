@@ -111,7 +111,7 @@ The Kanban board was a great help in keeping track of what I had done and what n
 |-------------|------------|---------------------|---------------------|---------------------|
 | **User Authorization** | 
 |  | 8 | As a Site User I can easily see my login status so that I know if I'm logged in to the site. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3A%22User+Authorization%22&pane=issue&itemId=41214544) |
-|  | 9 | As a Site User I can register for an account so that I can create, likem comment and delete posts. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3A%22User+Authorization%22&pane=issue&itemId=41214899) |
+|  | 9 | As a Site User I can register for an account so that I can create, like comment and delete posts. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3A%22User+Authorization%22&pane=issue&itemId=41214899) |
 | **Navigation** | 
 |  | 10 | As a User I can view the Navbar from every page to make navigation easy. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3ANavigation&pane=issue&itemId=41220590) |
  | **Posts** | 
@@ -120,7 +120,7 @@ The Kanban board was a great help in keeping track of what I had done and what n
  |  | 14 | As a logged in User I can comment on a POST so others can see that the post has at least one comment. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3APosts&pane=issue&itemId=41221232) |
  |  | 16 | As a user I can search for a Post to easier find what I am looking for. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3APosts&pane=issue&itemId=42254899) |
  |  | 17 | As a user I can keep scrolling down the page and new posts will be loaded without me having to press a button to load more posts. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3APosts&pane=issue&itemId=42959058) |
- |  | 18 | As a post Owner I can edit my own post to change anything I want about my existing post. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3APosts&pane=issue&itemId=42961068) |
+ |  | 18 | As a post Owner I can edit or delete my own post to change anything I want about my existing post. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3APosts&pane=issue&itemId=42961068) |
   | **Profiles** | 
 |  | 19 | As a user I can see a list of the most followed profiles on the site to easy see how the most popular profiles are. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3AProfiles&pane=issue&itemId=43308350) |
  |  | 20 | As a logged in user I can follow whatever profile I want to keep up with their posts. | Must Have | [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D&filterQuery=milestone%3AProfiles&pane=issue&itemId=43308602) |
@@ -497,7 +497,30 @@ I Installed Eslint's extension on gitpod and that was explained to me that that 
 
 ## Testing User Stories
 Testing of the User stories for the project.
-All User Stories can be found [Here]()
+All User Stories can be found [Here](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D)
+
+1. EPIC: User Authorization
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 9 | New account registration. | As a Site User I can register for an account so that I can create, like comment and delete posts. | As a non registered user I can create an account so that I can access all content on the website. I cannot choose a username that already exists. | :heavy_check_mark: |
+| 2 | Login Status | As a Site User I can easily see my login status so that I know if I'm logged in to the site. | When I am not logged in, my username is not visible in the navbar. When I am logged in, I can see my username in the navbar. When I sign in, a success message is displayed. | :heavy_check_mark: |
+
+2. EPIC: Posts
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 12 | Create a post | As a logged in User I can create a POST so others can view, comment and like my post. | When I am not logged in, I cannot create a post. When I am logged in, I can create a post. | :heavy_check_mark: |
+| 13 | Like a post | As a logged in User I can Like a POST so others can see that the post has been liked. | When I am not logged in and try to like a post, I get a tooltip message saying I have to log in. When I am logged in, I can like all posts, that are not my own. | :heavy_check_mark: |
+| 14 | Comment on a Post | As a logged in User I can comment on a POST so others can see that the post has at least one comment.| When I am not logged in, I cannot comment on a post. When I am logged in, I can comment on a post. When a comment is posted successfully, a success message is displayed. | :heavy_check_mark: |
+| 16 | Search for a post | As a user I can search for a Post to easier find what I am looking for. | I can search for any username or title of the posts that exists. | :heavy_check_mark: |
+| 17 | Infinite scroll | As a user I can keep scrolling down the page and new posts will be loaded without me having to press a button to load more posts. | As a user I can just keep scrolling down the page with new posts being loaded without having to press a button to load more. | :heavy_check_mark: |
+| 18 | Edit a post | As a post Owner I can edit or delete my own post to change anything I want about my existing post. | If I am not the owner of a post, I cannot edit it. If I am the owner of a post, I can edit anything about the post. After successful editing, a success message is displayed. | :heavy_check_mark: |
+
+2. EPIC: Posts
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
 
 
 
