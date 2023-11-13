@@ -571,6 +571,9 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Create information image | The create information image is not visible. | The create information image is not visible. | :heavy_check_mark: |
 | Create post image | The create post image is not visible. | The create post image is not visible. | :heavy_check_mark: |
 | Notification | Sign in | The Alert for a successful sign in is displayed. | :heavy_check_mark: |
+| Carousel | Click "Share your images with us" | I am redirected to the sign in page, after sign in, I am redirected to the create post page. | :heavy_check_mark: |
+| Carousel | Click "Share information with others" | I am redirected to the sign in page, after sign in, I am redirected to the create information page. | :heavy_check_mark: |
+| Carousel | Click "Contact us" | I am redirected to the sign in page, after sign in, I am redirected to the contact page. | :heavy_check_mark: |
 
 - As a Logged in user:
 
@@ -586,6 +589,9 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Information component | The information component is visible. | Information component is visible. | :heavy_check_mark: |
 | Create information image | The create information image is visible. | The create information image is visible. | :heavy_check_mark: |
 | Create post image | The create post image is visible. | The create post image is visible. | :heavy_check_mark: |
+| Carousel | Click "Share your images with us" |  I am redirected to the create post page | :heavy_check_mark: |
+| Carousel | Click "Share information with others" |  I am redirected to the create information page. | :heavy_check_mark: |
+| Carousel | Click "Contact us" |  I am redirected to the contact page. | :heavy_check_mark: |
 
 
 2. Information Component
