@@ -20,6 +20,8 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 Link to the Backend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Backend_README.md)
 
+Link to the Deployment README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Deployment_README.md)
+
 ![Fullscreen image of the application:](/documentation/images/amiresponsive.PNG)
 
 
