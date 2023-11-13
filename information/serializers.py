@@ -13,4 +13,4 @@ class InformationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Information
         fields = ['owner', 'start_date', 'end_date',
-                  'created_on', 'updated_on', 'text', 'is_owner', 'id',]
+                  'created_on', 'updated_on', 'text', 'is_owner', 'id', ]
