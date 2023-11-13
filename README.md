@@ -486,7 +486,12 @@ All CSS files has been validated and shows no errors.
 
 
 #### JavaScript
-
+Eslint shows no errors, only notifications are "unknown word".
+I Installed Eslint's extension on gitpod and that was explained to me that that was all I had to do to make it work. I have gone through all files on my project and no errors were presented anywhere.
+<details>
+<summary>Eslint</summary>
+<img src="documentation/testing/validation/eslint/eslint.png">
+</details>
 
 
 #### Python
