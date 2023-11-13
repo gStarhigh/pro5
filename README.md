@@ -517,11 +517,41 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | 17 | Infinite scroll | As a user I can keep scrolling down the page and new posts will be loaded without me having to press a button to load more posts. | As a user I can just keep scrolling down the page with new posts being loaded without having to press a button to load more. | :heavy_check_mark: |
 | 18 | Edit a post | As a post Owner I can edit or delete my own post to change anything I want about my existing post. | If I am not the owner of a post, I cannot edit it. If I am the owner of a post, I can edit anything about the post. After successful editing, a success message is displayed. | :heavy_check_mark: |
 
-2. EPIC: Posts
+3. EPIC: Navigation
 
 | **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|-------------------|
+| 10 | Navigation | As a User I can view the Navbar from every page to make navigation easy. | The Navbar is visible from all pages on the site. | :heavy_check_mark: |
 
+
+3. EPIC: Profiles
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 19 | Unfollow a profile | As a user I can unfollow a profile that I no longer want to follow. | When I try to unfollow a profile I follow, I unfollow that profile, and the profiles followers count, and my subscribed count decreases. | :heavy_check_mark: |
+| 20 | See the most followed profiles | As a user I can see a list of the most followed profiles on the site to easy see how the most popular profiles are. | The most followed profiles appear and if I am logged in, my own profile is not listed. | :heavy_check_mark: |
+| 21 | View a user Profile | As I user I can see a users profile page to find more information about the user and their interaction on the site. | I can only access the profile pages if I am logged in. If I am logged in, I can access all profile pages. | :heavy_check_mark: |
+| 22 | Unfollow a profile | As a user I can unfollow a profile that I no longer want to follow. | When I try to unfollow a profile I follow, I unfollow that profile, and the profiles followers count, and my subscribed count decreases. | :heavy_check_mark: |
+
+4. EPIC: Important weekly information
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 23 | Create the information form | As a User I can add information with a start and end date so other user on the site can take part of the information. | As a logged out user I can't create information. If I am logged in, I can create information. After successful submission, an alert is displayed. | :heavy_check_mark: |
+| 24 | Edit or delete information that I have posted | As a User I can edit or delete information that I have posted and own. | If I am the owner of an information post, I can edit or delete it. If I am not the owner, I cannot edit or delete it. After successful edit or deletion, an alert is displayed. | :heavy_check_mark: |
+| 25 | View important information |As a logged in User I can see my own and others important weekly information. | As a logged out user, I cannot see any important information. If I am logged in, I can see my own and others important information posts, if there are any. | :heavy_check_mark: |
+
+5. EPIC: Notifications to the user
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 26 | Create the information form | As a User I get notifications on the site whenever I perform an action so I know that my action was successful. | After I sign in, sign out, create, edit delete anything I own an alert is displayed. | :heavy_check_mark: |
+
+6. EPIC: Contact
+
+| **ID** | **User Story** |**As a..** | **Action/Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|-------------------|
+| 26 | Contact form | AAs a User I can contact the page owner through the contact page to ask any question I might have. | When I submit my contact form, an alert is displayed. I can view my tickets at my profile page. | :heavy_check_mark: |
 
 
 ## Manual Testing
