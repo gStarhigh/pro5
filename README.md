@@ -786,12 +786,29 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 10. Profile page.
 - As a Profile page owner.
 
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| The 3 dots | The 3 dots are visible. | The 3 dots are visible. | :heavy_check_mark: |
+| The 3 dots | Click the 3 dots. | "Edit profile" & "Change username" & "Change password" are displayed. | :heavy_check_mark: |
+| Edit profile | Click Edit profile. | I am redirected to the edit profile page. | :heavy_check_mark: |
+| Edit profile | Change the image and click save. | I am redirected to the edit profile page. | :heavy_check_mark: |
+| Edit profile | Change the image and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Edit profile | Change the image and click save. | I am redirected back to My profile page. | :heavy_check_mark: |
+| Edit profile | Change the Bio and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Edit profile | Change the bio and click save. | I am redirected back to My profile page. | :heavy_check_mark: |
+| Edit profile | Click Cancel. | I am redirected back to My profile page. | :heavy_check_mark: |
+| Change Username | Change your username and click Save. | An alert message is displayed | :heavy_check_mark: |
+| Change Username | Change your username and click Save. | I am redirected back to My profile page. | :heavy_check_mark: |
+| Change Username | Click Cancel. | I am redirected back to My profile page. | :heavy_check_mark: |
 
 
 
 
 - As not a Profile page owner.
 
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| The 3 dots | The 3 dots are not visible. | The 3 dots are not visible. | :heavy_check_mark: |
 
 
 
