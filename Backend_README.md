@@ -65,10 +65,209 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 ---
 ### Code Validation
 
-#### Python
+### Python
+I have separated the validation files by each app to make it easier to find.
+
+### Comments
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
 
 
+### drf_api
 
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### followers
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### information
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### likes
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### posts
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### profiles
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### root
+
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+
+
+### tickets
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
+<details>
+<summary>Name</summary>
+<img src="documentation/testing/validation/python/.png">
+</details>
 
 
 ---
