@@ -68,205 +68,209 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 ### Python
 I have separated the validation files by each app to make it easier to find.
 
+All python files has been validated and shows no errors.
+
+The env.py file has too long lines, but since those are links, I have accepted those as being too long.
+
 ### Comments
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/comments/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/comments/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/comments/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/comments/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/comments/views.png">
 </details>
 
 
 ### drf_api
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>permissions.py</summary>
+<img src="documentation/testing/validation/python/drf_api/permissions.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/drf_api/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>settings.py</summary>
+<img src="documentation/testing/validation/python/drf_api/settings.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/drf_api/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/drf_api/views.png">
 </details>
 
 
 ### followers
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/followers/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/followers/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/followers/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/followers/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/followers/views.png">
 </details>
 
 
 ### information
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/information/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/information/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/information/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/information/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/information/views.png">
 </details>
 
 
 ### likes
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/likes/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/likes/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/likes/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/likes/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/likes/views.png">
 </details>
 
 
 ### posts
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/posts/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/posts/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/posts/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/posts/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/posts/views.png">
 </details>
 
 
 ### profiles
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/profiles/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/profiles/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/profiles/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/profiles/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/profiles/views.png">
 </details>
 
 
 ### root
 
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>settings.py</summary>
+<img src="documentation/testing/validation/python/root/manage.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>env.py</summary>
+<img src="documentation/testing/validation/python/root/env.png">
 </details>
 
 
 ### tickets
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>apps.py</summary>
+<img src="documentation/testing/validation/python/tickets/apps.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>models.py</summary>
+<img src="documentation/testing/validation/python/tickets/models.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>serializers.py</summary>
+<img src="documentation/testing/validation/python/tickets/serializers.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>urls.py</summary>
+<img src="documentation/testing/validation/python/tickets/urls.png">
 </details>
 <details>
-<summary>Name</summary>
-<img src="documentation/testing/validation/python/.png">
+<summary>views.py</summary>
+<img src="documentation/testing/validation/python/tickets/views.png">
 </details>
 
 
