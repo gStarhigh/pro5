@@ -566,8 +566,6 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Navbar buttons | The Sign in link in the navbar is visible. | The sign in link in the navbar is visible. | :heavy_check_mark: |
 | Navbar buttons | The Sign up link in the navbar is visible. | The sign up link in the navbar is visible. | :heavy_check_mark: |
 | Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
-| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
-| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
 | Most popular profiles | Click a profile in "most followed profiles"  | I am redirected to the sign in page, after sign in, I am redirected to the profile I clicked. | :heavy_check_mark: |
 | Information component | The information component is not visible. | Information component is not visible. | :heavy_check_mark: |
 | Create information image | The create information image is not visible. | The create information image is not visible. | :heavy_check_mark: |
@@ -579,7 +577,62 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 | **Feature** | **Action** | **Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|
-| . | . | . | :heavy_check_mark: |
+| Navbar buttons | The Home link in the navbar is visible. | The Home link in the navbar is visible. | :heavy_check_mark: |
+| Navbar buttons | The Sign out link in the navbar is visible. | The Sign out link in the navbar is visible. | :heavy_check_mark: |
+| Click the Sign out link | I should be signed out and an alert should appear. | I was signed out and an alert did appear. | :heavy_check_mark: |
+| Click the contact link | I should be taken to the contact page | I was taken to the contact page. | :heavy_check_mark: |
+| View Information | I can see all posted information. | I can see all posted information | :heavy_check_mark: |
+| Post filtration buttons | The post filtration buttons: All, Liked, Feed are visible | The buttons are  visible. | :heavy_check_mark: |
+| Most popular profiles | Click a profile in "most followed profiles"  | I am redirected to the profile I clicked. | :heavy_check_mark: |
+| Information component | The information component is visible. | Information component is visible. | :heavy_check_mark: |
+| Create information image | The create information image is visible. | The create information image is visible. | :heavy_check_mark: |
+| Create post image | The create post image is visible. | The create post image is visible. | :heavy_check_mark: |
+
+
+2. Information Component
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Edit Information Icon | I can see the Icon if I have created an information object that exists in the list. | I can see the Icon. | :heavy_check_mark: |
+| Edit Information Icon | I can't see the Icon if I don't have an information object that exists in the list. | I can't see the Icon. | :heavy_check_mark: |
+| Edit Information dots | I can't see the 3 dots if I don't have an information object that exists in the list. | I can't see the 3 dots. | :heavy_check_mark: |
+| Edit Information dots | I can see the 3 dots if I have an information object that exists in the list. | I cant see the 3 dots. | :heavy_check_mark: |
+| Edit Information dots | Click Edit Information dots | Edit and delete icons appear  | :heavy_check_mark: |
+| Edit Icon | Click Edit Icon. | I am taken to the edit page.  | :heavy_check_mark: |
+| Edit | Change the start date. | Alert message appears. | :heavy_check_mark: |
+| Edit | Change the start date. | The start date has changed. | :heavy_check_mark: |
+| Edit | Change the end date. | Alert message appears. | :heavy_check_mark: |
+| Edit | Change the end date. | The end date has changed. | :heavy_check_mark: |
+| Edit | Change the Message. | Alert message appears. | :heavy_check_mark: |
+| Edit | Change the Message. | The Message content has changed. | :heavy_check_mark: |
+| Edit | Change the start date to a date older than today. | Error message appears. | :heavy_check_mark: |
+| Edit | Change the end date to a date older than today. | Error message appears. | :heavy_check_mark: |
+| Edit | Change it to valid data. | Alert message is displayed | :heavy_check_mark: |
+| Edit | Change it to valid data. | Redirected back to home page. | :heavy_check_mark: |
+| Delete Icon | Click Delete Icon | Delete confirmation Modal appears.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Delete Button | Alert message appears.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Delete Button | Information post is deleted.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Cancel Button | Information post is not deleted. | :heavy_check_mark: |
+
+3. Search Component
+
+- As a Logged out user:
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Search field | Search field exists | The Search field exists | :heavy_check_mark: |
+| Search field | Search for a Profile name that has created a Post. | All posts the profile name has posted are displayed. | :heavy_check_mark: |
+| Search field | Search for a title on a Post. | All posts that has the search query in the title are displayed. | :heavy_check_mark: |
+
+
+- As a Logged in user:
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Search field | Search field exists | The Search field exists | :heavy_check_mark: |
+| Search field | Search for a Profile name that has created a Post. | All posts the profile name has posted are displayed. | :heavy_check_mark: |
+| Search field | Search for a title on a Post. | All posts that has the search query in the title are displayed. | :heavy_check_mark: |
+
 
 
 ---
