@@ -683,7 +683,6 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | The 3 dots | The 3 dots are visible. | The 3 dots are visible. | :heavy_check_mark: |
 
 
-
 8. Like a post
 
 - As the Post owner.
@@ -704,20 +703,34 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 9. Comment on a post
 
+- All Signed In Users
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Comment | Create a comment | A comment is created. | :heavy_check_mark: |
+| Comment | Create a comment | An alert is displayed. | :heavy_check_mark: |
+| Comment | Type in the textfield then press cancel. | The content resets. | :heavy_check_mark: |
+
 - As the Comment owner.
 
 | **Feature** | **Action** | **Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|
-| Like | Hoover over the "heart" | A tooltip is displayed saying you cannot like your own post. | :heavy_check_mark: |
-| Like | Like a post. | You cannot like your own post. | :heavy_check_mark: |
-
+| The 3 dots | The 3 dots are visible. | The 3 dots are visible. | :heavy_check_mark: |
+| The 3 dots | Click the 3 dots. | Edit and delete icons appear. | :heavy_check_mark: |
+| Edit Icon | Click the Edit Icon. | I am taken to the Edit page. | :heavy_check_mark: |
+| Edit page | Change the content and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Change the content and click save. | The comment is updated. | :heavy_check_mark: |
+| Delete Icon | Click the Delete Icon. | The confirmation modal appears. | :heavy_check_mark: |
+| Delete Icon | Click the Delete Button. | The comment is deleted. | :heavy_check_mark: |
+| Delete Icon | Click the Delete Button. | An alert message is displayed. | :heavy_check_mark: |
 
 - As not the Comment owner.
 
 | **Feature** | **Action** | **Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|
-| Like | Like a post. | The heart becomes red | :heavy_check_mark: |
-| Like | Like a post. | The Likes count increases. | :heavy_check_mark: |
+| The 3 dots | The 3 dots are not visible. | The 3 dots are not visible. | :heavy_check_mark: |
+
+
 
 
 ---
