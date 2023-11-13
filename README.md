@@ -181,7 +181,10 @@ The structure of the website is divided between authenticated users and not auth
 
 #### Here is an image of the structure I used for this project.
 The flowchart was made using [Lucidchart](https://lucid.co/).
-![Image of the structure:]()
+<details>
+<summary>Structure</summary>
+<img src="documentation/wireframes/structure.png">
+</details>
 
 
 #### Wireframes
@@ -374,7 +377,16 @@ On a specific post, you can like and comment on the post. If you are the owner o
 
 
 #### Lighthouse result
+The lighthouse result is not as good as I would like. The problem is the images and avatars on the site. Might also be an issue with fetching them from cloudinary that makes the site runs slow. Will look into a better solution for image handling, format and size after submission.
 
+<details>
+<summary> Mobile</summary>
+<img src="documentation/lighthouse/lighthouse_mobile.png">
+</details>
+<details>
+<summary> Desktop</summary>
+<img src="documentation/lighthouse/lighthouse_desktop.png">
+</details>
 
 
 ---
