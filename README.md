@@ -185,9 +185,38 @@ The flowchart was made using [Lucidchart](https://lucid.co/).
 
 
 #### Wireframes
-The Wireframes should not be considered finished result of the website, but as a tool I used to plan and visualize the project as I worked on it. 
+The Wireframes should not be considered finished result of the website, but as a tool I used to plan and visualize the project as I worked on it. The wireframes were only made for mobile devices since React Bootstrap is a mobile first framework.
 
 All wireframes were created using [Balsamiq](https://balsamiq.com/).
+<details>
+<summary>Homepage</summary>
+<img src="documentation/wireframes/homepage.png">
+</details>
+<details>
+<summary>Signup page</summary>
+<img src="documentation/wireframes/signup.png">
+</details>
+<details>
+<summary>Login page</summary>
+<img src="documentation/wireframes/login.png">
+</details>
+<details>
+<summary>Create post page</summary>
+<img src="documentation/wireframes/create_post.png">
+</details>
+<details>
+<summary>Create information page</summary>
+<img src="documentation/wireframes/create_information.png">
+</details>
+<details>
+<summary>Contact page</summary>
+<img src="documentation/wireframes/contact.png">
+</details>
+<details>
+<summary>Profile page</summary>
+<img src="documentation/wireframes/profile.png">
+</details>
+
 
 
 ---
