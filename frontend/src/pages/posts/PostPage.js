@@ -60,7 +60,6 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="text-center my-auto" lg={{ span: 8, offset: 2 }}>
-        <p className={styles.PopProfiles}>Popular profiles</p>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={styles.Content}>
           {currentUser ? (
