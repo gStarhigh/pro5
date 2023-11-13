@@ -570,7 +570,6 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Information component | The information component is not visible. | Information component is not visible. | :heavy_check_mark: |
 | Create information image | The create information image is not visible. | The create information image is not visible. | :heavy_check_mark: |
 | Create post image | The create post image is not visible. | The create post image is not visible. | :heavy_check_mark: |
-| Post filtration buttons | The post filtration buttons: All, Liked, Feed are not visible | The buttons are not visible. | :heavy_check_mark: |
 | Notification | Sign in | The Alert for a successful sign in is displayed. | :heavy_check_mark: |
 
 - As a Logged in user:
@@ -597,7 +596,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Edit Information Icon | I can't see the Icon if I don't have an information object that exists in the list. | I can't see the Icon. | :heavy_check_mark: |
 | Edit Information dots | I can't see the 3 dots if I don't have an information object that exists in the list. | I can't see the 3 dots. | :heavy_check_mark: |
 | Edit Information dots | I can see the 3 dots if I have an information object that exists in the list. | I cant see the 3 dots. | :heavy_check_mark: |
-| Edit Information dots | Click Edit Information dots | Edit and delete icons appear  | :heavy_check_mark: |
+| Edit Information dots | Click Edit Information dots. | Edit and delete icons appear  | :heavy_check_mark: |
 | Edit Icon | Click Edit Icon. | I am taken to the edit page.  | :heavy_check_mark: |
 | Edit | Change the start date. | Alert message appears. | :heavy_check_mark: |
 | Edit | Change the start date. | The start date has changed. | :heavy_check_mark: |
@@ -609,30 +608,116 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Edit | Change the end date to a date older than today. | Error message appears. | :heavy_check_mark: |
 | Edit | Change it to valid data. | Alert message is displayed | :heavy_check_mark: |
 | Edit | Change it to valid data. | Redirected back to home page. | :heavy_check_mark: |
-| Delete Icon | Click Delete Icon | Delete confirmation Modal appears.  | :heavy_check_mark: |
-| Confirmation Modal | Click the Delete Button | Alert message appears.  | :heavy_check_mark: |
-| Confirmation Modal | Click the Delete Button | Information post is deleted.  | :heavy_check_mark: |
-| Confirmation Modal | Click the Cancel Button | Information post is not deleted. | :heavy_check_mark: |
+| Delete Icon | Click Delete Icon. | Delete confirmation Modal appears.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Delete Button. | Alert message appears.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Delete Button. | Information post is deleted.  | :heavy_check_mark: |
+| Confirmation Modal | Click the Cancel Button. | Information post is not deleted. | :heavy_check_mark: |
 
-3. Search Component
 
-- As a Logged out user:
+3. Most Followed profiles Component
 
 | **Feature** | **Action** | **Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|
-| Search field | Search field exists | The Search field exists | :heavy_check_mark: |
+| Subscribe to a Profile | Click subscribe on a profile. | The button changes from Subscribe to Unsubscribe. | :heavy_check_mark: |
+| Unsubscribe to a Profile | Click Unsubscribe on a profile. | The button changes from Unsubscribe to Subscribe. | :heavy_check_mark: |
+| Most popular profiles | Click a profile in "most followed profiles".  | I am redirected to the profile I clicked. | :heavy_check_mark: |
+
+
+4. Post filtration buttons
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Post filtration buttons | Click on "All". | All posts are displayed. | :heavy_check_mark: |
+| Post filtration buttons | Click on "Liked". | All posts that I have liked are displayed. | :heavy_check_mark: |
+| Post filtration buttons | Click on "Feed". | All posts from the profiles I follow are displayed. | :heavy_check_mark: |
+| Post filtration buttons | Click on "Liked" when not having liked any posts. | "No results found. Adjust the search keyword or like a post." is displayed. | :heavy_check_mark: |
+| Post filtration buttons | Click on "Feed" when not following any profile. | "No results found. Adjust the search keyword or follow a user." is displayed. | :heavy_check_mark: |
+
+
+5. Search Component
+
+- As a User:
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Search field | Search field exists. | The Search field exists. | :heavy_check_mark: |
 | Search field | Search for a Profile name that has created a Post. | All posts the profile name has posted are displayed. | :heavy_check_mark: |
 | Search field | Search for a title on a Post. | All posts that has the search query in the title are displayed. | :heavy_check_mark: |
 
 
-- As a Logged in user:
+6. Infinite Scroll
 
 | **Feature** | **Action** | **Expected result** | **Pass/Fail** |
 |-------------|------------|---------------------|-------------------|
-| Search field | Search field exists | The Search field exists | :heavy_check_mark: |
-| Search field | Search for a Profile name that has created a Post. | All posts the profile name has posted are displayed. | :heavy_check_mark: |
-| Search field | Search for a title on a Post. | All posts that has the search query in the title are displayed. | :heavy_check_mark: |
+| Infinite scrolling | Scroll to the bottom of the page. | More posts are loaded, if more exists. | :heavy_check_mark: |
 
+
+7. Post Page
+
+- As the Post owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| The 3 dots | The 3 dots are visible. | The 3 dots are visible. | :heavy_check_mark: |
+| The 3 dots | Click the 3 dots. | Edit and delete icons appear. | :heavy_check_mark: |
+| Edit Icon | Click the Edit Icon. | I am taken to the Edit page. | :heavy_check_mark: |
+| Edit page | Change the image and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Change the image and click save. | I am redirected back to the post. | :heavy_check_mark: |
+| Edit page | Change the title and click save. | I am redirected back to the post. | :heavy_check_mark: |
+| Edit page | Change the title and click save. |  An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Change the Description and click save. | I am redirected back to the post. | :heavy_check_mark: |
+| Edit page | Change the Description and click save. |  An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Change the Content and click save. | I am redirected back to the post. | :heavy_check_mark: |
+| Edit page | Change the Content and click save. |  An alert message is displayed. | :heavy_check_mark: |
+| Edit page | Click on Cancel. |  I am redirected back to the post. | :heavy_check_mark: |
+| Edit page | Click on Cancel. |  An alert message is not displayed. | :heavy_check_mark: |
+| Delete Icon | Click the Delete Icon. | The confirmation modal appears. | :heavy_check_mark: |
+| Delete Modal | Click the Delete button. | Post is deleted. | :heavy_check_mark: |
+| Delete Modal | Click the Delete button. | An alert message is not displayed. | :heavy_check_mark: |
+| Delete Modal | Click the Cancel button. | I am redirected back to the post. | :heavy_check_mark: |
+
+- As not the Post owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| The 3 dots | The 3 dots are visible. | The 3 dots are visible. | :heavy_check_mark: |
+
+
+
+8. Like a post
+
+- As the Post owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Like | Hoover over the "heart" | A tooltip is displayed saying you cannot like your own post. | :heavy_check_mark: |
+| Like | Like a post. | You cannot like your own post. | :heavy_check_mark: |
+
+
+- As not the Post owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Like | Like a post. | The heart becomes red | :heavy_check_mark: |
+| Like | Like a post. | The Likes count increases. | :heavy_check_mark: |
+
+
+9. Comment on a post
+
+- As the Comment owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Like | Hoover over the "heart" | A tooltip is displayed saying you cannot like your own post. | :heavy_check_mark: |
+| Like | Like a post. | You cannot like your own post. | :heavy_check_mark: |
+
+
+- As not the Comment owner.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| Like | Like a post. | The heart becomes red | :heavy_check_mark: |
+| Like | Like a post. | The Likes count increases. | :heavy_check_mark: |
 
 
 ---
