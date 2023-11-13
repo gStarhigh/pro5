@@ -1,5 +1,5 @@
 // React
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 // React Bootstrap imports
@@ -18,10 +18,14 @@ import appStyles from "../../App.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
+// Toastify notificatons
+import { AlertContext } from "../../contexts/AlertContext";
+
 const UserPasswordForm = () => {
   const history = useHistory();
   const { id } = useParams();
   const currentUser = useCurrentUser();
+  const { setAlert } = useContext(AlertContext);
 
   const [userData, setUserData] = useState({
     new_password1: "",
@@ -48,6 +52,7 @@ const UserPasswordForm = () => {
     event.preventDefault();
     try {
       await axiosRes.post("/dj-rest-auth/password/change/", userData);
+      setAlert("Password updated successfully!");
       history.goBack();
     } catch (err) {
       setErrors(err.response?.data);
