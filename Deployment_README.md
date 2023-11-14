@@ -1,3 +1,18 @@
+# React project (Project Portfolio 5, Advanced FrontEnd) for Code Institute.
+
+## General information
+This Readme goes through the steps of setting up your workspace and deploying your project to both GitHub and Heroku.
+
+
+Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
+
+Link to the Backend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/Backend_README.md)
+
+Link to the Frontend README: [Click Here!](https://github.com/gStarhigh/pro5/blob/main/README.md)
+
+![Fullscreen image of the application:](/documentation/images/amiresponsive.PNG)
+
+
 ## Deployment
 
 ### Creating the workspace
