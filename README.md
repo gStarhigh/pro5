@@ -923,6 +923,10 @@ All images can be found [Here](https://github.com/gStarhigh/pro5/tree/main/docum
     - https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
 
 
+- React Image File Resizer
+  - https://www.npmjs.com/package/react-image-file-resizer
+  - https://medium.com/@impulsejs/convert-dataurl-to-a-file-in-javascript-1921b8c3f4b
+
 - Favicon Credit: 
   - https://favicon.io/emoji-favicons/horse
 
