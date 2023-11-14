@@ -829,7 +829,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 | **Bug** | **Solution** |
 |-------------|------------|
-| When trying to register an account with a Username and Password that are too alike the submit fails but no error message is displayed to the user, only a 400 Error in the console. | No Solution in place. |
+| When trying to register an account with a Username and Password that are too alike the submit fails but no error message is displayed to the user, only a 400 Error in the console. | Solved. I was missing error handling in the signup form. |
 
 
 ---
