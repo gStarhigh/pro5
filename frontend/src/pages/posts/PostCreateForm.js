@@ -52,15 +52,11 @@ function PostCreateForm() {
 
       try {
         const resizedImage = await resizeFile(event.target.files[0]);
-        console.log("Resized image URI:", resizedImage);
-
         setPostData({
           ...postData,
           image: resizedImage,
         });
-      } catch (error) {
-        console.error("Error resizing image:", error);
-      }
+      } catch (err) {}
     }
   };
 

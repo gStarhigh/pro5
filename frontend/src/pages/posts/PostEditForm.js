@@ -1,6 +1,7 @@
 // React imports
 import React, { useEffect, useRef, useState, useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import Resizer from "react-image-file-resizer";
 
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
@@ -28,7 +29,7 @@ function PostEditForm() {
     content: "",
     image: "",
   });
-  const { title, description, content, image } = postData;
+  const { title, description, content } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -56,32 +57,71 @@ function PostEditForm() {
     });
   };
 
-  const handleChangeImage = (event) => {
+  const handleChangeImage = async (event) => {
     if (event.target.files.length) {
-      URL.revokeObjectURL(image);
-      setPostData({
-        ...postData,
-        image: URL.createObjectURL(event.target.files[0]),
-      });
+      if (postData.image) {
+        URL.revokeObjectURL(postData.image);
+      }
+
+      try {
+        const resizedImageFile = await resizeFile(event.target.files[0]);
+        const resizedImageURL = URL.createObjectURL(resizedImageFile);
+        setPostData({
+          ...postData,
+          image: resizedImageURL,
+          file: resizedImageFile,
+        });
+      } catch (err) {}
     }
+  };
+
+  // Credit: https://medium.com/@impulsejs/convert-dataurl-to-a-file-in-javascript-1921b8c3f4b
+  const dataURLtoFile = (dataURL, fileName) => {
+    const arr = dataURL.split(",");
+    const mime = arr[0].match(/:(.*?);/)[1];
+    const bstr = atob(arr[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new File([u8arr], fileName, { type: mime });
+  };
+
+  // Credit: https://www.npmjs.com/package/react-image-file-resizer
+  const resizeFile = async (file) => {
+    return new Promise((resolve, reject) => {
+      Resizer.imageFileResizer(
+        file,
+        1024,
+        1024,
+        "PNG",
+        100,
+        0,
+        (uri) => {
+          const resizedFile = dataURLtoFile(uri, "resizedImage.png");
+          resolve(resizedFile);
+        },
+        "base64"
+      );
+    });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
 
+    const formData = new FormData();
     formData.append("title", title);
     formData.append("description", description);
     formData.append("content", content);
-
-    if (imageInput?.current?.files[0]) {
-      formData.append("image", imageInput.current.files[0]);
-    }
+    formData.append("image", postData.file);
 
     try {
-      await axiosReq.put(`/posts/${id}/`, formData);
+      const { data } = await axiosReq.put(`/posts/${id}/`, formData);
       setAlert("Your post was updated!");
-      history.push(`/posts/${id}`);
+      history.push(`/posts/${data.id}`);
     } catch (err) {
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
@@ -159,7 +199,7 @@ function PostEditForm() {
           >
             <Form.Group className="text-center">
               <figure>
-                <Image className={styles.Image} src={image} rounded />
+                <Image className={styles.Image} src={postData.image} rounded />
               </figure>
               <div>
                 <Form.Label
