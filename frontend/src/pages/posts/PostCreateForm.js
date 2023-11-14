@@ -1,6 +1,7 @@
 // React imports
 import React, { useRef, useState, useContext } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import Resizer from "react-image-file-resizer";
 
 // React Bootstrap imports
 import Form from "react-bootstrap/Form";
@@ -45,14 +46,56 @@ function PostCreateForm() {
     });
   };
 
-  const handleChangeImage = (event) => {
+  const handleChangeImage = async (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
-      setPostData({
-        ...postData,
-        image: URL.createObjectURL(event.target.files[0]),
-      });
+
+      try {
+        const resizedImage = await resizeFile(event.target.files[0]);
+        console.log("Resized image URI:", resizedImage);
+
+        setPostData({
+          ...postData,
+          image: resizedImage,
+        });
+      } catch (error) {
+        console.error("Error resizing image:", error);
+      }
     }
+  };
+
+  // Credit: https://medium.com/@impulsejs/convert-dataurl-to-a-file-in-javascript-1921b8c3f4b
+  const dataURLtoFile = (dataURL, fileName) => {
+    const arr = dataURL.split(",");
+    const mime = arr[0].match(/:(.*?);/)[1];
+    const bstr = atob(arr[1]);
+    let n = bstr.length;
+    const u8arr = new Uint8Array(n);
+
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n);
+    }
+
+    return new File([u8arr], fileName, { type: mime });
+  };
+
+  // Credit: https://www.npmjs.com/package/react-image-file-resizer
+  const resizeFile = async (file) => {
+    return new Promise((resolve, reject) => {
+      Resizer.imageFileResizer(
+        file,
+        1024,
+        1024,
+        "PNG",
+        100,
+        0,
+        (uri) => {
+          const resizedFile = dataURLtoFile(uri, "resizedImage.png");
+          resolve(resizedFile);
+        },
+        "base64"
+      );
+    });
   };
 
   const handleSubmit = async (event) => {
@@ -62,11 +105,10 @@ function PostCreateForm() {
       return;
     }
     const formData = new FormData();
-
     formData.append("title", title);
     formData.append("description", description);
     formData.append("content", content);
-    formData.append("image", imageInput.current.files[0]);
+    formData.append("image", postData.image);
 
     try {
       const { data } = await axiosReq.post("/posts/", formData);
@@ -154,7 +196,11 @@ function PostCreateForm() {
               {image ? (
                 <>
                   <figure>
-                    <Image className={styles.Image} src={image} rounded></Image>
+                    <Image
+                      className={styles.Image}
+                      src={URL.createObjectURL(image)}
+                      rounded
+                    ></Image>
                   </figure>
                   <div>
                     <Form.Label
