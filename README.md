@@ -820,8 +820,11 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 ---
 ## Future improvements
-
-
+| **Feature** | **Description** | 
+|-------------|------------|
+| Groups|  Create different classes or groups that can see different things on the website. I would like for example to be able to see different information depending on what group you are a part of. | 
+| Hay Usage | model I want to implement a hay usage model, in which the user can add how much hay each of their horses should get per feeding. The user should be able to change this and the end of the month, a total amount in kg should be calculated that the owner of the group/admin, can access to easier provide invoices to the users.|
+| Invoice|  I want to add the ability for the group owner/ admin to upload invoices to the different users on the page depending on the usage of each horse of the owner. When a new invoice is uploaded, a due date for the invoice is also added to the users profile page, and a "bell" should be visible in the navbar, to indicate something new has happened. This bell should expand to contain the information when clicked.| 
 
 
 ---
