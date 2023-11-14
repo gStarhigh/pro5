@@ -900,7 +900,33 @@ Most important packages:
 ---
 ## Credits
 
-- Favicon Credit: https://favicon.io/emoji-favicons/horse
+- Code Institute:
+  - This project is heavily based upon Code Institues "Moments" Walkthrough project, with alterations made to the project.
 
-- Emoji in Readme credit: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
+- Code Institute's tutor support.
+
+- My Wife Maria for all support and ideas for the project.
+
+
+- Private Route:
+  - https://jasonwatmore.com/post/2022/06/24/react-router-6-private-route-component-to-restrict-access-to-protected-pages
+  - https://jasonwatmore.com/post/2021/09/09/react-redirect-to-login-page-if-unauthenticated
+
+
+- Image credits:
+  - Gene Devine:
+  - https://unsplash.com/@devine_images
+
+  - Magdalena Smolnicka
+    - https://unsplash.com/@magdaleny
+
+  - Pawel Czerwinski:
+    - https://unsplash.com/photos/black-and-brown-rotary-phone-near-gray-wall--0xCCPIbl3M
+
+
+- Favicon Credit: 
+  - https://favicon.io/emoji-favicons/horse
+
+- Emoji in Readme credit:
+  - https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 ---
