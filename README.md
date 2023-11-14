@@ -852,6 +852,7 @@ Most important packages:
 - dj3-cloudinary-storage: Integrates Cloudinary with Django Storage API.
 - django-allauth: Integrates user authentication aswell as 3rd party account authientication such as facebook and other social accounts.
 - Gunicorn: Gunicorn is a pure-Python HTTP server for WSGI applications.
+- Toastify: Toastify is an 3rd party library that allows for alerts to be displayed when a user perfoms an action on the site.
 
 <details>
 <summary>All packages</summary>
@@ -864,15 +865,13 @@ Most important packages:
 
 ---
 ## Final Result
-- The final deployed project can be found [here.]()
+- The final deployed project can be found [here.](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 ### Sample printscreens of the finished project below:
 
-(All images can be found [Here]())
+All images can be found [Here](https://github.com/gStarhigh/pro5/tree/main/documentation).
 
 
-
----
 
 ---
 ## Github Pages
