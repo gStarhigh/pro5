@@ -52,6 +52,8 @@ Link to the Deployment README: [Click Here!](https://github.com/gStarhigh/pro5/b
  - ## [Flowchart](#Flowchart-1)
 
  - ## [General features](#general-features-1)
+
+ - ## [Reusable Components](#reusable-components-1)
     
 - ## [Testing](#testing-1)
     - ## [Code Validation](#code-validation-1)
