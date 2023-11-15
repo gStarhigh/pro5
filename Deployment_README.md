@@ -79,6 +79,42 @@ Don't forget the dot at the end.
 15. Now the basic settings are in place, and since we have moved the SECRET_KEY to the env.py file before comitting and pushing to GitHub, it is safe and we can now add, commit, and push our first time to GitHub.
     - NOTE: It's important that you have not comitted anything while the Secret Key was in settings.py as this will then be open for everyone to find in your GitHub account. If you have done this, change the secret key variable in your env.py file, and commit and push again. Now the secret key is protected.
 
+#### Creating the FrontEnd inside the Backend workspace
+
+. Open the workspace for your Backend project.
+
+2. Open the terminal window and create a new folder called frontend in the root directory with this command:
+    - "mkdir frontend"
+
+3. Change directory to be inside the frontend folder with the following command:
+    - "cd frontend"
+
+4. From inside the frontend directory, run the following command to create a new React app and install all the working dependencies:
+    - "npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm"
+
+5. Enter "y" to confirm.
+
+6. When everything has completed, Enter the following command to remove the .git folder, .gitignore file and README.md from the frontend folder as these already exist within the root directory of your Backend project.
+    - NOTE: Make sure you are in the frontend terminal when running this command:
+    - "rm -rf .git .gitignore README.md"
+
+7. Inside the FrontEnd directory, run the following command to make sure it works:
+    - "npm start"
+
+8. Open the browser to see the React logo so it works as expected.
+
+9. Stop the application with "CTRL-C" in the terminal on windows, and "CMD-C" on a Mac.
+10. Move back to the root of your directory by "cd ..".(My personal way is to have one terminal open for the backend and one for the frontend side by side. Simplifies the process.)
+
+11. Add, commit, and push your changes to GitHub every so often.
+
+12. 
+
+
+
+
+
+
 
 #### Creating the Heroku app and Elephant SQL database.
 
