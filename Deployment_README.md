@@ -31,10 +31,14 @@ Link to the Frontend README: [Click Here!](https://github.com/gStarhigh/pro5/blo
 ### Creating the workspace
 I have created both my FrontEnd and the BackEnd in the same workspace. All instructions that follow are for a combined workspace using GITPOD. If you have your Backend in a separate workspace or use CodeAnywhere, this is not the correct way to continue and some thing might differ.
 
-1. Create a new empty workspace with your own name.
-2. Use this command in the terminal: "npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm"
-This ensures all packages are installed that are needed in the beginning.
-3. 
+
+
+Create the Backend
+
+
+
+
+
 
 
 
