@@ -388,7 +388,7 @@ The avatar is reused throughout the website in a lot of different places. Places
   - On a comment on a post.
   - On the profile page.
 
-  - MoreDropDown.js
+- MoreDropDown.js
   The Moredropdown is used on a variety of things on the website, and this is a very good example of a reusable component. It's used on:
     - A post
     - A comment
@@ -398,11 +398,11 @@ The avatar is reused throughout the website in a lot of different places. Places
 
 - Spinner
 The spinner is used on almost all requests that the frontend does towards the backend and provides the user with a visual effect to implement that the site is loading "something". This, in my opinion, makes the user understand that the site is working and is going to provide the requested information instead of a blank page while the api does it request. Examples where the spinner is used:
-- Most followed profiles
-- Posts
-- Profile page
-- Tickets on profile page
-- Pagination (when the site is loading more posts for example when scrolling to the bottom)
+  - Most followed profiles
+  - Posts
+  - Profile page
+  - Tickets on profile page
+  - Pagination (when the site is loading more posts for example when scrolling to the bottom)
 
 
 --- 
