@@ -32,9 +32,18 @@ Link to the Frontend README: [Click Here!](https://github.com/gStarhigh/pro5/blo
 I have created both my FrontEnd and the BackEnd in the same workspace. All instructions that follow are for a combined workspace using GITPOD. If you have your Backend in a separate workspace or use CodeAnywhere, this is not the correct way to continue and some thing might differ.
 
 
+1. Navigate to [This link](https://github.com/Code-Institute-Org/gitpod-full-template) , and click "Use this template".
+2. Click Create a new repository.
+3. Choose a name for your repository and click "Create repository"
+4. Then you can open it up in GitPod by clicking the Green "Gitpod" button.
 
-Create the Backend
-
+#### Create the Backend
+1. When your IDE has finished installing everything, type "pip3 install 'django<4'" to install the same version of django as I used. If you want the latest, just type "pip install django"
+2. Create your project by typing in the termial: "django-admin startproject *yourprojectsname* ."
+Don't forget the dot at the end.
+3. Install Cloudinary by typing in the termial: "pip install django-cloudinary-storage".
+4. Install Pillow by typing in the terminal: "pip install Pillow". Notice the capital P.
+5. 
 
 
 
