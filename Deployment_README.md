@@ -18,10 +18,9 @@ Link to the Frontend README: [Click Here!](https://github.com/gStarhigh/pro5/blo
 
  - ## [Table of Contents](#table-of-contents-1)
 
-
-- ## [Deployment](#Deployment)
+- ## [Deployment](#Deployment-1)
     - ## [Creating the Workspace](#creating-the-workspace-1)
-    - ## [Creating the Heroku app](#creating-the-heroku-app-1)
+    - ## [Deploying the project](#deploying-the-project-1)
 
 - ## [GitHub Pages](#github-pages-1)
 
