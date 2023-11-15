@@ -43,7 +43,41 @@ I have created both my FrontEnd and the BackEnd in the same workspace. All instr
 Don't forget the dot at the end.
 3. Install Cloudinary by typing in the termial: "pip install django-cloudinary-storage".
 4. Install Pillow by typing in the terminal: "pip install Pillow". Notice the capital P.
-5. 
+5. Add cloudinary to the Installed Apps. Notice the order of where they are inserted:
+    <details>
+    <summary>Installed apps</summary>
+    <img src="documentation/deployment/images/cloudinary_apps.png">
+    </details>
+6. Navigate to [Cloudinary](https://cloudinary.com/) and create an account.
+7. In the account details section, there is an API Envrionment variable. Copy that URL.
+8. Create a filed called "env.py" in the root of your directory.
+9. At the top of the env.py file write: "import os"
+10. Add this line to your env.py file: os.environ['CLOUDINARY_URL'] = "Paste the URL here".
+    Make sure the url starts with "cloudinary://" and not "CLOUDINARY_URL=cloudinary://".
+11. Go to the settings.py file and find the SECRET_KEY, and copy it.
+12. Go back to the env.py file and add this line: os.environ['SECRET_KEY'] = 'PAST IN YOUR SECRET KEY HERE'
+13. Go back to your settings.py file and add these lines at the top of the file:
+    <details>
+    <summary>Settings Imports</summary>
+    <img src="documentation/deployment/images/settings_imports.png">
+    </details>
+14. Add these lines to the settings file:
+    <details>
+    <summary>Cloudinary</summary>
+    <img src="documentation/deployment/images/cloudinary_url.png">
+    </details>
+
+    <details>
+    <summary>Secret Key</summary>
+    <img src="documentation/deployment/images/secret_key.png">
+    </details>
+
+    <details>
+    <summary>Media</summary>
+    <img src="documentation/deployment/images/media.png">
+    </details>
+15. Now the basic settings are in place, and since we have moved the SECRET_KEY to the env.py file before comitting and pushing to GitHub, it is safe and we can now add, commit, and push our first time to GitHub.
+    - NOTE: It's important that you have not comitted anything while the Secret Key was in settings.py as this will then be open for everyone to find in your GitHub account. If you have done this, change the secret key variable in your env.py file, and commit and push again. Now the secret key is protected.
 
 
 
