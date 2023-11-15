@@ -380,6 +380,8 @@ On a specific post, you can like and comment on the post. If you are the owner o
 #### Lighthouse result
 The lighthouse result is not as good as I would like. The problem is the images and avatars on the site. Might also be an issue with fetching them from cloudinary that makes the site runs slow. Will look into a better solution for image handling, format and size after submission.
 
+I first had 2mb as the maximum allowed images to be uploaded, however I found out that there is not many pictures taken today that is lower than 2mb, which made the upload journey difficult for users. I found React image file resizer which allowed me to upload bigger pictures, change the format of the pictures when uploaded and set the max height and width. I had hoped this would improve Lighthouse result, however there was no difference. I need to find another solution to improve the Lighthouse result. 
+
 <details>
 <summary> Mobile</summary>
 <img src="documentation/lighthouse/lighthouse_mobile.png">
