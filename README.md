@@ -858,18 +858,38 @@ Most important packages:
 
 <details>
 <summary>All packages</summary>
-<img src="">
+<img src="documentation/images/requirements.png">
 </details>
 
 
 ### Frameworks and Websites used:
-
+- Gitpod: Used for version control and to commit and push code to github.
+- Github: Github is used to store the projects code after being pushed from gitpod.
+- Heroku: Used to deploy the project online.
+- PostgreSQL(ElephantSQL): Used as Database.
+- Cloudinary: Used to host all images on the site.
+- LucidChart: Used to create the Database Schema and the Flowchart.
+- Balsamiq: Used to create the Wireframes for the site.
+- Google Fonts: Used as font for the site.
+- Font Awesome: Used for icon implementation on the site.
+- Favicon: Used as an icon in the tab-bar of the site.
+- React Bootstrap: Used for responsiveness and layout.
 
 ---
 ## Final Result
 - The final deployed project can be found [here.](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 ### Sample printscreens of the finished project below:
+
+<details>
+<summary>Mobile</summary>
+<img src="documentation/testing/images/mobile.png">
+</details>
+
+<details>
+<summary>Desktop</summary>
+<img src="documentation/testing/images/desktop.png">
+</details>
 
 All images can be found [Here](https://github.com/gStarhigh/pro5/tree/main/documentation).
 
