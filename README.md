@@ -831,6 +831,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | **Bug** | **Solution** |
 |-------------|------------|
 | When trying to register an account with a Username and Password that are too alike the submit fails but no error message is displayed to the user, only a 400 Error in the console. | Solved. I was missing error handling in the signup form. |
+| When submitting a Post, I did not check if the user had added an image, which resulted in errors when the user tried to update their post. | I solved it by implementing a check in the handleSubmit to check so that the user has chosen an image.  |
 
 
 ---
