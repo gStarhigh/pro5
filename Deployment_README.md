@@ -104,16 +104,41 @@ Don't forget the dot at the end.
 8. Open the browser to see the React logo so it works as expected.
 
 9. Stop the application with "CTRL-C" in the terminal on windows, and "CMD-C" on a Mac.
-10. Move back to the root of your directory by "cd ..".(My personal way is to have one terminal open for the backend and one for the frontend side by side. Simplifies the process.)
+10. Move back to the root of your directory by "cd ..".(My personal way is to have one terminal open for the backend and one for the frontend side by side. Simplifies the process. Please do this in the future as you will need this to be able to start both the backend and the front end in different terminals)
 
 11. Add, commit, and push your changes to GitHub every so often.
 
-12. 
+12. Open your env.py file
+13. Add a new key with your BACKEND local link like this:
+    - os.environ['ALLOWED_HOST'] = '8000-gstarhigh-pro5-SOMETHINGELSEHERE.gitpod.io'
+14. Add a new key with your FRONTEND local link like this:
+    - os.environ['CLIENT_ORIGIN'] = 'https://8080-gstarhigh-pro5-SOMETHINGELSEHERE.gitpod.io'
+    Note the differences with the "/" in the two above.
+It should now look like this:
+    <details>
+    <summary>env.py</summary>
+    <img src="documentation/deployment/images/env.png">
+    </details>
 
+Now we need to navigate back to the Backend, to the settings.py file and do the following:
 
+15. Add the ALLOWED_HOSTS:
+    <details>
+    <summary>Allowed Hosts</summary>
+    <img src="documentation/deployment/images/allowed_hosts.png">
+    </details>
 
+16. CORS should look like this:
+    <details>
+    <summary>CORS</summary>
+    <img src="documentation/deployment/images/cors.png">
+    </details>
 
-
+17. Navigate to the package.json file in your FRONTEND directory and add the line called "proxy" at the very bottom as shown:
+    <details>
+    <summary>Proxy</summary>
+    <img src="documentation/deployment/images/proxy.png">
+    </details>    
 
 
 #### Creating the Heroku app and Elephant SQL database.
@@ -124,6 +149,7 @@ Don't forget the dot at the end.
     - pip3 install dj_database_url==0.5.0 psycopg2
 3. Create requirements.txt file:
     - pip3 freeze --local > requirements.txt
+    Make sure you update your requirements.txt file everytime you install something new.
 
 4. Log in, or create an account at [ElephantSQL](https://elephantsql.com/).
 5. Click "Create new instance".
@@ -164,7 +190,54 @@ When we are finished and everything is complete, your Config Vars should look li
     <img src="documentation/deployment/images/config_vars.png">
     </details>
 
+22. To be able to use the elephantSQL database on you deployed project, and the local sqlite3 database on your local evironment, add the following to your settings.py file:
+    <details>
+    <summary>Database Dev</summary>
+    <img src="documentation/deployment/images/database_dev.png">
+    </details>
+Then add the following line to the env.py file:
+    - os.environ['DEV'] = "1"
+If you always want to use the ElephantSQL database, you dont have to add that to the env.py file.
 
+
+#### Deploying the project
+
+1. Navigate to the root of your project in the terminal and type this command:
+    - "pip3 install whitenoise==6.4.0"
+
+2. Update your requirements file:
+    - "pip3 freeze > requirements.txt"
+
+3. Create a new folder called staticfiles in the root of your project with this command:
+    - "mkdir staticfiles"
+
+4. Move the cloudinary_storage in settings.py file, below the django.contrib.staticfiles:
+    <details>
+    <summary>Database Dev</summary>
+    <img src="documentation/deployment/images/installed_apps.png">
+    </details>
+
+5. In the MIDDLEWARE list in settings.py, add WhiteNoice BELOW the SecurityMiddleware and above SessionMiddleware:
+    - Add this line:  'whitenoise.middleware.WhiteNoiseMiddleware',
+    <details>
+    <summary>MIDDLEWARE</summary>
+    <img src="documentation/deployment/images/middleware.png">
+    </details>
+
+6. In the TEMPLATES list in settings.py, add the following code:
+    -  os.path.join(BASE_DIR, 'staticfiles', 'build')
+    <details>
+    <summary>TEMPLATES</summary>
+    <img src="documentation/deployment/images/templates.png">
+    </details>
+
+7. In the staticfiles section, add STATIC_ROOT and WHITENOICE_ROOT
+    -  STATIC_ROOT = BASE_DIR / 'staticfiles'
+    -  WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
+    <details>
+    <summary>Static Files</summary>
+    <img src="documentation/deployment/images/static.png">
+    </details>
 
 
 ---
