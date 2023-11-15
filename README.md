@@ -60,13 +60,9 @@ Link to the Deployment README: [Click Here!](https://github.com/gStarhigh/pro5/b
     - ## [Future improvements](#Future-improvements-1)
 - ## [Bugs](#Bugs-1)
 
-- ## [Libraries and Software](#Libraries-and-Software-1)
+- ## [Languages, Libraries and Software](#Languages-and-Libraries-and-Software-1)
 
 - ## [Final Result](#final-result-1)
-
-- ## [Deployment](#deployment-1)
-
-- ## [Github Pages](#github-pages-1)
 
 - ## [Credits](#credits-1)
 ---
@@ -838,7 +834,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 
 
 ---
-## Languages, Libraries and Software
+## Languages and Libraries and Software
 ### Main Languages/ Frameworks:
 - HTML5
 - CSS3
