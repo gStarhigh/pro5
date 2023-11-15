@@ -184,7 +184,7 @@ Adding Config Vars
 21. As Key type: DISABLE_COLLECTSTATIC
     - As Value: 1
 
-When we are finished and everything is complete, your Config Vars should look like this: 
+    When we are finished and everything is complete, your Config Vars should look like this: 
     <details>
     <summary>Config Vars</summary>
     <img src="documentation/deployment/images/config_vars.png">
@@ -278,15 +278,26 @@ axiosDefaults.js File.
 14. Create a filed in the root of your directory called:
     - "Procfile"
         - Notice the capital P.
+    - Inside this file, add these 2 commands:
+        - "release: python manage.py makemigrations && python manage.py migrate"
+        - "web: gunicorn drf_api.wsgi"
+
+15. In settings.py Add corsheaders, above your installed apps in the installed apps list:
+    - "'corsheaders',"
+
+16. Add corsheaders middleware to the TOP of the MIDDLEWARE list:
+    - "'corsheaders.middleware.CorsMiddleware',"
+
+
 
 Compiling staticfiles.
 
-15. In the root directory terminal type this(if you don't already have a staticfiles folder in your root of your project):
+17. In the root directory terminal type this(if you don't already have a staticfiles folder in your root of your project):
     - "mkdir staticfiles"
     Then:
     - "python3 manage.py collectstatic"
 
-16. Navigate to the frontEnd in your terminal and type:
+18. Navigate to the frontEnd in your terminal and type:
     - npm run build && mv build ../staticfiles/.
 
 
@@ -295,16 +306,39 @@ Important: Everytime you do changes to your code, you will need to rerun this co
 
 Runtime
 
-17. In the root of your directory create a file called:
+19. In the root of your directory create a file called:
     - "runtime.txt"
 
-18. Within the runtime.txt file, add this:
+20. Within the runtime.txt file, add this:
     - "python-3.9.16"
 
-19. Make sure all servers are terminated, use the command:
+21. Make sure all servers are terminated, use the command:
     - "CTRL-C" or "CMD-C".
 
+We can now deploy the project for the first time to Heroku.
+- Make sure everything is committed and pushed to github!
 
+22. Open Heroku and navigate to the Deploy tab.
+
+23. Click on "Connect to GitHub"
+
+24. Search for your repo and click "Connect"
+
+25. Click in "Enable automatic deployes(optional)"
+
+26. Use the "Manual deploy" and click "Deploy Branch"
+
+When the app is deployed, copy the url to the deployed app and go back to the config Vars section.
+
+27. Here we need to change 2 Keys and values:
+    1. KEY: "ALLOWED_HOST"  VALUE: "post in the deployed URL"
+    - Make Sure to remove "https://" at the beginning and the trailing "/" at the end of your URL.
+    2. KEY: "CLIENT_ORIGIN" VALUE: "post in the deployed URL"
+    - KEEP the "https://" at the beginning, but remove the trailing "/".
+
+28. Now you can redeploy your app from the dashboard if needed.
+
+Good luck!
 
 ---
 ## Github Pages
