@@ -293,7 +293,7 @@ The Information create page lets you post any important information of your choi
 
 
 ### Contact page
-On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page.
+On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page. Right now, the admin has no way to either respond or change the status of the message. However the message is saved in the database, and with future implementation, this will be like a conversation between the submitter, and the admin.
 
 <details>
 <summary>Contact page - Mobile</summary>
@@ -823,6 +823,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Groups|  Create different classes or groups that can see different things on the website. I would like for example to be able to see different information depending on what group you are a part of. | 
 | Hay Usage | model I want to implement a hay usage model, in which the user can add how much hay each of their horses should get per feeding. The user should be able to change this and the end of the month, a total amount in kg should be calculated that the owner of the group/admin, can access to easier provide invoices to the users.|
 | Invoice|  I want to add the ability for the group owner/ admin to upload invoices to the different users on the page depending on the usage of each horse of the owner. When a new invoice is uploaded, a due date for the invoice is also added to the users profile page, and a "bell" should be visible in the navbar, to indicate something new has happened. This bell should expand to contain the information when clicked.| 
+| Contact form | Right now the contact form is only being saved to the database. The admin has no way to respond or change the status of the ticket in any way. This shall of course be addressed in the future. I tried to get gmail to work with django core mail, but I could not get it to work. The user has full CRUD functionality over their submission, and right now that will be enough. |
 
 
 ---
@@ -844,14 +845,15 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 - Django
 - React
 
-### Modules/ Packages used:
+### Modules/ Packages / Libraries used:
 Most important packages:
 - django: Python web framework used to develop the site.
 - psycopg2: PostgreSQL database for the Python programming lanugage.
 - dj3-cloudinary-storage: Integrates Cloudinary with Django Storage API.
 - django-allauth: Integrates user authentication aswell as 3rd party account authientication such as facebook and other social accounts.
 - Gunicorn: Gunicorn is a pure-Python HTTP server for WSGI applications.
-- Toastify: Toastify is an 3rd party library that allows for alerts to be displayed when a user perfoms an action on the site.
+- Toastify: Toastify is an 3rd party library that allows for alerts to be displayed when a user perfoms an action on the site. I searched alot for a functioning alert system to work with REACT, and after alot of trial and error, I found Toastify. It's a simple to use and a very good and interactive alert system that I really like. There are a lot of customization that you can make to the alerts aswell, however I chose to not customize it at all since I really liked the standard look of the alerts.
+- Infinite Scroll: I used infinite scroll to be able to just scroll down a page with the next page automatically being loaded without the user having to press a button to "load more". This greatly improves the user experience. 
 
 <details>
 <summary>All packages</summary>
