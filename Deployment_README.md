@@ -281,7 +281,29 @@ axiosDefaults.js File.
 
 Compiling staticfiles.
 
-15. 
+15. In the root directory terminal type this(if you don't already have a staticfiles folder in your root of your project):
+    - "mkdir staticfiles"
+    Then:
+    - "python3 manage.py collectstatic"
+
+16. Navigate to the frontEnd in your terminal and type:
+    - npm run build && mv build ../staticfiles/.
+
+
+Important: Everytime you do changes to your code, you will need to rerun this command in the frontEnd directory in the terminal:
+    - "npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/."
+
+Runtime
+
+17. In the root of your directory create a file called:
+    - "runtime.txt"
+
+18. Within the runtime.txt file, add this:
+    - "python-3.9.16"
+
+19. Make sure all servers are terminated, use the command:
+    - "CTRL-C" or "CMD-C".
+
 
 
 ---
