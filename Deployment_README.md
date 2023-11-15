@@ -80,12 +80,55 @@ Don't forget the dot at the end.
     - NOTE: It's important that you have not comitted anything while the Secret Key was in settings.py as this will then be open for everyone to find in your GitHub account. If you have done this, change the secret key variable in your env.py file, and commit and push again. Now the secret key is protected.
 
 
+#### Creating the Heroku app and Elephant SQL database.
+
+1. Install Gunicorn:
+    - pip3 install 'django<4' gunicorn
+2. Install Supporting libraries:
+    - pip3 install dj_database_url==0.5.0 psycopg2
+3. Create requirements.txt file:
+    - pip3 freeze --local > requirements.txt
+
+4. Log in, or create an account at [ElephantSQL](https://elephantsql.com/).
+5. Click "Create new instance".
+6. Choose a name for your project.
+7. Choose your plan (Choose Tiny Turtle for the free option).
+8. Tags are optional to fill out, then press "Select region".
+9. Choose the region closest to you.
+10. Return to the dashboard and choose your newly created project.
+11. Under "Details", find the URL for your database and copy it. The link starts with "postgres://...." (We will use this soon)
+
+Back to creating the Heroku APP.
+
+12.  Login to Heroku and click "New" -> "Create new app" to start a new project.
+13. Login to Heroku and click "New" -> "Create new app" to start a new project.
+14.  Choose an "app name" and "Region" - Then press "Create app".
+15. Remove any installed ADD-ONS created by Heroku as we will not need them and they cost money. Your overview should look like this:
+    <details>
+    <summary>Overview</summary>
+    <img src="documentation/deployment/images/overview.png">
+    </details>
 
 
+Adding Config Vars
+
+16. Click on Settings tab, and choose "Reveal Config Vars" and add the following:
+17. As key type: DATABASE_URL
+    - As Value: "The link you copied earlier from ElephantSQL".
+19. As key type: SECRET_KEY
+    - As Value: The SECRET_KEY link in your env.py file.
+20. As key type: CLOUDINARY_URL
+    - As Value: Your cloudinary link in your env.py file.
+21. As Key type: DISABLE_COLLECTSTATIC
+    - As Value: 1
+
+When we are finished and everything is complete, your Config Vars should look like this: 
+    <details>
+    <summary>Config Vars</summary>
+    <img src="documentation/deployment/images/config_vars.png">
+    </details>
 
 
-
-#### Creating the Heroku app
 
 
 ---
