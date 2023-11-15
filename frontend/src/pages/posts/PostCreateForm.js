@@ -100,6 +100,10 @@ function PostCreateForm() {
       history.push("/signin");
       return;
     }
+    if (!postData.image) {
+      setErrors({ image: ["An image must be selected"] });
+      return;
+    }
     const formData = new FormData();
     formData.append("title", title);
     formData.append("description", description);
