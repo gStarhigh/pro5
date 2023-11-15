@@ -369,6 +369,40 @@ On a specific post, you can like and comment on the post. If you are the owner o
 <img src="documentation/images/comments_desktop.PNG">
 </details>
 
+
+## Reusable components
+I have a couple of reusable components throughout the site. This is possible with the separation of the function into it's own file where I import it to the other files where I want the component to show. You can always import different files into other files, but the nice thing about separating your code into minor files is that if you want to import something, you don't have to import so much code, but just a small part, which makes your code easier to read, to understand, and improves functionality on your website.
+
+If I would start over, I would probably try to increase this way of thinking, but since this is my first REACT project this was the best I could do starting out. I have learned a lot and have a better understanding of how REACT works now that I have finished compared to when I started.
+
+Here is a list of the components I separated to their own files to be reused throughout the website, however other files are also imported into other files in this project.
+
+- Avatar.js
+The avatar is reused throughout the website in a lot of different places. Places that the avatar is reused in:
+  - The Navbar when a user is signed in.
+  - Most followed profiles list.
+  - On each post the user has created in the postspage.
+  - On each specific post when clicked.
+  - On a comment on a post.
+  - On the profile page.
+
+  - MoreDropDown.js
+  The Moredropdown is used on a variety of things on the website, and this is a very good example of a reusable component. It's used on:
+    - A post
+    - A comment
+    - A ticket
+    - A information post
+    - The profile page
+
+- Spinner
+The spinner is used on almost all requests that the frontend does towards the backend and provides the user with a visual effect to implement that the site is loading "something". This, in my opinion, makes the user understand that the site is working and is going to provide the requested information instead of a blank page while the api does it request. Examples where the spinner is used:
+- Most followed profiles
+- Posts
+- Profile page
+- Tickets on profile page
+- Pagination (when the site is loading more posts for example when scrolling to the bottom)
+
+
 --- 
 ## Testing
 
