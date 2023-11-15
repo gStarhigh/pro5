@@ -239,6 +239,50 @@ If you always want to use the ElephantSQL database, you dont have to add that to
     <img src="documentation/deployment/images/static.png">
     </details>
 
+Adding the root_view
+
+8. Navigate to the urls.py file in your BackEnd application:
+    - Remove the "root_route" from .views imports.
+    - Add TemplateView import.
+    <details>
+    <summary>Urls</summary>
+    <img src="documentation/deployment/images/urls.png">
+    </details>
+
+9. In the urlpatterns list, remove the root_route code and replace it with Templateview pointing to the index.html file:
+    - Add this code: "path('', TemplateView.as_view(template_name='index.html')),"
+
+10. At the bottom of the file, add the 404 handler:
+    -  handler404 = TemplateView.as_view(template_name='index.html')
+
+11. Add "api/" to the beginning of all urls, excluding the path for Home page and admin panel.
+    - "api/"
+
+Your file should look like this now(with your own links):
+    <details>
+    <summary>URLPatterns</summary>
+    <img src="documentation/deployment/images/patterns.png">
+    </details>
+
+axiosDefaults.js File.
+
+12. If you have not created an axios.defaults.js file, you need to do that now.
+    - In your Frontend directory, create a folder called "api", and within that folder, create the file "axiosDefaults.js".
+
+13. Make sure your axiosDefaults.js file looks like this:
+    <details>
+    <summary>Axios Defaults</summary>
+    <img src="documentation/deployment/images/axios.png">
+    </details>
+
+14. Create a filed in the root of your directory called:
+    - "Procfile"
+        - Notice the capital P.
+
+Compiling staticfiles.
+
+15. 
+
 
 ---
 ## Github Pages
