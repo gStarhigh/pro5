@@ -284,6 +284,13 @@ The Create post page lets you upload an image of your choice and choose a title,
 
 ### Information Create page
 The Information create page lets you post any important information of your choice to other on the page that is authenticated. It could for example be that your horse should get new shoes tomorrow and need to be in the stable. Or that the horse should get extra food one day. If the end date has passed, the information is deleted from the database.
+
+  - The Admin can through the Admin panel, edit or delete any created information posts should the Admin desire.
+    <details>
+    <summary>Admin Panel</summary>
+    <img src="documentation/testing/images/admin_information.PNG">
+    </details>
+    
 <details>
 <summary>Create Information - Mobile</summary>
 <img src="documentation/images/information_create_mobile.png">
@@ -295,7 +302,13 @@ The Information create page lets you post any important information of your choi
 
 
 ### Contact page
-On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page. Right now, the admin has no way to either respond or change the status of the message. However the message is saved in the database, and with future implementation, this will be like a conversation between the submitter, and the admin.
+On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page.
+
+ - The Admin can through the Admin panel, edit, answer back in the same ticket or delete any tickets created should the Admin desire.
+    <details>
+    <summary>Admin Panel</summary>
+    <img src="documentation/testing/images/admin_tickets.PNG">
+    </details>
 
 <details>
 <summary>Contact page - Mobile</summary>
@@ -309,6 +322,13 @@ On the contact page you can send a message to any question that you might have.A
 
 ### Profile Page
 On your profile page you can see your tickets, edit your profile, change username and change password. If you are not the owner of the profile, an unsubscribe button is visible. 
+
+  - The Admin can through the Admin panel, edit, answer back in the same ticket or delete any tickets created should the Admin desire.
+    <details>
+    <summary>Admin Panel</summary>
+    <img src="documentation/testing/images/admin_profile.PNG">
+    </details>
+
 <details>
 <summary>Profile page - Mobile</summary>
 <img src="documentation/images/profile_page_mobile.png">
@@ -355,6 +375,17 @@ On your profile page you can see your tickets, edit your profile, change usernam
 
 ### Post page
 On a specific post, you can like and comment on the post. If you are the owner of the post, you cannot like your post, however you have the ability to edit or delete your post. If you are the creator of a comment, your name will be Green, if there is a comment from someone other than you, their color is Blue. This is implemented to easier find your own, or someone elses comments. You also have the ability to edit or delete your own comment.
+
+- The Admin can through the Admin panel, edit or delete any post or comment should the Admin desire.
+  <details>
+  <summary>Post Admin Panel</summary>
+  <img src="documentation/testing/images/admin_post.PNG">
+  </details>
+  <details>
+  <summary>Comment Admin Panel</summary>
+  <img src="documentation/testing/images/admin_comment.PNG">
+  </details>
+
 <details>
 <summary>Post owner - Mobile</summary>
 <img src="documentation/images/post_owner_mobile.png">
