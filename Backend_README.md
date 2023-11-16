@@ -300,6 +300,30 @@ For example, to view all profiles in a list:
 |-------------|------------|---------------------|-------------------|
 | View all posts | Add "/posts" to the URL. | All posts are displayed in a list. | :heavy_check_mark: |
 | View a specific post | Add "/posts/ID" to the URL. | The specific post is displayed. | :heavy_check_mark: |
+| View a specific post you own | Add "/posts/ID" to the URL. | Is_owner is set to True. | :heavy_check_mark: |
+| View a specific post you don't own | Add "/posts/ID" to the URL. | Is_owner is set to False. | :heavy_check_mark: |
+| Change title of a post | Add "/posts/ID" to the URL. | The Title is updated. | :heavy_check_mark: |
+| Change description of a post | Add "/posts/ID" to the URL. | The description is updated. | :heavy_check_mark: |
+| Change content of a post | Add "/posts/ID" to the URL. | The Content is updated. | :heavy_check_mark: |
+| Change image of a post | Add "/posts/ID" to the URL. | The image url is updated. | :heavy_check_mark: |
+| Like a post | Add "/posts/ID" to the URL. | Likes_count is increased by 1. | :heavy_check_mark: |
+| Like a post | Add "/posts/ID" to the URL. | Like_id is set. | :heavy_check_mark: |
+| Unlike a post | Add "/posts/ID" to the URL. | Like_id is set to Null. | :heavy_check_mark: |
+| Unlike a post | Add "/posts/ID" to the URL. | Likes_count is decreased by 1. | :heavy_check_mark: |
+| Comment on a post | Add "/posts/ID" to the URL. | Comments_count is increased by 1. | :heavy_check_mark: |
+| Delete comment on a post | Add "/posts/ID" to the URL. | Comments_count is decreased by 1. | :heavy_check_mark: |
+| Update a post | Add "/posts/ID" to the URL. | Updated_at updates to todays date. | :heavy_check_mark: |
+| Delete a post | Add "/posts/ID" to the URL. | "Detail not found" is displayed and the post is gone. | :heavy_check_mark: |
+
+<details>
+<summary>Post list</summary>
+<img src="documentation/testing/images/post_list.png">
+</details>
+<details>
+<summary>Post ID</summary>
+<img src="documentation/testing/images/post_id.png">
+</details>
+
 
 
 ---
