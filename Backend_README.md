@@ -121,14 +121,19 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, on_delete=models.CASCADE | 
+| start_date | DateField | |
+| end_date | DateField | |
+| updated_on | DateTimeField | auto_now=True |
+| created_on | DateTimeField | auto_now_add=True |
+| text | TextField |  |
+
+- Owner has a OneToOne relationship with the User model. If the User object is deleted also deletes the information object that has the Foreign Key.
+- Start_date is a DateField that stores the start date of the the information. This field does not allow for blank values.
+- End_date is a DateField that stores the end date of the the information. This field does not allow for blank values.
+- Updated_on is a DateTimeField that automatically sets the time and date when updated.
+- Created_on is a DateTimeField that automatically sets the time and date when created.
+- Text is a TextField that stores the content of the information. This field does not allow for blank values.
 
 
 <details>
