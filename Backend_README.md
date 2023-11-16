@@ -404,6 +404,7 @@ For example, to view all profiles in a list:
 
 | **Bug** | **Solution** |
 |-------------|------------|
+| When testing, I could not display all tickets from all users in a list, but only the user I was signed in as. | No errors or problem caused by this. Everything works as expected on the website and all tickets are saved to each user and to the server. |
 
 
 ---
