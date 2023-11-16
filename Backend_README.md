@@ -294,7 +294,12 @@ For example, to view all profiles in a list:
 </details>
 
 
+2. Posts
 
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| View all posts | Add "/posts" to the URL. | All posts are displayed in a list. | :heavy_check_mark: |
+| View a specific post | Add "/posts/ID" to the URL. | The specific post is displayed. | :heavy_check_mark: |
 
 
 ---
