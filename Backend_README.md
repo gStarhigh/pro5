@@ -622,15 +622,15 @@ For example, to view all profiles in a list:
 
 ### Modules/ Packages used:
 Most important packages:
-- django: Python web framework used to develop the site.
+- djangorestframework: Python web framework used to develop the site.
 - psycopg2: PostgreSQL database for the Python programming lanugage.
 - dj3-cloudinary-storage: Integrates Cloudinary with Django Storage API.
-- django-allauth: Integrates user authentication aswell as 3rd party account authientication such as facebook and other social accounts.
+- django-allauth: Integrates user authentication as well as 3rd party account authentication such as facebook and other social accounts.
 - Gunicorn: Gunicorn is a pure-Python HTTP server for WSGI applications.
 
 <details>
 <summary>All packages</summary>
-<img src="">
+<img src="documentation/images/requirements.png">
 </details>
 
 
