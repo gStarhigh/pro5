@@ -319,6 +319,15 @@ On your profile page you can see your tickets, edit your profile, change usernam
 </details>
 
 <details>
+<summary>Profile page with Name - Mobile</summary>
+<img src="documentation/images/profile_name_mobile.png">
+</details>
+<details>
+<summary>Profile page with Name - Desktop</summary>
+<img src="documentation/images/profile_name_desktop.png">
+</details>
+
+<details>
 <summary>Edit profile - Mobile</summary>
 <img src="documentation/images/edit_profile_mobile.png">
 </details>
