@@ -14,15 +14,9 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
  - ## [Table of Contents](#table-of-contents-1)
 
- - ## [UX](#UX-1)
-
- - ## [Project Goals](#project-goals-1)
-
  - ## [User Stories](#user-stories-1)
 
  - ## [Flowchart](#Flowchart-1)
-
- - ## [General features](#general-features-1)
     
 - ## [Testing](#testing-1)
     - ## [Code Validation](#code-validation-1)
@@ -32,20 +26,10 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
 - ## [Libraries and Software](#Libraries-and-Software-1)
 
-- ## [Final Result](#final-result-1)
-
-- ## [Deployment](#deployment-1)
-
-- ## [Github Pages](#github-pages-1)
-
-- ## [Credits](#credits-1)
----
-
-## Project Goals
 
 
 ---
-# User Stories
+# User Stories/Tasks
 
 | **EPIC** | **ID #** | **User Story** | **Github project** |
 |-------------|------------|---------------------|---------------------|
@@ -60,9 +44,6 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 --- 
 ## Testing
 
-
-
----
 ### Code Validation
 
 ### Python
@@ -283,11 +264,6 @@ The env.py file has too long lines, but since those are links, I have accepted t
 
 
 
----
-## Future improvements
-
-
-
 
 ---
 ## Bugs
@@ -312,29 +288,7 @@ Most important packages:
 </details>
 
 
-### Frameworks and Websites used:
-
-
----
-## Final Result
-- The final deployed project can be found [here.]()
-
-### Sample printscreens of the finished project below:
-
-(All images can be found [Here]())
-
-
-
 ---
 ## Deployment
 
-The deployment guidelines can be found in the Deployment Readme.
-
-
----
-## Credits
-
-- Favicon Credit: https://favicon.io/emoji-favicons/horse
-
-- Emoji in Readme credit: https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
----
+The deployment guidelines can be found in the [Deployment Readme](https://github.com/gStarhigh/pro5/blob/main/Deployment_README.md).
