@@ -101,14 +101,13 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, related_name='following', on_delete=models.CASCADE | 
+| followed | ForeignKey | User, related_name='followed', on_delete=models.CASCADE |
+| created_at | DateTimeField | auto_now_add=True |
+
+- Owner is a ForeignKey field that has a ManyToOne relationship from Follower to User. This means that each follower is associated with one user, but each user can have multiple followers.
+- Followed is a ForeignKey that creates a ManyToOne relationship from Follower to User. This means that each follower is associated with the user they are following, but each user can be followed by multiple users.
+- Created_at is a DateTimeField that automatically sets the time and date when created.
 
 
 <details>
