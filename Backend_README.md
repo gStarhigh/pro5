@@ -349,6 +349,56 @@ For example, to view all profiles in a list:
 <img src="documentation/testing/images/comment_id.png">
 </details>
 
+
+4. Information
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| View all Information objects | Add "/information" to the URL. | All Information objects are displayed in a list. | :heavy_check_mark: |
+| View a specific Information object | Add "/information/ID" to the URL. | The specific object is displayed. | :heavy_check_mark: |
+| View a specific Information object that you created | Add "/information/ID" to the URL. | Is_owner is set to True | :heavy_check_mark: |
+| View a specific Information object that you did not create | Add "/information/ID" to the URL. | Is_owner is set to False | :heavy_check_mark: |
+| Update an information object | Add "/comments/ID" to the URL. | Updated_at is updated with todays date. | :heavy_check_mark: |
+| Update the start_date | Add "/comments/ID" to the URL. | Start_date is updated with the new date. | :heavy_check_mark: |
+| Update the end_date | Add "/comments/ID" to the URL. | End_date is updated with the new date. | :heavy_check_mark: |
+| Update the text | Add "/comments/ID" to the URL. | The Text is updated with the new text. | :heavy_check_mark: |
+| Delete a information object | Add "/comments/ID" to the URL. | "Detail not found" is displayed and the information object is gone. | :heavy_check_mark: |
+
+
+<details>
+<summary>Information list</summary>
+<img src="documentation/testing/images/comment_list.png">
+</details>
+<details>
+<summary>Information ID</summary>
+<img src="documentation/testing/images/comment_id.png">
+</details>
+
+5. Tickets/Contactform
+- For tickets I am only able to display a list of the tickets made by the user I am currently signed in as.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| View all Tickets in a list | Add "/tickets" to the URL. | All Tickets made by the signed in user are displayed in a list. | :heavy_check_mark: |
+| View a specific Tickets | Add "/tickets" to the URL. | The specific Ticket is displayed | :heavy_check_mark: |
+| View a specific Ticket that you created | Add "/tickets/ID" to the URL. | Is_owner is set to True | :heavy_check_mark: |
+| Update a Ticket | Add "/tickets/ID" to the URL. | Updated_on is updated with todays date. | :heavy_check_mark: |
+| Update the Subject | Add "/tickets/ID" to the URL. | The Subject is updated with the new text. | :heavy_check_mark: |
+| Update the Message | Add "/tickets/ID" to the URL. | The Message is updated with the new text. | :heavy_check_mark: |
+| Delete a Ticket | Add "/tickets/ID" to the URL. | "Detail not found" is displayed and the Ticket is gone. | :heavy_check_mark: |
+
+
+<details>
+<summary>Ticket list</summary>
+<img src="documentation/testing/images/ticket_list.png">
+</details>
+<details>
+<summary>Ticket ID</summary>
+<img src="documentation/testing/images/ticket_id.png">
+</details>
+
+
+
 ---
 ## Bugs
 
