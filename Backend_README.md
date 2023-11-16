@@ -67,14 +67,97 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 - Image contains the profile image, and if none is chosen by the user, defaults to the default profile picture.
 
 
+#### Comments Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+
+#### Followers Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+
+#### Information Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+
+#### Likes Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 
 
+#### Posts Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
 |  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
+
+
+#### Tickets Model
+- 
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+
 
 
 
