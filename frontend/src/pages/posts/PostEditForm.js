@@ -116,7 +116,9 @@ function PostEditForm() {
     formData.append("title", title);
     formData.append("description", description);
     formData.append("content", content);
-    formData.append("image", postData.file);
+    if (postData.file) {
+      formData.append("image", postData.file);
+    }
 
     try {
       const { data } = await axiosReq.put(`/posts/${id}/`, formData);
