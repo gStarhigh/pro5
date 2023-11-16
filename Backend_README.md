@@ -67,6 +67,11 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 - Image contains the profile image, and if none is chosen by the user, defaults to the default profile picture.
 
 
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/profiles/models.png">
+</details>
+
 #### Comments Model
 - 
 
@@ -80,6 +85,12 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 |  |  |  |
 |  |  |  |
+
+
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/comments/models.png">
+</details>
 
 
 #### Followers Model
@@ -97,6 +108,12 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 
 
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/followers/models.png">
+</details>
+
+
 #### Information Model
 - 
 
@@ -110,6 +127,12 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 |  |  |  |
 |  |  |  |
+
+
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/information/models.png">
+</details>
 
 
 #### Likes Model
@@ -127,6 +150,11 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 
 
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/likes/models.png">
+</details>
+
 
 #### Posts Model
 - 
@@ -142,6 +170,11 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 |  |  |  |
 
+
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/posts/models.png">
+</details>
 
 
 #### Tickets Model
@@ -159,7 +192,10 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 |  |  |  |
 
 
-
+<details>
+<summary>Model image</summary>
+<img src="documentation/testing/validation/python/tickets/models.png">
+</details>
 
 --- 
 ## Testing
