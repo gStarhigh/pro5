@@ -16,7 +16,7 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 
  - ## [User Stories](#user-stories-1)
 
- - ## [Flowchart](#Flowchart-1)
+ - ## [Database](#database-1)
     
 - ## [Testing](#testing-1)
     - ## [Code Validation](#code-validation-1)
@@ -35,9 +35,46 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 |-------------|------------|---------------------|---------------------|
 
 ---
-## Flowchart
 
-#### Database
+
+
+## Database
+The project uses the PostgreSQL relational Database for storing Data. This project was set up using [ElephantSQL](https://elephantsql.com/).
+
+
+### Models
+
+#### User Model
+- User Model is a part of the Django Rest Framework dj-rest-auth library. It contains basic information about authenticated users such as Username & Password.
+
+#### Profile Model
+- Profile model is created for users to add or change the details on their profile page such as, Name, Bio & Profile Image.
+
+| **Name** | **Field Type** | **Validation** |
+|-------------|------------|---------------------|
+| owner | OneToOneField | User, on_delete=models.CASCADE | 
+| created_at | DateTimeField | auto_now_add=True |
+| updated_at | DateTimeField | auto_now_add=True |
+| name | CharField | max_length=255, blank=True |
+| content | TextField | blank=True |
+| image | ImageField | upload_to="images/", default="../default_profile" |
+
+- Owner has a OneToOne relationship with the User model. If the User object is deleted also deletes the object that has the Foreign Key.
+- Created_at is a DateTimeField that automatically sets the time and date when created.
+- Updated_at is a DateTimeField that automatically sets the time and date when updated.
+- Name is a Charfield with an allowed max length of 255. This field is allowed to be empty.
+- Content is a Textfield that is allowed to be empty.
+- Image contains the profile image, and if none is chosen by the user, defaults to the default profile picture.
+
+
+
+
+
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 
 
