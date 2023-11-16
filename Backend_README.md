@@ -73,7 +73,7 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 </details>
 
 #### Comments Model
-- 
+- Stores the users Comments on a post.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
@@ -97,7 +97,7 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 
 #### Followers Model
-- 
+- Stores the followers and following of Profiles.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
@@ -117,7 +117,7 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 
 #### Information Model
-- 
+- Stores each information object created by the users.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
@@ -143,18 +143,17 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 
 #### Likes Model
-- 
+- Stores each like on a post by the users.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, on_delete=models.CASCADE |
+| post | ForeignKey | Post, related_name='likes', on_delete=models.CASCADE |
+| created_at | DateTimeField | auto_now_add=True |
+
+- Owner is a ForeignKey that has a OneToOne relationship with the User model. If the User object is deleted also deletes the like object that has the Foreign Key.
+- Post is a ForeignKey that has a OneToOne relationship with the Post model. This means that each like is associated with one Post, however one Post can have multiple likes.
+- Created_at is a DateTimeField that automatically sets the time and date when created.
 
 
 <details>
@@ -164,7 +163,7 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 
 #### Posts Model
-- 
+- Stores each post created by the users.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
@@ -185,7 +184,7 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 
 #### Tickets Model
-- 
+- Stores each ticket created by the users.
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
