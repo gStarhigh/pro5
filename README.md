@@ -891,6 +891,8 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 |-------------|------------|
 | When trying to register an account with a Username and Password that are too alike the submit fails but no error message is displayed to the user, only a 400 Error in the console. | Solved. I was missing error handling in the signup form. |
 | When submitting a Post, I did not check if the user had added an image, which resulted in errors when the user tried to update their post. | I solved it by implementing a check in the handleSubmit to check so that the user has chosen an image.  |
+| When being signed in, and refreshing certain pages that are wrapped in privateroute in app.js, you are redirected to the SignIn page. However you are still signed in, and it's not required of your to sign in again. | No solution tested, but it has something to do with the privateroute and I think that when the site is refreshed, the API does not have time to check if you are signed in with the privateroute before the user is being redirected. |
+| On the deployed Heroku version of my site, the username and password is not pre-populated on the signin page. However this works perfectly on the local  version. | No solution tested. |
 
 
 ---
