@@ -194,14 +194,21 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, on_delete=models.CASCADE |
+| updated_on | DateField | auto_now=True |
+| created_on | DateField | auto_now_add=True |
+| subject | TextField |  |
+| message | TextField |  |
+| ticket_status | IntegerField | choices=TICKET_STATUS, default=0 |
+
+- Owner is a ForeignKey that has a OneToMany relationship with the User model. This means that each ticket is associated with a User, but a User can have multiple tickets.
+- Updated_on is a DateField that is automatically set to the Date of when the ticket was updated.
+- Created_on is a DateField that is automatically set to the Date of when the ticket was created.
+- Subject is a TextField that holds the tickets Subject. This field does not allow for blank values.
+- Message is a TextField that holds the tickets Message. This field does not allow for blank values.
+- Ticket_status is an IntegerField that stores the status of each ticket. The multiple choices stands for different status of each ticket, with the default set to 0. Each number represents a string of readable status for the user.
+
+    - TICKET_STATUS = ((0, "Awaiting review"), (1, "Reviewed"), (2, "Closed"))
 
 
 <details>
