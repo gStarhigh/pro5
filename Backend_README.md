@@ -77,14 +77,17 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, on_delete=models.CASCADE | 
+| post | ForeignKey | Post, on_delete=models.CASCADE |
+| created_at | DateTimeField | auto_now_add=True |
+| updated_at | DateTimeField | auto_now=True |
+| content | TextField |  |
+
+- Owner has a OneToOne relationship with the User model. If the User object is deleted also deletes the object that has the Foreign Key.
+- Post has a OneToOne relationship with the Post model. Each comment is associated with one post, but each post can have multiple comments.
+- Created_at is a DateTimeField that automatically sets the time and date when created.
+- Updated_at is a DateTimeField that automatically sets the time and date when updated.
+- Content is a TextField that stores the content of the comment. This does not allow for blank values.
 
 
 <details>
