@@ -24,16 +24,16 @@ Link to the Deployment README: [Click Here!](https://github.com/gStarhigh/pro5/b
 
 ![Fullscreen image of the application:](/documentation/images/amiresponsive.PNG)
 
-
+Fullscreen printscreens:
 <details>
 <summary>Image of the finished website - Mobile</summary>
-<img src="">
+<img src="documentation/testing/images/mobile.png">
 </details>
 
 
 <details>
 <summary>Image of the finished website - Desktop</summary>
-<img src="">
+<img src="documentation/testing/images/desktop.png">
 </details>
 
 ---
