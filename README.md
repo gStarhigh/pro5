@@ -893,6 +893,7 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | When submitting a Post, I did not check if the user had added an image, which resulted in errors when the user tried to update their post. | I solved it by implementing a check in the handleSubmit to check so that the user has chosen an image.  |
 | When being signed in, and refreshing certain pages that are wrapped in privateroute in app.js, you are redirected to the SignIn page. However you are still signed in, and it's not required of your to sign in again. | No solution tested, but it has something to do with the privateroute and I think that when the site is refreshed, the API does not have time to check if you are signed in with the privateroute before the user is being redirected. |
 | On the deployed Heroku version of my site, the username and password is not pre-populated on the signin page. However this works perfectly on the local  version. | No solution tested. |
+| When creating Information in the information form, and you type in the date, it will display and error message saying "start" or "end" "date cannot be in the past" even when the typed in date is not in the past. This does not affect the submit since the input dates are correct. This does not happen if you choose the date directly from the datepicker. | Does not affect functionality, the form submits correctly. No solutions implemented. |
 
 
 ---
