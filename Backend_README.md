@@ -31,8 +31,44 @@ Link to the application: [Click Here!](https://pro5-aeecc7322fbc.herokuapp.com/)
 ---
 # User Stories/Tasks
 
-| **EPIC** | **ID #** | **User Story** | **Github project** |
-|-------------|------------|---------------------|---------------------|
+| **EPIC** | **ID #** | **Task** | **Label** | **Github project** |
+|-------------|------------|---------------------|---------------------|---------------------|
+| **Create the Profile model** | 1 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41082447)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Post model** | 2 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41082145)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Likes model** | 3 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41082198)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Followers model** | 4 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41082242)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Comment model** | 7 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41100016)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Information model** | 15 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=41896728)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+| **Create the Contact model** | 27 |  || [Link](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D&filterQuery=milestone%3AModels&pane=issue&itemId=44330597)
+|  |  | Create the model.py. | Must Have |
+|  |  | Create the views.py. | Must Have |
+|  |  | Create the serializers.py. | Must Have |
+|  |  | Create the urls.py. | Must Have |
+
 
 ---
 
