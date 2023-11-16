@@ -167,15 +167,21 @@ The project uses the PostgreSQL relational Database for storing Data. This proje
 
 | **Name** | **Field Type** | **Validation** |
 |-------------|------------|---------------------|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| owner | ForeignKey | User, on_delete=models.CASCADE |
+| created_at | DateTimeField | auto_now_add=True |
+| updated_at | DateTimeField | auto_now=True |
+| title | CharField | max_length=255 |
+| description | TextField | max_length=255 |
+| content | TextField | max_length=255 |
+| image | ImageField | upload_to='images/', default='../default_image' |
 
+- Owner is a ForeignKey that has a OneToMany relationship with the User model. This means that each post is associated with one user, but one user can have multiple posts.
+- Created_at is a DateTimeField that is automatically set to the date and time of when the post was created.
+- Updated_at is a DateTimeField that is automatically set to the date and time of when the post is updated.
+- Title is a CharField that contains the title of the post, with a max allowed 255 characters.
+- Description is a TextField that contains the description of a post, with a max allowed 255 characters.
+- Content is a TextField that contains the content of a post, with a max allowed 255 characters.
+- Image is an ImageField, that contains the users uploaded image, as a fallback the default image will be displayed.
 
 <details>
 <summary>Model image</summary>
