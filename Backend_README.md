@@ -325,6 +325,29 @@ For example, to view all profiles in a list:
 </details>
 
 
+3. Comments
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| View all Comments | Add "/comments" to the URL. | All Comments are displayed in a list. | :heavy_check_mark: |
+| View a specific Comment | Add "/comments/ID" to the URL. | The specific comment is displayed. | :heavy_check_mark: |
+| View a specific Comment that you created | Add "/comments/ID" to the URL. | Is_owner is set to True | :heavy_check_mark: |
+| View a specific Comment that you did not create | Add "/comments/ID" to the URL. | Is_owner is set to False | :heavy_check_mark: |
+| View a profile ID of creator of the post | Add "/comments/ID" to the URL. | Profile_ID is displaying the Profile ID of the creator of the post | :heavy_check_mark: |
+| Update a specific Comment | Add "/comments/ID" to the URL. | Updated_at is updated. | :heavy_check_mark: |
+| Update a specific Comments content | Add "/comments/ID" to the URL. | The content is updated. | :heavy_check_mark: |
+| Update a specific Comments content | Add "/comments/ID" to the URL. | The content is updated. | :heavy_check_mark: |
+| Delete a comment | Add "/comments/ID" to the URL. | "Detail not found" is displayed and the comment is gone. | :heavy_check_mark: |
+
+
+<details>
+<summary>Comment list</summary>
+<img src="documentation/testing/images/comment_list.png">
+</details>
+<details>
+<summary>Comment ID</summary>
+<img src="documentation/testing/images/comment_id.png">
+</details>
 
 ---
 ## Bugs
