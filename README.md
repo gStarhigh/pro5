@@ -290,7 +290,7 @@ The Information create page lets you post any important information of your choi
     <summary>Admin Panel</summary>
     <img src="documentation/testing/images/admin_information.PNG">
     </details>
-    
+
 <details>
 <summary>Create Information - Mobile</summary>
 <img src="documentation/images/information_create_mobile.png">
@@ -304,10 +304,14 @@ The Information create page lets you post any important information of your choi
 ### Contact page
 On the contact page you can send a message to any question that you might have.After a successful submission you can view, edit or delete your tickets on your profile page.
 
- - The Admin can through the Admin panel, edit, answer back in the same ticket or delete any tickets created should the Admin desire.
+ - The Admin can through the Admin panel, edit, answer back in the same ticket, delete any tickets created or create a new ticket and chose the profile to display it at should the Admin desire.
     <details>
     <summary>Admin Panel</summary>
     <img src="documentation/testing/images/admin_tickets.PNG">
+    </details>
+    <details>
+    <summary>Admin Response</summary>
+    <img src="documentation/testing/images/admin_response.PNG">
     </details>
 
 <details>
