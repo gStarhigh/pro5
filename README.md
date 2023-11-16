@@ -831,6 +831,11 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | Edit profile | Change the image and click save. | I am redirected to My Profile page. | :heavy_check_mark: |
 | Edit profile | Change the image and click save. | An alert message is displayed. | :heavy_check_mark: |
 | Edit profile | Change the Bio and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Name | Add a name in Edit profile. | My name is visible under my username. | :heavy_check_mark: |
+| Name | Delete name from Edit profile. | My name is no longer visible under my username. | :heavy_check_mark: |
+| Name | Delete name from Edit profile. | An alert message is displayed. | :heavy_check_mark: |
+| Edit profile | Change the Name and click save. | An alert message is displayed. | :heavy_check_mark: |
+| Edit profile | Change the Name and click save. | I am redirected to My Profile page. | :heavy_check_mark: |
 | Edit profile | Change the bio and click save. | I am redirected back to My profile page. | :heavy_check_mark: |
 | Edit profile | Click Cancel. | I am redirected back to My profile page. | :heavy_check_mark: |
 | Change Username | Click Change username. | I am redirected to the Change username page. | :heavy_check_mark: |
