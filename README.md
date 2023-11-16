@@ -866,6 +866,14 @@ All User Stories can be found [Here](https://github.com/users/gStarhigh/projects
 | The 3 dots | The 3 dots are not visible. | The 3 dots are not visible. | :heavy_check_mark: |
 
 
+11. 404 error page.
+
+| **Feature** | **Action** | **Expected result** | **Pass/Fail** |
+|-------------|------------|---------------------|-------------------|
+| See the 404 page | Type in an url that is wrong. | The 404 page appears. | :heavy_check_mark: |
+| Go home | Click the "Go home" button. | I am redirected to the homepage. | :heavy_check_mark: |
+
+
 ---
 ## Future improvements
 | **Feature** | **Description** | 
