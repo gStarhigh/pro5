@@ -92,7 +92,7 @@ The project goal was to create a responsive website using the Django Framework A
 All acceptance criteria can be viewed in [GITHUB](https://github.com/users/gStarhigh/projects/5/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C%22Labels%22%5D) on each Issue.
 
 
-I used milestones for each part of the project to map out everything that needed to be done for each functionality to work. Everything was planned and setup using GitHub.
+I used milestones for each part of the project as sprints, to map out everything that needed to be done for each functionality to work. Everything was planned and setup using GitHub Issues and Projects.
 
 - The two Milestones/tasks called "Hay usage" and "Invoices" were not implemented.
 <details>
@@ -452,6 +452,7 @@ The spinner is used on almost all requests that the frontend does towards the ba
 --- 
 ## Testing
 
+#### All testing is conducted in Google Chrome.
 
 #### Lighthouse result
 The lighthouse result is not as good as I would like. The problem is the images and avatars on the site. Might also be an issue with fetching them from cloudinary that makes the site runs slow. Will look into a better solution for image handling, format and size after submission.
