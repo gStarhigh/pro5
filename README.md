@@ -1005,6 +1005,9 @@ All images can be found [Here](https://github.com/gStarhigh/pro5/tree/main/docum
   - https://jasonwatmore.com/post/2022/06/24/react-router-6-private-route-component-to-restrict-access-to-protected-pages
   - https://jasonwatmore.com/post/2021/09/09/react-redirect-to-login-page-if-unauthenticated
 
+- Toastify Alerts (Used for alerts with user interactions):
+  - https://www.npmjs.com/package/react-toastify
+
 
 - Image credits:
   - Gene Devine:
