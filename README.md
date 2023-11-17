@@ -994,9 +994,9 @@ All images can be found [Here](https://github.com/gStarhigh/pro5/tree/main/docum
 ## Credits
 
 - Code Institute:
-  - This project is heavily based upon Code Institues "Moments" Walkthrough project, with alterations made to the project.
+  - This project is heavily based upon Code Institutes "Moments" Walkthrough project, with alterations made to the project. A big Thank You for the inspiration and help with this project.
 
-- Code Institute's tutor support.
+- Code Institute's tutor support for helping me when I had issues migrating one of my new models.
 
 - My Wife Maria for all support and ideas for the project.
 
