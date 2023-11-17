@@ -39,7 +39,7 @@ function App() {
     <AlertProvider>
       <div className={styles.App}>
         <NavBar />
-        <Container className={styles.main}>
+        <Container className={styles.Main}>
           <Switch>
             <Route
               exact

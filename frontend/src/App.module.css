@@ -5,7 +5,7 @@
     color: #2B2118;
 }
 
-.main {
+.Main {
     padding-top: 71px;
 }
 
@@ -31,4 +31,10 @@ i:hover {
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #dadadf;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .Main {
+        padding-top: 90px;
+    }
 }
